@@ -1,0 +1,10 @@
+{
+  "name": "un-antologia-di-domande",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node tools/dev-server.js",
+    "check": "node --check assets/js/app.js && node --check content/percorso.js && node --check sw.js"
+  }
+}

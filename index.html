@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f3efe6">
+  <meta name="description" content="Un percorso didattico per incontrare la letteratura partendo dalle domande umane.">
+  <title>Un'antologia di domande</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./icons/icon-192.png">
+  <link rel="stylesheet" href="./assets/css/app.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Vai al contenuto</a>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Un'antologia di domande — home">
+      <span class="brand-mark" aria-hidden="true">?</span>
+      <span>Antologia di domande</span>
+    </a>
+    <nav class="primary-nav" aria-label="Navigazione principale">
+      <a href="#percorso">Il percorso</a>
+      <a href="#autori">Gli autori</a>
+      <button class="icon-button" id="readingButton" type="button" aria-label="Opzioni di lettura" aria-expanded="false" aria-controls="readingPanel">Aa</button>
+    </nav>
+  </header>
+
+  <aside class="reading-panel" id="readingPanel" hidden>
+    <strong>Opzioni di lettura</strong>
+    <label for="fontSize">Dimensione del testo</label>
+    <input id="fontSize" type="range" min="0" max="2" step="1" value="1">
+    <label class="toggle-row"><input id="highContrast" type="checkbox"> Contrasto più netto</label>
+  </aside>
+
+  <main id="main" tabindex="-1"></main>
+
+  <footer class="site-footer">
+    <p>La letteratura è una conversazione che attraversa i secoli.</p>
+    <p class="credit">Materiali realizzati da gbprof e Libera (ChatGPT) tramite dialogo costante e progettazione comune, sotto la direzione di gbprof.</p>
+  </footer>
+
+  <dialog id="installDialog" aria-labelledby="installTitle">
+    <form method="dialog">
+      <button class="dialog-close" value="close" aria-label="Chiudi">×</button>
+      <p class="eyebrow">PORTALA CON TE</p>
+      <h2 id="installTitle">Installa la PWA</h2>
+      <p id="installHelp">Puoi aggiungere questo percorso alla schermata iniziale e consultarlo anche senza connessione.</p>
+      <div class="dialog-actions">
+        <button class="button primary" id="confirmInstall" value="default">Installa</button>
+        <button class="button quiet" value="close">Non ora</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div class="offline-note" id="offlineNote" role="status" hidden>Sei offline: i contenuti fondamentali restano disponibili.</div>
+  <script type="module" src="./assets/js/app.js"></script>
+</body>
+</html>
