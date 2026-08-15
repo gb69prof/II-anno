@@ -1,9 +1,11 @@
 const CACHE = 'antologia-domande-v1';
+const APP_BASE = new URL('./', self.location.href);
+const FALLBACK = new URL('index.html', APP_BASE).href;
 const CORE = [
-  './', './index.html', './manifest.webmanifest',
-  './assets/css/app.css', './assets/js/app.js', './content/percorso.js',
-  './icons/icon.svg', './icons/icon-192.png', './icons/icon-512.png'
-];
+  '', 'index.html', 'manifest.webmanifest',
+  'assets/css/app.css', 'assets/js/app.js', 'content/percorso.js',
+  'icons/icon.svg', 'icons/icon-192.png', 'icons/icon-512.png'
+].map(path => new URL(path, APP_BASE).href);
 
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(CORE)).then(() => self.skipWaiting()));
@@ -19,8 +21,8 @@ self.addEventListener('fetch', event => {
   if (url.origin !== self.location.origin) return;
   if (event.request.mode === 'navigate') {
     event.respondWith(fetch(event.request).then(response => {
-      const copy = response.clone(); caches.open(CACHE).then(cache => cache.put('./index.html', copy)); return response;
-    }).catch(() => caches.match('./index.html')));
+      const copy = response.clone(); caches.open(CACHE).then(cache => cache.put(FALLBACK, copy)); return response;
+    }).catch(() => caches.match(FALLBACK)));
     return;
   }
   event.respondWith(caches.match(event.request).then(cached => cached || fetch(event.request).then(response => {
