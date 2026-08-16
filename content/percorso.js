@@ -187,5 +187,5 @@ export const authorMethod = [
 export const futureAuthors = [
   { name: 'Luigi Pirandello', note: 'L’identità, le maschere, la verità', status: 'LEZIONE DISPONIBILE', route: 'autore/pirandello' },
   { name: 'Giacomo Leopardi', note: 'Prima opera: L’Infinito', status: 'LEZIONE DISPONIBILE', route: 'opera/leopardi/infinito' },
-  { name: 'Jacques Prévert', note: 'Percorso in preparazione' }
+  { name: 'Jacques Prévert', note: 'I ragazzi che si amano: amore, libertà e sguardo sociale', status: 'LEZIONE DISPONIBILE', route: 'opera/prevert/ragazzi-che-si-amano' }
 ];
