@@ -5,8 +5,10 @@ PWA didattica destinata al secondo anno della scuola superiore. Il percorso intr
 ## Struttura
 
 - `index.html`: shell accessibile della PWA;
-- `content/percorso.js`: contenuti delle otto soglie e grammatica futura degli autori;
+- `content/percorso.js`: contenuti delle otto soglie e indice degli autori;
+- `content/autori/`: moduli dati delle singole opere;
 - `assets/js/app.js`: routing, interazioni, preferenze locali e installazione;
+- `assets/js/work-view.js`: vista modulare riutilizzabile per le opere;
 - `assets/css/app.css`: sistema visivo responsive;
 - `manifest.webmanifest`, `sw.js`, `icons/`: installabilità e funzionamento offline.
 
@@ -16,7 +18,7 @@ Per una verifica locale è sufficiente eseguire `npm run dev` e aprire l'indiriz
 
 ## Aggiungere gli autori
 
-L'area autori è predisposta ma non contiene lezioni inventate. I futuri percorsi useranno la grammatica comune: grande domanda, mondo ricevuto, frattura, immagine del mondo, forma/poetica, opere, dialogo con noi. I contenuti possono essere aggiunti come moduli separati senza riscrivere l'interfaccia generale.
+L'area autori usa una grammatica comune: grande domanda, mondo ricevuto, frattura, immagine del mondo, forma/poetica, opere e dialogo con noi. La prima lezione disponibile è `L'Infinito` di Giacomo Leopardi. I contenuti successivi possono essere aggiunti come moduli separati senza riscrivere l'interfaccia generale.
 
 ## Privacy
 
