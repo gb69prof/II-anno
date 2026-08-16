@@ -1,10 +1,11 @@
-const CACHE = 'antologia-domande-v5';
+const CACHE = 'antologia-domande-v6';
 const APP_BASE = new URL('./', self.location.href);
 const FALLBACK = new URL('index.html', APP_BASE).href;
 const CORE = [
   '', 'index.html', 'manifest.webmanifest',
-  'assets/css/app.css', 'assets/js/app.js', 'assets/js/work-view.js', 'assets/js/form-lab-view.js', 'assets/js/author-view.js',
-  'content/percorso.js', 'content/laboratorio-forma.js', 'content/autori/leopardi-infinito.js', 'content/autori/pirandello.js',
+  'assets/css/app.css', 'assets/js/app.js', 'assets/js/work-view.js', 'assets/js/form-lab-view.js', 'assets/js/author-view.js', 'assets/js/prevert-view.js',
+  'content/percorso.js', 'content/laboratorio-forma.js', 'content/autori/leopardi-infinito.js', 'content/autori/pirandello.js', 'content/autori/prevert-ragazzi.js',
+  'assets/maps/prevert-ragazzi-percorso.svg',
   'assets/maps/pirandello-mondo.svg', 'assets/maps/pirandello-fratture.svg', 'assets/maps/pirandello-mondo-nuovo.svg',
   'assets/maps/pirandello-poetica.svg', 'assets/maps/pirandello-opere.svg', 'assets/maps/pirandello-conclusione.svg',
   'assets/copertina-antologia-domande.png',
