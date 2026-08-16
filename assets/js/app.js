@@ -1,4 +1,6 @@
 import { stages, authorMethod, futureAuthors } from '../../content/percorso.js';
+import { infinitoLesson } from '../../content/autori/leopardi-infinito.js';
+import { workTemplate, bindWorkInteractions } from './work-view.js';
 
 const main = document.querySelector('#main');
 const readingButton = document.querySelector('#readingButton');
@@ -26,6 +28,16 @@ function saveState() {
 
 function esc(value) {
   return String(value).replace(/[&<>'"]/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[char]));
+}
+
+function authorPreviewCard(author) {
+  if (author.route) return `<a class="author-card available" href="#${author.route}"><span>${author.status}</span><h3>${author.name}</h3><p>${author.note}</p><b>Entra nella poesia →</b></a>`;
+  return `<article class="author-card"><span>PROSSIMAMENTE</span><h3>${author.name}</h3><p>${author.note}</p></article>`;
+}
+
+function futureAuthorCard(author) {
+  if (author.route) return `<a class="future-card available" href="#${author.route}"><p class="eyebrow">${author.status}</p><h3>${author.name}</h3><p>${author.note}</p><b>Apri la lezione →</b></a>`;
+  return `<article class="future-card"><p class="eyebrow">CONTENUTI NON ANCORA INSERITI</p><h3>${author.name}</h3><p>${author.note}</p></article>`;
 }
 
 function homeTemplate() {
@@ -70,7 +82,7 @@ function homeTemplate() {
           <div><p class="eyebrow">LA PROSSIMA PARTE</p><h2>Gli autori come interlocutori.</h2></div>
           <p>Non anticipiamo lezioni che non sono ancora state costruite. Prepariamo però il modo in cui entreremo in ogni vita e in ogni opera.</p>
         </div>
-        <div class="author-grid">${futureAuthors.map(author => `<article class="author-card"><span>PROSSIMAMENTE</span><h3>${author.name}</h3><p>${author.note}</p></article>`).join('')}</div>
+        <div class="author-grid">${futureAuthors.map(authorPreviewCard).join('')}</div>
         <div class="hero-actions"><a class="button primary" href="#autori-metodo" style="background:#f1eee5;color:#182321;border-color:#f1eee5">Scopri il metodo</a></div>
       </div>
     </section>`;
@@ -104,7 +116,7 @@ function authorsTemplate() {
   return `<section class="authors-page"><div class="shell"><p class="eyebrow">INCONTRIAMO GLI AUTORI</p><h1>Una grammatica per il dialogo.</h1><p class="authors-lead">La domanda iniziale sarà sempre la stessa: <strong>che cosa stava cercando di capire questo autore?</strong> Da lì, ogni informazione troverà il proprio posto.</p>
     <div class="method-list">${authorMethod.map(([title, text], i) => `<section class="method-step"><span class="num">${String(i + 1).padStart(2, '0')}</span><h2>${title}</h2><p>${text}</p></section>`).join('')}</div>
     <div class="carry-card" style="--stage:#ea6a47"><p class="eyebrow">IL CRITERIO</p><p>La struttura collega le domande; non costringe autori diversi dentro lezioni tutte uguali.</p></div>
-    <h2 class="future-title">I primi incontri previsti</h2><div class="future-grid">${futureAuthors.map(author => `<article class="future-card"><p class="eyebrow">CONTENUTI NON ANCORA INSERITI</p><h3>${author.name}</h3><p>${author.note}</p></article>`).join('')}</div>
+    <h2 class="future-title">I primi incontri previsti</h2><div class="future-grid">${futureAuthors.map(futureAuthorCard).join('')}</div>
     <div class="hero-actions"><a class="button primary" href="#percorso">Ripercorri le otto soglie</a></div></div></section>`;
 }
 
@@ -129,7 +141,10 @@ function bindInteractions() {
 
 function render() {
   const route = location.hash.replace(/^#/, '') || 'home';
-  if (route.startsWith('tappa/')) {
+  if (route.startsWith('opera/leopardi/infinito')) {
+    main.innerHTML = workTemplate(infinitoLesson);
+    document.title = `${infinitoLesson.title} — ${infinitoLesson.author}`;
+  } else if (route.startsWith('tappa/')) {
     const stage = stages.find(item => item.id === route.split('/')[1]);
     if (stage) {
       if (!state.visited.includes(stage.id)) { state.visited.push(stage.id); saveState(); }
@@ -143,7 +158,14 @@ function render() {
     if (route === 'percorso' || route === 'autori') requestAnimationFrame(() => document.querySelector(`#${route}`)?.scrollIntoView());
   }
   bindInteractions();
-  if (!location.hash || route.startsWith('tappa/') || route === 'autori-metodo') window.scrollTo(0, 0);
+  if (route.startsWith('opera/leopardi/infinito')) {
+    bindWorkInteractions(main);
+    const section = route.split('/')[3];
+    if (section) requestAnimationFrame(() => document.querySelector(`#${section}`)?.scrollIntoView());
+    else window.scrollTo(0, 0);
+  } else if (!location.hash || route.startsWith('tappa/') || route === 'autori-metodo') {
+    window.scrollTo(0, 0);
+  }
   main.focus({ preventScroll: true });
 }
 
