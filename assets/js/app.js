@@ -5,6 +5,8 @@ import { formLab } from '../../content/laboratorio-forma.js';
 import { formLabTemplate, bindFormLabInteractions } from './form-lab-view.js';
 import { pirandelloLesson } from '../../content/autori/pirandello.js';
 import { authorTemplate, bindAuthorInteractions } from './author-view.js';
+import { prevertLesson } from '../../content/autori/prevert-ragazzi.js';
+import { prevertTemplate, bindPrevertInteractions } from './prevert-view.js';
 
 const main = document.querySelector('#main');
 const readingButton = document.querySelector('#readingButton');
@@ -151,6 +153,9 @@ function render() {
   } else if (route.startsWith('laboratorio-forma')) {
     main.innerHTML = formLabTemplate(formLab);
     document.title = `${formLab.title} — Un'antologia di domande`;
+  } else if (route.startsWith('opera/prevert/ragazzi-che-si-amano')) {
+    main.innerHTML = prevertTemplate(prevertLesson);
+    document.title = `${prevertLesson.title} — ${prevertLesson.author}`;
   } else if (route.startsWith('opera/leopardi/infinito')) {
     main.innerHTML = workTemplate(infinitoLesson);
     document.title = `${infinitoLesson.title} — ${infinitoLesson.author}`;
@@ -176,6 +181,11 @@ function render() {
   } else if (route.startsWith('laboratorio-forma')) {
     bindFormLabInteractions(main, formLab);
     const section = route.split('/')[1];
+    if (section) requestAnimationFrame(() => document.querySelector(`#${section}`)?.scrollIntoView());
+    else window.scrollTo(0, 0);
+  } else if (route.startsWith('opera/prevert/ragazzi-che-si-amano')) {
+    bindPrevertInteractions(main, prevertLesson);
+    const section = route.split('/')[3];
     if (section) requestAnimationFrame(() => document.querySelector(`#${section}`)?.scrollIntoView());
     else window.scrollTo(0, 0);
   } else if (route.startsWith('opera/leopardi/infinito')) {
