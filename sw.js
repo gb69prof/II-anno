@@ -1,9 +1,10 @@
-const CACHE = 'antologia-domande-v1';
+const CACHE = 'antologia-domande-v2';
 const APP_BASE = new URL('./', self.location.href);
 const FALLBACK = new URL('index.html', APP_BASE).href;
 const CORE = [
   '', 'index.html', 'manifest.webmanifest',
   'assets/css/app.css', 'assets/js/app.js', 'content/percorso.js',
+  'assets/copertina-antologia-domande.png',
   'icons/icon.svg', 'icons/icon-192.png', 'icons/icon-512.png'
 ].map(path => new URL(path, APP_BASE).href);
 
