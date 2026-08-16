@@ -3,6 +3,8 @@ import { infinitoLesson } from '../../content/autori/leopardi-infinito.js';
 import { workTemplate, bindWorkInteractions } from './work-view.js';
 import { formLab } from '../../content/laboratorio-forma.js';
 import { formLabTemplate, bindFormLabInteractions } from './form-lab-view.js';
+import { pirandelloLesson } from '../../content/autori/pirandello.js';
+import { authorTemplate, bindAuthorInteractions } from './author-view.js';
 
 const main = document.querySelector('#main');
 const readingButton = document.querySelector('#readingButton');
@@ -33,7 +35,7 @@ function esc(value) {
 }
 
 function authorPreviewCard(author) {
-  if (author.route) return `<a class="author-card available" href="#${author.route}"><span>${author.status}</span><h3>${author.name}</h3><p>${author.note}</p><b>Entra nella poesia →</b></a>`;
+  if (author.route) return `<a class="author-card available" href="#${author.route}"><span>${author.status}</span><h3>${author.name}</h3><p>${author.note}</p><b>${author.route.startsWith('opera/') ? 'Entra nella poesia' : 'Apri la lezione'} →</b></a>`;
   return `<article class="author-card"><span>PROSSIMAMENTE</span><h3>${author.name}</h3><p>${author.note}</p></article>`;
 }
 
@@ -143,7 +145,10 @@ function bindInteractions() {
 
 function render() {
   const route = location.hash.replace(/^#/, '') || 'home';
-  if (route.startsWith('laboratorio-forma')) {
+  if (route.startsWith('autore/pirandello')) {
+    main.innerHTML = authorTemplate(pirandelloLesson);
+    document.title = `${pirandelloLesson.author} — Un'antologia di domande`;
+  } else if (route.startsWith('laboratorio-forma')) {
     main.innerHTML = formLabTemplate(formLab);
     document.title = `${formLab.title} — Un'antologia di domande`;
   } else if (route.startsWith('opera/leopardi/infinito')) {
@@ -163,7 +168,12 @@ function render() {
     if (route === 'percorso' || route === 'autori') requestAnimationFrame(() => document.querySelector(`#${route}`)?.scrollIntoView());
   }
   bindInteractions();
-  if (route.startsWith('laboratorio-forma')) {
+  if (route.startsWith('autore/pirandello')) {
+    bindAuthorInteractions(main, pirandelloLesson);
+    const section = route.split('/')[2];
+    if (section) requestAnimationFrame(() => document.querySelector(`#pirandello-${section}`)?.scrollIntoView());
+    else window.scrollTo(0, 0);
+  } else if (route.startsWith('laboratorio-forma')) {
     bindFormLabInteractions(main, formLab);
     const section = route.split('/')[1];
     if (section) requestAnimationFrame(() => document.querySelector(`#${section}`)?.scrollIntoView());
