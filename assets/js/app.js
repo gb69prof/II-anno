@@ -1,6 +1,8 @@
 import { stages, authorMethod, futureAuthors } from '../../content/percorso.js';
 import { infinitoLesson } from '../../content/autori/leopardi-infinito.js';
 import { workTemplate, bindWorkInteractions } from './work-view.js';
+import { formLab } from '../../content/laboratorio-forma.js';
+import { formLabTemplate, bindFormLabInteractions } from './form-lab-view.js';
 
 const main = document.querySelector('#main');
 const readingButton = document.querySelector('#readingButton');
@@ -71,7 +73,7 @@ function homeTemplate() {
             <a class="threshold-card ${state.visited.includes(stage.id) ? 'visited' : ''}" style="--stage:${stage.color}" href="#tappa/${stage.id}">
               <div class="card-top"><span class="card-number">${stage.number} · ${stage.eyebrow}</span><span class="visited-dot" title="Tappa visitata"></span></div>
               <h3>${stage.title}</h3><p>${stage.question}</p><span class="card-arrow">Attraversa →</span>
-            </a>`).join('')}
+            </a>${stage.id === 'forma' ? `<a class="laboratory-entry" href="#laboratorio-forma"><span class="lab-mark">LAB</span><div><p class="eyebrow">STRUMENTO TRASVERSALE</p><h3>Il laboratorio della forma</h3><p>Verso, ritmo, rime e figure: scopri come un’idea diventa un’esperienza.</p></div><b>Entra nel laboratorio →</b></a>` : ''}`).join('')}
         </div>
         <div class="progress-wrap"><div class="progress-track"><div class="progress-bar" style="width:${state.visited.length / stages.length * 100}%"></div></div><span class="progress-label">${state.visited.length} di ${stages.length} soglie visitate</span></div>
       </div>
@@ -100,7 +102,7 @@ function stageTemplate(stage) {
       <section class="stage-block"><p class="eyebrow">DIAMO UN NOME A CIÒ CHE È EMERSO</p><h2>Ora possiamo formulare il problema.</h2><div class="concept-grid">${stage.concept.map(p => `<p>${p}</p>`).join('')}</div></section>
       <section class="stage-block bridge"><p class="eyebrow">VERSO LA LETTERATURA</p><p>${stage.bridge}</p></section>
       <section class="carry-card"><p class="eyebrow">UNA DOMANDA DA PORTARE CON TE</p><p>${stage.carry}</p></section>
-      <nav class="stage-nav" aria-label="Tappe del percorso">${prev ? `<a href="#tappa/${prev.id}"><small>← Tappa precedente</small>${prev.title}</a>` : `<a href="#percorso"><small>← Torna</small>Le otto soglie</a>`}${next ? `<a href="#tappa/${next.id}"><small>Prossima tappa →</small>${next.title}</a>` : `<a href="#autori-metodo"><small>Continua →</small>Incontra gli autori</a>`}</nav>
+      <nav class="stage-nav" aria-label="Tappe del percorso">${stage.id === 'leggere' ? `<a href="#laboratorio-forma"><small>← Soglia precedente</small>Il laboratorio della forma</a>` : prev ? `<a href="#tappa/${prev.id}"><small>← Tappa precedente</small>${prev.title}</a>` : `<a href="#percorso"><small>← Torna</small>Le otto soglie</a>`}${stage.id === 'forma' ? `<a href="#laboratorio-forma"><small>Prossima soglia →</small>Il laboratorio della forma</a>` : next ? `<a href="#tappa/${next.id}"><small>Prossima tappa →</small>${next.title}</a>` : `<a href="#autori-metodo"><small>Continua →</small>Incontra gli autori</a>`}</nav>
     </div>
   </article>`;
 }
@@ -141,7 +143,10 @@ function bindInteractions() {
 
 function render() {
   const route = location.hash.replace(/^#/, '') || 'home';
-  if (route.startsWith('opera/leopardi/infinito')) {
+  if (route.startsWith('laboratorio-forma')) {
+    main.innerHTML = formLabTemplate(formLab);
+    document.title = `${formLab.title} — Un'antologia di domande`;
+  } else if (route.startsWith('opera/leopardi/infinito')) {
     main.innerHTML = workTemplate(infinitoLesson);
     document.title = `${infinitoLesson.title} — ${infinitoLesson.author}`;
   } else if (route.startsWith('tappa/')) {
@@ -158,7 +163,12 @@ function render() {
     if (route === 'percorso' || route === 'autori') requestAnimationFrame(() => document.querySelector(`#${route}`)?.scrollIntoView());
   }
   bindInteractions();
-  if (route.startsWith('opera/leopardi/infinito')) {
+  if (route.startsWith('laboratorio-forma')) {
+    bindFormLabInteractions(main, formLab);
+    const section = route.split('/')[1];
+    if (section) requestAnimationFrame(() => document.querySelector(`#${section}`)?.scrollIntoView());
+    else window.scrollTo(0, 0);
+  } else if (route.startsWith('opera/leopardi/infinito')) {
     bindWorkInteractions(main);
     const section = route.split('/')[3];
     if (section) requestAnimationFrame(() => document.querySelector(`#${section}`)?.scrollIntoView());
