@@ -15,6 +15,8 @@ export function workTemplate(work) {
       </div>
     </header>
 
+    <div class="shell"><a class="prework-link" href="#laboratorio-forma"><span><strong>Prima di analizzare la forma</strong><br>Ripassa verso, ritmo, rime e figure nel laboratorio trasversale.</span><b>Apri il laboratorio →</b></a></div>
+
     <nav class="work-nav" aria-label="Sezioni della lezione">
       <div class="shell">
         <a href="#opera/leopardi/infinito/apertura">Prima di leggere</a>
