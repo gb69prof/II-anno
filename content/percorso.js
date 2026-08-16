@@ -186,6 +186,6 @@ export const authorMethod = [
 
 export const futureAuthors = [
   { name: 'Luigi Pirandello', note: 'Percorso in preparazione' },
-  { name: 'Giacomo Leopardi', note: 'Percorso in preparazione' },
+  { name: 'Giacomo Leopardi', note: 'Prima opera: L’Infinito', status: 'LEZIONE DISPONIBILE', route: 'opera/leopardi/infinito' },
   { name: 'Jacques Prévert', note: 'Percorso in preparazione' }
 ];
