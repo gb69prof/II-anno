@@ -1,9 +1,10 @@
-const CACHE = 'antologia-domande-v2';
+const CACHE = 'antologia-domande-v3';
 const APP_BASE = new URL('./', self.location.href);
 const FALLBACK = new URL('index.html', APP_BASE).href;
 const CORE = [
   '', 'index.html', 'manifest.webmanifest',
-  'assets/css/app.css', 'assets/js/app.js', 'content/percorso.js',
+  'assets/css/app.css', 'assets/js/app.js', 'assets/js/work-view.js',
+  'content/percorso.js', 'content/autori/leopardi-infinito.js',
   'assets/copertina-antologia-domande.png',
   'icons/icon.svg', 'icons/icon-192.png', 'icons/icon-512.png'
 ].map(path => new URL(path, APP_BASE).href);
