@@ -42,12 +42,10 @@ function homeTemplate() {
             <button class="button quiet" type="button" data-install>Installa</button>
           </div>
         </div>
-        <div class="question-orbit" aria-label="Le domande del percorso">
-          <span class="orbit-core" aria-hidden="true">?</span>
-          <span class="orbit-word">io</span><span class="orbit-word">gli altri</span>
-          <span class="orbit-word">il mondo</span><span class="orbit-word">la forma</span>
-          <span class="orbit-word">gli autori</span>
-        </div>
+        <figure class="hero-cover">
+          <img src="./assets/copertina-antologia-domande.png" alt="Due studenti davanti a porte illuminate che conducono a libri, figure di autori e paesaggi della letteratura.">
+          <figcaption>Entrare nella letteratura significa attraversare domande.</figcaption>
+        </figure>
       </div>
     </section>
     <section class="path-section" id="percorso">
