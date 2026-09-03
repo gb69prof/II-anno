@@ -1,8 +1,10 @@
-const CACHE = 'antologia-domande-v6';
+const CACHE_PREFIX = 'antologia-domande-';
+const CACHE = `${CACHE_PREFIX}v7`;
 const APP_BASE = new URL('./', self.location.href);
 const FALLBACK = new URL('index.html', APP_BASE).href;
 const CORE = [
-  '', 'index.html', 'manifest.webmanifest',
+  '', 'index.html', 'privacy.html', 'accessibilita.html', 'manifest.webmanifest',
+  'pwa-common/gbprof-accessibility.css', 'pwa-common/gbprof-accessibility.js',
   'assets/css/app.css', 'assets/js/app.js', 'assets/js/work-view.js', 'assets/js/form-lab-view.js', 'assets/js/author-view.js', 'assets/js/prevert-view.js',
   'content/percorso.js', 'content/laboratorio-forma.js', 'content/autori/leopardi-infinito.js', 'content/autori/pirandello.js', 'content/autori/prevert-ragazzi.js',
   'assets/maps/prevert-ragazzi-percorso.svg',
@@ -17,7 +19,11 @@ self.addEventListener('install', event => {
 });
 
 self.addEventListener('activate', event => {
-  event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(key => key !== CACHE).map(key => caches.delete(key)))).then(() => self.clients.claim()));
+  event.waitUntil(
+    caches.keys()
+      .then(keys => Promise.all(keys.filter(key => key.startsWith(CACHE_PREFIX) && key !== CACHE).map(key => caches.delete(key))))
+      .then(() => self.clients.claim())
+  );
 });
 
 self.addEventListener('fetch', event => {
@@ -26,12 +32,17 @@ self.addEventListener('fetch', event => {
   if (url.origin !== self.location.origin) return;
   if (event.request.mode === 'navigate') {
     event.respondWith(fetch(event.request).then(response => {
-      const copy = response.clone(); caches.open(CACHE).then(cache => cache.put(FALLBACK, copy)); return response;
-    }).catch(() => caches.match(FALLBACK)));
+      const copy = response.clone();
+      caches.open(CACHE).then(cache => cache.put(event.request, copy));
+      return response;
+    }).catch(() => caches.match(event.request).then(cached => cached || caches.match(FALLBACK))));
     return;
   }
   event.respondWith(caches.match(event.request).then(cached => cached || fetch(event.request).then(response => {
-    if (response.ok) { const copy = response.clone(); caches.open(CACHE).then(cache => cache.put(event.request, copy)); }
+    if (response.ok) {
+      const copy = response.clone();
+      caches.open(CACHE).then(cache => cache.put(event.request, copy));
+    }
     return response;
   })));
 });
