@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="it"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#15201d"><meta name="description" content="Porta di accesso ai percorsi di Antologia, Grammatica e Storia del secondo anno.">
-<title>Secondo anno — gbprof e Libera</title><style>
+<meta name="theme-color" content="#15201d"><meta name="description" content="Grammatica del secondo anno: contenuti in preparazione.">
+<title>Grammatica · Secondo anno — gbprof e Libera</title><style>
 :root{--ink:#faf5e8;--muted:#cbd3cd;--line:rgba(255,255,255,.15);--gold:#dfb65f}
 *{box-sizing:border-box}body{margin:0;min-height:100svh;color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;background:#15201d}
 body::before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 16% 18%,rgba(74,133,111,.28),transparent 32rem),radial-gradient(circle at 86% 78%,rgba(170,91,54,.22),transparent 32rem),linear-gradient(120deg,transparent 0 48%,rgba(255,255,255,.025) 48% 52%,transparent 52%)}
@@ -29,24 +29,6 @@ a:focus-visible{outline:3px solid var(--gold);outline-offset:5px}
 @media(min-width:721px) and (max-width:960px){.card{padding:1.4rem}.card h2{font-size:2rem}}
 </style>
 </head><body><a class="skip" href="#percorsi">Vai al contenuto</a><main id="percorsi" tabindex="-1">
-<header><p class="eyebrow">gbprof · Percorsi didattici</p><h1>Secondo anno</h1><p class="intro">Leggere, comprendere, orientarsi: tre percorsi per incontrare i testi, conoscere la lingua ed esplorare la storia.</p></header>
-<section class="choices" aria-label="Scegli la disciplina"><a class="card literature" href="./Antologia/index.html" data-mark="A"><span class="number">Percorso 01</span><h2>Antologia</h2><p>Un’antologia di domande: il percorso, il laboratorio della forma e l’incontro con gli autori.</p><span class="open">Entra nel percorso</span></a>
-<a class="card grammar" href="./Grammatica/index.html" data-mark="G"><span class="number">Percorso 02</span><h2>Grammatica</h2><p>Contenuti in preparazione</p><span class="open">Entra nel percorso</span></a>
-<a class="card history" href="./Storia/index.html" data-mark="S"><span class="number">Percorso 03</span><h2>Storia</h2><p>Contenuti in preparazione</p><span class="open">Entra nel percorso</span></a>
-</section>
+<header><p class="eyebrow">gbprof · Secondo anno</p><h1>Grammatica</h1><p class="intro">Contenuti in preparazione</p></header><a class="back" href="../index.html">← Torna all’indice della Seconda</a>
 <footer><span>Secondo anno · Antologia, Grammatica e Storia</span><span>gbprof e Libera</span></footer>
-</main><script>
-// Keep existing bookmarks to Antologia's hash routes useful after the move.
-function forwardLegacyRoute() {
-  if (/^#(?:(?:home|percorso|autori(?:-metodo)?|laboratorio-forma)(?:\/|$)|tappa\/|opera\/|autore\/)/.test(location.hash)) {
-    location.replace(new URL('./Antologia/index.html' + location.search + location.hash, location.href));
-  }
-}
-forwardLegacyRoute();
-window.addEventListener('hashchange', forwardLegacyRoute);
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./sw.js', {scope:'./', updateViaCache:'none'}).catch(console.error);
-  });
-}
-</script></body></html>
+</main></body></html>

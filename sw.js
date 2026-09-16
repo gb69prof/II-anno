@@ -1,48 +1,32 @@
-const CACHE_PREFIX = 'antologia-domande-';
-const CACHE = `${CACHE_PREFIX}v7`;
-const APP_BASE = new URL('./', self.location.href);
-const FALLBACK = new URL('index.html', APP_BASE).href;
-const CORE = [
-  '', 'index.html', 'privacy.html', 'accessibilita.html', 'manifest.webmanifest',
-  'pwa-common/gbprof-accessibility.css', 'pwa-common/gbprof-accessibility.js',
-  'assets/css/app.css', 'assets/js/app.js', 'assets/js/work-view.js', 'assets/js/form-lab-view.js', 'assets/js/author-view.js', 'assets/js/prevert-view.js',
-  'content/percorso.js', 'content/laboratorio-forma.js', 'content/autori/leopardi-infinito.js', 'content/autori/pirandello.js', 'content/autori/prevert-ragazzi.js',
-  'assets/maps/prevert-ragazzi-percorso.svg',
-  'assets/maps/pirandello-mondo.svg', 'assets/maps/pirandello-fratture.svg', 'assets/maps/pirandello-mondo-nuovo.svg',
-  'assets/maps/pirandello-poetica.svg', 'assets/maps/pirandello-opere.svg', 'assets/maps/pirandello-conclusione.svg',
-  'assets/copertina-antologia-domande.png',
-  'icons/icon.svg', 'icons/icon-192.png', 'icons/icon-512.png'
-].map(path => new URL(path, APP_BASE).href);
-
-self.addEventListener('install', event => {
-  event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(CORE)).then(() => self.skipWaiting()));
-});
-
+// Transition worker at the ORIGINAL URL: old installations update this file.
+// No cache or localStorage is deleted: other PWAs share this origin.
+const BASE = new URL('./', self.location.href);
+const LEGACY_FILES = new Set(['manifest.webmanifest', 'privacy.html', 'accessibilita.html']);
+self.addEventListener('install', () => self.skipWaiting());
 self.addEventListener('activate', event => {
-  event.waitUntil(
-    caches.keys()
-      .then(keys => Promise.all(keys.filter(key => key.startsWith(CACHE_PREFIX) && key !== CACHE).map(key => caches.delete(key))))
-      .then(() => self.clients.claim())
-  );
+  event.waitUntil((async () => {
+    await self.clients.claim();
+    const windows = await self.clients.matchAll({type: 'window'});
+    for (const client of windows) {
+      const url = new URL(client.url);
+      // Refresh only the old app's entry point, never other subjects or PWAs.
+      if (url.origin === BASE.origin &&
+          (url.pathname === BASE.pathname || url.pathname === BASE.pathname + 'index.html')) {
+        // Do not await navigation inside activate: it can wait for activation
+        // itself and deadlock the first visit after the update.
+        void client.navigate(client.url).catch(() => {});
+      }
+    }
+  })());
 });
-
 self.addEventListener('fetch', event => {
   if (event.request.method !== 'GET') return;
   const url = new URL(event.request.url);
-  if (url.origin !== self.location.origin) return;
-  if (event.request.mode === 'navigate') {
-    event.respondWith(fetch(event.request).then(response => {
-      const copy = response.clone();
-      caches.open(CACHE).then(cache => cache.put(event.request, copy));
-      return response;
-    }).catch(() => caches.match(event.request).then(cached => cached || caches.match(FALLBACK))));
-    return;
+  if (url.origin !== BASE.origin || !url.pathname.startsWith(BASE.pathname)) return;
+  const path = url.pathname.slice(BASE.pathname.length);
+  if (LEGACY_FILES.has(path) || /^(assets|content|icons|pwa-common)\//.test(path)) {
+    // Requests from an old tab or bookmark continue at their relocated URL.
+    event.respondWith(Response.redirect(new URL('Antologia/' + path + url.search, BASE).href, 302));
   }
-  event.respondWith(caches.match(event.request).then(cached => cached || fetch(event.request).then(response => {
-    if (response.ok) {
-      const copy = response.clone();
-      caches.open(CACHE).then(cache => cache.put(event.request, copy));
-    }
-    return response;
-  })));
+  // All other requests use the network normally, without the old root cache.
 });
