@@ -4,20 +4,10 @@ const BASE = new URL('./', self.location.href);
 const LEGACY_FILES = new Set(['manifest.webmanifest', 'privacy.html', 'accessibilita.html']);
 self.addEventListener('install', () => self.skipWaiting());
 self.addEventListener('activate', event => {
-  event.waitUntil((async () => {
-    await self.clients.claim();
-    const windows = await self.clients.matchAll({type: 'window'});
-    for (const client of windows) {
-      const url = new URL(client.url);
-      // Refresh only the old app's entry point, never other subjects or PWAs.
-      if (url.origin === BASE.origin &&
-          (url.pathname === BASE.pathname || url.pathname === BASE.pathname + 'index.html')) {
-        // Do not await navigation inside activate: it can wait for activation
-        // itself and deadlock the first visit after the update.
-        void client.navigate(client.url).catch(() => {});
-      }
-    }
-  })());
+  // Never force navigation: activation may coincide with a click on a subject.
+  // The former worker already used network-first for page navigations, so the
+  // next online visit/reload shows the new index even before this update.
+  event.waitUntil(self.clients.claim());
 });
 self.addEventListener('fetch', event => {
   if (event.request.method !== 'GET') return;

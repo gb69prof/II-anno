@@ -9,7 +9,7 @@ Ingresso alle PWA di **Antologia**, **Grammatica** e **Storia**, con impostazion
 
 ## Migrazione della PWA
 
-Il file tecnico `sw.js` resta al vecchio indirizzo per aggiornare le registrazioni esistenti. Prende il posto del worker precedente, aggiorna le finestre aperte sul vecchio ingresso e lascia passare le richieste in rete senza usare la vecchia cache. Reindirizza inoltre le richieste dei vecchi client alle risorse trasferite in Antologia. L'indice riconosce i vecchi segnalibri con route hash e li inoltra alla PWA.
+Il file tecnico `sw.js` resta al vecchio indirizzo per aggiornare le registrazioni esistenti. Prende il posto del worker precedente e lascia passare le richieste in rete senza usare la vecchia cache. Non forza il ricaricamento delle finestre, per non interrompere la navigazione. Il vecchio worker usava già la rete per le pagine: alla visita o al ricaricamento online successivo compare il nuovo indice. Il ponte reindirizza inoltre le richieste dei vecchi client alle risorse trasferite in Antologia. L'indice riconosce i vecchi segnalibri con route hash e li inoltra alla PWA.
 
 Il nuovo worker `Antologia/sw.js` ha ambito `Antologia/` e un nome cache legato al suo percorso. Non elimina cache delle altre installazioni. Il ponte non cancella alcuna cache preesistente: quelle storiche vengono conservate perché i vecchi nomi non identificavano in modo univoco il percorso. Le chiavi localStorage restano invariate: appunti, progressi e preferenze si conservano sullo stesso dominio e browser.
 
