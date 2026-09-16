@@ -1,0 +1,2702 @@
+[
+  {
+    "id": "q1",
+    "lesson": "cesare-e-augusto",
+    "kind": "C",
+    "question": "Che natura aveva il primo triumvirato?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Un accordo privato fra tre uomini potenti"
+      },
+      {
+        "id": "1",
+        "text": "Una magistratura eletta annualmente"
+      },
+      {
+        "id": "2",
+        "text": "Una commissione del Senato"
+      },
+      {
+        "id": "3",
+        "text": "Una legge di successione"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Il patto fra Cesare, Pompeo e Crasso non costituiva una magistratura riconosciuta dalla costituzione.",
+    "source": "b0061"
+  },
+  {
+    "id": "q2",
+    "lesson": "cesare-e-augusto",
+    "kind": "C",
+    "question": "Che cosa avvenne ad Alesia nel 52 a.C.?",
+    "options": [
+      {
+        "id": "0",
+        "text": "La sconfitta della resistenza guidata da Vercingetorige"
+      },
+      {
+        "id": "1",
+        "text": "La morte di Crasso"
+      },
+      {
+        "id": "2",
+        "text": "Il passaggio del Rubicone"
+      },
+      {
+        "id": "3",
+        "text": "La vittoria su Pompeo"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Alesia conclude la fase decisiva della resistenza gallica; Pompeo sarà sconfitto a Farsalo.",
+    "source": "b0096"
+  },
+  {
+    "id": "q3",
+    "lesson": "cesare-e-augusto",
+    "kind": "C",
+    "question": "Quale limite violò Cesare attraversando il Rubicone armato?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Il limite del suo comando provinciale"
+      },
+      {
+        "id": "1",
+        "text": "Il confine con il regno egizio"
+      },
+      {
+        "id": "2",
+        "text": "Un accordo con Vercingetorige"
+      },
+      {
+        "id": "3",
+        "text": "Il divieto di accedere al Senato"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Un proconsole non poteva entrare in Italia con le proprie truppe: il gesto avvia la guerra civile.",
+    "source": "b0136"
+  },
+  {
+    "id": "q4",
+    "lesson": "cesare-e-augusto",
+    "kind": "C",
+    "question": "Che cosa rendeva eccezionale il titolo dictator perpetuo?",
+    "options": [
+      {
+        "id": "0",
+        "text": "L’assenza di un limite temporale"
+      },
+      {
+        "id": "1",
+        "text": "La collegialità annuale"
+      },
+      {
+        "id": "2",
+        "text": "La rinuncia alle legioni"
+      },
+      {
+        "id": "3",
+        "text": "L’elezione popolare dei governatori"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Una magistratura d’emergenza perdeva la temporaneità che ne limitava il potere.",
+    "source": "b0176"
+  },
+  {
+    "id": "q5",
+    "lesson": "cesare-e-augusto",
+    "kind": "C",
+    "question": "Quale risorsa diede il testamento a Ottaviano?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Adozione, nome ed eredità di Cesare"
+      },
+      {
+        "id": "1",
+        "text": "Il consolato automatico a vita"
+      },
+      {
+        "id": "2",
+        "text": "Il titolo di Augusto"
+      },
+      {
+        "id": "3",
+        "text": "Il comando di tutte le province"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Il testamento non gli attribuiva automaticamente le magistrature: gli offriva una potente base di legittimazione.",
+    "source": "b0254"
+  },
+  {
+    "id": "q6",
+    "lesson": "cesare-e-augusto",
+    "kind": "C",
+    "question": "Che cosa istituì la lex Titia?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Il secondo triumvirato"
+      },
+      {
+        "id": "1",
+        "text": "Il primo triumvirato"
+      },
+      {
+        "id": "2",
+        "text": "La dittatura di Silla"
+      },
+      {
+        "id": "3",
+        "text": "Il principato di Tiberio"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Nel 43 a.C. il secondo triumvirato ricevette riconoscimento giuridico e poteri straordinari.",
+    "source": "b0261"
+  },
+  {
+    "id": "q7",
+    "lesson": "cesare-e-augusto",
+    "kind": "C",
+    "question": "Chi fu l’avversario dello schieramento ottavianeo ad Azio?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Antonio e Cleopatra"
+      },
+      {
+        "id": "1",
+        "text": "Bruto e Cassio"
+      },
+      {
+        "id": "2",
+        "text": "Pompeo e Catone"
+      },
+      {
+        "id": "3",
+        "text": "Sesto Pompeo e Lepido"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Azio nel 31 a.C. segna il crollo politico dello schieramento di Antonio e Cleopatra.",
+    "source": "b0330"
+  },
+  {
+    "id": "q8",
+    "lesson": "cesare-e-augusto",
+    "kind": "C",
+    "question": "A che cosa si riferisce auctoritas?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Al prestigio e all’influenza del princeps"
+      },
+      {
+        "id": "1",
+        "text": "Al solo salario dei legionari"
+      },
+      {
+        "id": "2",
+        "text": "Alla cittadinanza dei provinciali"
+      },
+      {
+        "id": "3",
+        "text": "Alla durata legale del consolato"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Auctoritas non coincide con la potestas di una singola magistratura.",
+    "source": "b0376"
+  },
+  {
+    "id": "q9",
+    "lesson": "cesare-e-augusto",
+    "kind": "C",
+    "question": "Quali poteri furono centrali nella sistemazione del 23 a.C.?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Tribunicia potestas e imperium proconsolare"
+      },
+      {
+        "id": "1",
+        "text": "Dittatura perpetua e titolo regio"
+      },
+      {
+        "id": "2",
+        "text": "Censura annuale e triumvirato"
+      },
+      {
+        "id": "3",
+        "text": "Consolato a vita e monarchia ereditaria dichiarata"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Augusto abbandonò il consolato annuale e costruì una combinazione più flessibile di poteri.",
+    "source": "b0408"
+  },
+  {
+    "id": "q10",
+    "lesson": "cesare-e-augusto",
+    "kind": "C",
+    "question": "Chi succedette ad Augusto nel 14 d.C.?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Tiberio"
+      },
+      {
+        "id": "1",
+        "text": "Agrippa"
+      },
+      {
+        "id": "2",
+        "text": "Gaio Cesare"
+      },
+      {
+        "id": "3",
+        "text": "Marcello"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Gli altri candidati morirono prima di Augusto; Tiberio fu adottato e associato a poteri rilevanti.",
+    "source": "b0522"
+  },
+  {
+    "id": "q11",
+    "lesson": "cesare-e-augusto",
+    "kind": "N",
+    "question": "Perché l’espansione rese più difficile l’equilibrio repubblicano?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Accrebbe risorse e comandi oltre la scala delle istituzioni cittadine"
+      },
+      {
+        "id": "1",
+        "text": "Eliminò la competizione aristocratica"
+      },
+      {
+        "id": "2",
+        "text": "Rese superflui gli eserciti"
+      },
+      {
+        "id": "3",
+        "text": "Trasferì ogni decisione ai provinciali"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Il problema è il rapporto fra ampiezza del dominio e istituzioni, aggravato dalla competizione per risorse e comandi.",
+    "source": "b0014"
+  },
+  {
+    "id": "q12",
+    "lesson": "cesare-e-augusto",
+    "kind": "N",
+    "question": "Come si rafforzò il legame fra soldati e comandanti?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Attraverso campagne prolungate e aspettative di premi e terre"
+      },
+      {
+        "id": "1",
+        "text": "Con una singola legge che privatizzò tutte le legioni"
+      },
+      {
+        "id": "2",
+        "text": "Perché i soldati cessarono di essere cittadini"
+      },
+      {
+        "id": "3",
+        "text": "Grazie all’abolizione delle ricompense"
+      }
+    ],
+    "correct": "0",
+    "explanation": "La dispensa insiste su un processo graduale, non su una riforma che creò improvvisamente eserciti privati.",
+    "source": "b0022"
+  },
+  {
+    "id": "q13",
+    "lesson": "cesare-e-augusto",
+    "kind": "N",
+    "question": "Perché i Commentarii richiedono lettura critica?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Cesare vi giustifica anche la propria azione politica"
+      },
+      {
+        "id": "1",
+        "text": "Sono privi di ogni informazione storica"
+      },
+      {
+        "id": "2",
+        "text": "Furono scritti da Pompeo"
+      },
+      {
+        "id": "3",
+        "text": "Sono una trascrizione neutrale delle assemblee"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Essere fonte indispensabile non esclude l’autorappresentazione del comandante.",
+    "source": "b0101"
+  },
+  {
+    "id": "q14",
+    "lesson": "cesare-e-augusto",
+    "kind": "N",
+    "question": "Perché alcuni aristocratici rifiutavano la clementia?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Essere perdonati confermava la loro dipendenza dal vincitore"
+      },
+      {
+        "id": "1",
+        "text": "Il perdono toglieva ogni potere a Cesare"
+      },
+      {
+        "id": "2",
+        "text": "La clemenza eliminava il Senato per legge"
+      },
+      {
+        "id": "3",
+        "text": "Tutti i perdonati perdevano automaticamente la cittadinanza"
+      }
+    ],
+    "correct": "0",
+    "explanation": "La clemenza rafforzava chi decideva il perdono e poteva umiliare chi aspirava all’autonomia politica.",
+    "source": "b0184"
+  },
+  {
+    "id": "q15",
+    "lesson": "cesare-e-augusto",
+    "kind": "N",
+    "question": "Perché il cesaricidio non restaurò la Repubblica?",
+    "options": [
+      {
+        "id": "0",
+        "text": "I congiurati non avevano un governo né il controllo delle risorse decisive"
+      },
+      {
+        "id": "1",
+        "text": "La Repubblica fu abolita da una legge quel giorno"
+      },
+      {
+        "id": "2",
+        "text": "Ogni legione passò subito a Bruto"
+      },
+      {
+        "id": "3",
+        "text": "Il testamento nominò Antonio re"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Eliminare Cesare non eliminava veterani, risorse e conflitti che sostenevano il suo potere.",
+    "source": "b0222"
+  },
+  {
+    "id": "q16",
+    "lesson": "cesare-e-augusto",
+    "kind": "N",
+    "question": "Quale nesso lega proscrizioni e guerra?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Confische e uccisioni eliminavano rivali e finanziavano eserciti"
+      },
+      {
+        "id": "1",
+        "text": "Le proscrizioni riducevano soltanto le imposte"
+      },
+      {
+        "id": "2",
+        "text": "Servivano a eleggere consoli provinciali"
+      },
+      {
+        "id": "3",
+        "text": "Scioglievano le legioni dei triumviri"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Violenza politica e raccolta di denaro erano funzioni connesse del sistema triumvirale.",
+    "source": "b0295"
+  },
+  {
+    "id": "q17",
+    "lesson": "cesare-e-augusto",
+    "kind": "N",
+    "question": "Perché la guerra finale fu dichiarata a Cleopatra?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Per presentare una guerra civile come difesa contro una minaccia esterna"
+      },
+      {
+        "id": "1",
+        "text": "Perché Antonio non aveva più soldati romani"
+      },
+      {
+        "id": "2",
+        "text": "Perché l’Egitto governava il Senato"
+      },
+      {
+        "id": "3",
+        "text": "Per evitare qualsiasi uso di propaganda"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Il lessico della guerra esterna nascondeva il conflitto fra comandanti romani.",
+    "source": "b0336"
+  },
+  {
+    "id": "q18",
+    "lesson": "cesare-e-augusto",
+    "kind": "N",
+    "question": "Perché la restituzione del 27 a.C. non ripristinò il vecchio sistema?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Augusto mantenne province e forze che impedivano una libera competizione al vertice"
+      },
+      {
+        "id": "1",
+        "text": "Il Senato cessò definitivamente di riunirsi"
+      },
+      {
+        "id": "2",
+        "text": "Tutte le magistrature furono cancellate"
+      },
+      {
+        "id": "3",
+        "text": "Roma divenne una democrazia diretta"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Le istituzioni continuavano a operare, ma senza contendibilità reale della supremazia.",
+    "source": "b0374"
+  },
+  {
+    "id": "q19",
+    "lesson": "cesare-e-augusto",
+    "kind": "N",
+    "question": "Perché la Pax Augusta non equivale a pace universale?",
+    "options": [
+      {
+        "id": "0",
+        "text": "La stabilità interna conviveva con guerre alle frontiere"
+      },
+      {
+        "id": "1",
+        "text": "L’esercito venne interamente sciolto"
+      },
+      {
+        "id": "2",
+        "text": "Le province non furono più amministrate"
+      },
+      {
+        "id": "3",
+        "text": "Le guerre civili continuarono ininterrottamente in Italia"
+      }
+    ],
+    "correct": "0",
+    "explanation": "La pace celebrata riguarda soprattutto la cessazione delle guerre civili.",
+    "source": "b0452"
+  },
+  {
+    "id": "q20",
+    "lesson": "cesare-e-augusto",
+    "kind": "N",
+    "question": "Quale confronto coglie la differenza fra Cesare e Augusto?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Il primo espose l’eccezione; il secondo la rese compatibile con forme tradizionali"
+      },
+      {
+        "id": "1",
+        "text": "Cesare rifiutò ogni carica mentre Augusto divenne re"
+      },
+      {
+        "id": "2",
+        "text": "Augusto rinunciò al controllo militare"
+      },
+      {
+        "id": "3",
+        "text": "I due restaurarono identicamente la concorrenza repubblicana"
+      }
+    ],
+    "correct": "0",
+    "explanation": "La differenza riguarda forma, legittimazione e durata del potere, non l’assenza di guerre nell’ascesa di Augusto.",
+    "source": "b0558"
+  },
+  {
+    "id": "q21",
+    "lesson": "il-potere-e-il-sangue",
+    "kind": "C",
+    "question": "Come si chiamavano i poteri dei tribuni conferiti ad Augusto?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Tribunicia potestas"
+      },
+      {
+        "id": "1",
+        "text": "Lex Titia"
+      },
+      {
+        "id": "2",
+        "text": "Damnatio memoriae"
+      },
+      {
+        "id": "3",
+        "text": "Donativum"
+      }
+    ],
+    "correct": "0",
+    "explanation": "La tribunicia potestas consentiva iniziativa politica e protezione senza elezione annuale a tribuno.",
+    "source": "b0028"
+  },
+  {
+    "id": "q22",
+    "lesson": "il-potere-e-il-sangue",
+    "kind": "C",
+    "question": "Chi concentrò i pretoriani in un unico campo presso Roma?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Seiano"
+      },
+      {
+        "id": "1",
+        "text": "Germanico"
+      },
+      {
+        "id": "2",
+        "text": "Agrippa"
+      },
+      {
+        "id": "3",
+        "text": "Muciano"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Seiano, prefetto del pretorio, accrebbe il peso politico della guardia.",
+    "source": "b0049"
+  },
+  {
+    "id": "q23",
+    "lesson": "il-potere-e-il-sangue",
+    "kind": "C",
+    "question": "Come va trattata la presunta follia di Caligola?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Come una spiegazione delle fonti ostili, non una diagnosi medica certa"
+      },
+      {
+        "id": "1",
+        "text": "Come una diagnosi clinica provata"
+      },
+      {
+        "id": "2",
+        "text": "Come una legge del Senato"
+      },
+      {
+        "id": "3",
+        "text": "Come un fatto attestato dal suo medico moderno"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Non possiamo formulare diagnosi sicure a distanza sulla base di narrazioni ostili.",
+    "source": "b0062"
+  },
+  {
+    "id": "q24",
+    "lesson": "il-potere-e-il-sangue",
+    "kind": "C",
+    "question": "Quale conquista diede prestigio militare a Claudio?",
+    "options": [
+      {
+        "id": "0",
+        "text": "La Britannia nel 43 d.C."
+      },
+      {
+        "id": "1",
+        "text": "La Dacia nel 106"
+      },
+      {
+        "id": "2",
+        "text": "La Gallia nel 52 a.C."
+      },
+      {
+        "id": "3",
+        "text": "Palmira nel 272"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Claudio intervenne nella campagna britannica per rafforzare anche la propria immagine.",
+    "source": "b0080"
+  },
+  {
+    "id": "q25",
+    "lesson": "il-potere-e-il-sangue",
+    "kind": "C",
+    "question": "Chi erano Narcisso, Pallante e Callisto?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Liberti con importanti funzioni amministrative"
+      },
+      {
+        "id": "1",
+        "text": "Tre imperatori del 69"
+      },
+      {
+        "id": "2",
+        "text": "Generali avversari di Claudio"
+      },
+      {
+        "id": "3",
+        "text": "Senatori della congiura di Bruto"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Gli uffici della casa imperiale offrivano continuità amministrativa attraverso uomini dipendenti dal principe.",
+    "source": "b0078"
+  },
+  {
+    "id": "q26",
+    "lesson": "il-potere-e-il-sangue",
+    "kind": "C",
+    "question": "Che cosa possiamo affermare sull’incendio del 64?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Non è provato che Nerone lo abbia ordinato"
+      },
+      {
+        "id": "1",
+        "text": "Nerone è certamente l’autore materiale"
+      },
+      {
+        "id": "2",
+        "text": "Tacito non ne parla"
+      },
+      {
+        "id": "3",
+        "text": "Distrusse soltanto la Domus Aurea già esistente"
+      }
+    ],
+    "correct": "0",
+    "explanation": "La dispensa distingue sospetti e prove e ricorda i soccorsi organizzati dall’imperatore.",
+    "source": "b0098"
+  },
+  {
+    "id": "q27",
+    "lesson": "il-potere-e-il-sangue",
+    "kind": "C",
+    "question": "Quale dinastia termina con Nerone?",
+    "options": [
+      {
+        "id": "0",
+        "text": "La giulio-claudia"
+      },
+      {
+        "id": "1",
+        "text": "La flavia"
+      },
+      {
+        "id": "2",
+        "text": "La severiana"
+      },
+      {
+        "id": "3",
+        "text": "La carolingia"
+      }
+    ],
+    "correct": "0",
+    "explanation": "La morte di Nerone nel 68 lascia privo di un erede riconosciuto il sistema dinastico giulio-claudio.",
+    "source": "b0103"
+  },
+  {
+    "id": "q28",
+    "lesson": "il-potere-e-il-sangue",
+    "kind": "C",
+    "question": "Che cosa rifiutò Galba ai pretoriani?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Il donativo promesso"
+      },
+      {
+        "id": "1",
+        "text": "La restituzione della cittadinanza"
+      },
+      {
+        "id": "2",
+        "text": "La nomina di Augusto"
+      },
+      {
+        "id": "3",
+        "text": "L’apertura del Colosseo"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Il rifiuto della ricompensa alienò un sostegno militare essenziale.",
+    "source": "b0115"
+  },
+  {
+    "id": "q29",
+    "lesson": "il-potere-e-il-sangue",
+    "kind": "C",
+    "question": "Dove fu sconfitto Otone nel 69?",
+    "options": [
+      {
+        "id": "0",
+        "text": "A Bedriaco"
+      },
+      {
+        "id": "1",
+        "text": "A Farsalo"
+      },
+      {
+        "id": "2",
+        "text": "Al ponte Milvio"
+      },
+      {
+        "id": "3",
+        "text": "Ad Adrianopoli"
+      }
+    ],
+    "correct": "0",
+    "explanation": "La prima battaglia di Bedriaco oppose le forze otoniane a quelle di Vitellio.",
+    "source": "b0130"
+  },
+  {
+    "id": "q30",
+    "lesson": "il-potere-e-il-sangue",
+    "kind": "C",
+    "question": "Che cosa documenta la lex de imperio Vespasiani?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Prerogative del principe richiamate attraverso precedenti"
+      },
+      {
+        "id": "1",
+        "text": "La prima abolizione di ogni legge romana"
+      },
+      {
+        "id": "2",
+        "text": "La cittadinanza universale del 212"
+      },
+      {
+        "id": "3",
+        "text": "La divisione tetrarchica"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Il frammento non è una costituzione completa né prova l’assenza di precedenti investiture.",
+    "source": "b0159"
+  },
+  {
+    "id": "q31",
+    "lesson": "il-potere-e-il-sangue",
+    "kind": "N",
+    "question": "Perché la successione era strutturalmente fragile?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Un potere personale non disponeva di una regola dinastica automatica"
+      },
+      {
+        "id": "1",
+        "text": "Il Senato eleggeva sempre all’unanimità un re"
+      },
+      {
+        "id": "2",
+        "text": "Ogni legione era esclusa dalla politica"
+      },
+      {
+        "id": "3",
+        "text": "Le magistrature rendevano impossibile ogni continuità"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Adozione, famiglia, consenso e armi concorrevano senza una procedura pacifica sempre efficace.",
+    "source": "b0032"
+  },
+  {
+    "id": "q32",
+    "lesson": "il-potere-e-il-sangue",
+    "kind": "N",
+    "question": "Come possono coesistere buona amministrazione e debolezza politica in Tiberio?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Prudenza gestionale e incapacità di costruire fiducia sono aspetti diversi"
+      },
+      {
+        "id": "1",
+        "text": "Una buona gestione elimina sempre il conflitto"
+      },
+      {
+        "id": "2",
+        "text": "La politica non riguarda il rapporto con il Senato"
+      },
+      {
+        "id": "3",
+        "text": "L’isolamento dimostra necessariamente incapacità finanziaria"
+      }
+    ],
+    "correct": "0",
+    "explanation": "La dispensa distingue l’efficienza amministrativa dalla legittimazione e dai rapporti politici.",
+    "source": "b0047"
+  },
+  {
+    "id": "q33",
+    "lesson": "il-potere-e-il-sangue",
+    "kind": "N",
+    "question": "Perché la statua nel Tempio di Gerusalemme era esplosiva?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Imporre il culto imperiale violava un vincolo religioso fondamentale"
+      },
+      {
+        "id": "1",
+        "text": "Gli Ebrei chiedevano soltanto un prezzo minore"
+      },
+      {
+        "id": "2",
+        "text": "La statua avrebbe abolito il Senato"
+      },
+      {
+        "id": "3",
+        "text": "Il Tempio si trovava a Roma"
+      }
+    ],
+    "correct": "0",
+    "explanation": "La questione religiosa aveva conseguenze dirette sull’obbedienza e sul rischio di rivolta.",
+    "source": "b0064"
+  },
+  {
+    "id": "q34",
+    "lesson": "il-potere-e-il-sangue",
+    "kind": "N",
+    "question": "Perché Claudio integrava le élite galliche?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Per utilizzare collaborazione, competenze e lealtà provinciali"
+      },
+      {
+        "id": "1",
+        "text": "Per abolire ogni distinzione sociale"
+      },
+      {
+        "id": "2",
+        "text": "Per espellere tutti gli Italici dal Senato"
+      },
+      {
+        "id": "3",
+        "text": "Per rinunciare al governo della Gallia"
+      }
+    ],
+    "correct": "0",
+    "explanation": "L’integrazione era una scelta di governo, non una semplice generosità universale.",
+    "source": "b0081"
+  },
+  {
+    "id": "q35",
+    "lesson": "il-potere-e-il-sangue",
+    "kind": "N",
+    "question": "Perché i liberti erano utili al principe e invisi ai senatori?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Garantivano continuità ma davano influenza a uomini esterni all’aristocrazia"
+      },
+      {
+        "id": "1",
+        "text": "Erano eletti annualmente dalle legioni"
+      },
+      {
+        "id": "2",
+        "text": "Non avevano alcun contatto con il governo"
+      },
+      {
+        "id": "3",
+        "text": "Possedevano una regalità ereditaria indipendente"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Il potere degli ex schiavi dipendenti dalla casa imperiale metteva in discussione il prestigio senatorio.",
+    "source": "b0079"
+  },
+  {
+    "id": "q36",
+    "lesson": "il-potere-e-il-sangue",
+    "kind": "N",
+    "question": "Perché il consenso di parte della plebe non salvò Nerone?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Perse il sostegno decisivo di eserciti e pretoriani"
+      },
+      {
+        "id": "1",
+        "text": "Tutta la popolazione aveva cessato di conoscerlo"
+      },
+      {
+        "id": "2",
+        "text": "Il pubblico urbano controllava ogni provincia"
+      },
+      {
+        "id": "3",
+        "text": "Gli spettacoli sostituivano legalmente l’esercito"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Il consenso sociale era importante, ma non sufficiente quando veniva meno la coalizione armata.",
+    "source": "b0102"
+  },
+  {
+    "id": "q37",
+    "lesson": "il-potere-e-il-sangue",
+    "kind": "N",
+    "question": "Perché l’adozione di Pisone accelerò la crisi di Galba?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Escluse Otone senza procurare un sostegno abbastanza forte"
+      },
+      {
+        "id": "1",
+        "text": "Eliminò tutte le legioni provinciali"
+      },
+      {
+        "id": "2",
+        "text": "Restituì automaticamente la Repubblica"
+      },
+      {
+        "id": "3",
+        "text": "Fu imposta da Vespasiano in Egitto"
+      }
+    ],
+    "correct": "0",
+    "explanation": "La scelta dinastica non compensava la perdita di consenso militare e spinse Otone alla congiura.",
+    "source": "b0117"
+  },
+  {
+    "id": "q38",
+    "lesson": "il-potere-e-il-sangue",
+    "kind": "N",
+    "question": "Perché Vitellio non era stabile dopo la vittoria?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Le altre armate non accettavano il predominio delle legioni renane"
+      },
+      {
+        "id": "1",
+        "text": "Vincere comportava perdere il titolo imperiale"
+      },
+      {
+        "id": "2",
+        "text": "Il Senato aveva abolito tutte le province"
+      },
+      {
+        "id": "3",
+        "text": "L’Egitto non produceva più grano"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Il sostegno di una parte dell’esercito non garantiva l’adesione delle altre regioni.",
+    "source": "b0143"
+  },
+  {
+    "id": "q39",
+    "lesson": "il-potere-e-il-sangue",
+    "kind": "N",
+    "question": "Che cosa mostra l’arcanum imperii?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Le legioni provinciali potevano creare un imperatore fuori Roma"
+      },
+      {
+        "id": "1",
+        "text": "Ogni successione doveva avvenire sul Campidoglio"
+      },
+      {
+        "id": "2",
+        "text": "La guardia era ormai irrilevante in ogni caso"
+      },
+      {
+        "id": "3",
+        "text": "Il Senato cessava di avere qualsiasi funzione"
+      }
+    ],
+    "correct": "0",
+    "explanation": "La forza decisiva poteva nascere nelle province, mentre Roma continuava a conferire riconoscimento giuridico.",
+    "source": "b0157"
+  },
+  {
+    "id": "q40",
+    "lesson": "il-potere-e-il-sangue",
+    "kind": "N",
+    "question": "Quale messaggio politico aveva l’Anfiteatro Flavio?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Restituire all’uso pubblico uno spazio del lusso neroniano"
+      },
+      {
+        "id": "1",
+        "text": "Celebrare la continuazione della reggia privata"
+      },
+      {
+        "id": "2",
+        "text": "Allontanare ogni spettacolo da Roma"
+      },
+      {
+        "id": "3",
+        "text": "Sostituire il Senato con un’arena legislativa"
+      }
+    ],
+    "correct": "0",
+    "explanation": "L’edilizia comunica una diversa relazione fra principe e città.",
+    "source": "b0160"
+  },
+  {
+    "id": "q41",
+    "lesson": "roma-potere-esercito-crisi",
+    "kind": "C",
+    "question": "Quale dinastia fondò Vespasiano?",
+    "options": [
+      {
+        "id": "0",
+        "text": "La flavia"
+      },
+      {
+        "id": "1",
+        "text": "La giulio-claudia"
+      },
+      {
+        "id": "2",
+        "text": "La severiana"
+      },
+      {
+        "id": "3",
+        "text": "La tetrarchica"
+      }
+    ],
+    "correct": "0",
+    "explanation": "La successione flavia comprende Vespasiano, Tito e Domiziano.",
+    "source": "b0043"
+  },
+  {
+    "id": "q42",
+    "lesson": "roma-potere-esercito-crisi",
+    "kind": "C",
+    "question": "Quale calamità segnò l’inizio del regno di Tito?",
+    "options": [
+      {
+        "id": "0",
+        "text": "L’eruzione del Vesuvio nel 79"
+      },
+      {
+        "id": "1",
+        "text": "La peste del 1348"
+      },
+      {
+        "id": "2",
+        "text": "Il sacco di Roma del 410"
+      },
+      {
+        "id": "3",
+        "text": "La cattura di Valeriano"
+      }
+    ],
+    "correct": "0",
+    "explanation": "L’intervento nelle calamità contribuì alla memoria favorevole di Tito.",
+    "source": "b0053"
+  },
+  {
+    "id": "q43",
+    "lesson": "roma-potere-esercito-crisi",
+    "kind": "C",
+    "question": "Chi adottò Traiano?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Nerva"
+      },
+      {
+        "id": "1",
+        "text": "Domiziano"
+      },
+      {
+        "id": "2",
+        "text": "Commodo"
+      },
+      {
+        "id": "3",
+        "text": "Caracalla"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Nerva cercò una base militare più forte associando un generale prestigioso.",
+    "source": "b0059"
+  },
+  {
+    "id": "q44",
+    "lesson": "roma-potere-esercito-crisi",
+    "kind": "C",
+    "question": "Da quali truppe fu sostenuto Settimio Severo?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Dalle legioni pannoniche"
+      },
+      {
+        "id": "1",
+        "text": "Dalla sola guardia di Caligola"
+      },
+      {
+        "id": "2",
+        "text": "Da un esercito cartaginese"
+      },
+      {
+        "id": "3",
+        "text": "Dalle truppe carolingie"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Severo emerse dalla guerra civile del 193 con il sostegno delle armate provinciali.",
+    "source": "b0065"
+  },
+  {
+    "id": "q45",
+    "lesson": "roma-potere-esercito-crisi",
+    "kind": "C",
+    "question": "Che cosa dispose la Constitutio Antoniniana del 212?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Cittadinanza a quasi tutti gli abitanti liberi dell’Impero"
+      },
+      {
+        "id": "1",
+        "text": "Libertà immediata per tutti gli schiavi"
+      },
+      {
+        "id": "2",
+        "text": "Abolizione di tutte le imposte"
+      },
+      {
+        "id": "3",
+        "text": "Accesso automatico di tutti al Senato"
+      }
+    ],
+    "correct": "0",
+    "explanation": "L’estensione era giuridica e non equivaleva a uguaglianza politica o abolizione della schiavitù.",
+    "source": "b0071"
+  },
+  {
+    "id": "q46",
+    "lesson": "roma-potere-esercito-crisi",
+    "kind": "C",
+    "question": "Quale evento segna l’inizio convenzionale dell’anarchia militare?",
+    "options": [
+      {
+        "id": "0",
+        "text": "L’uccisione di Alessandro Severo nel 235"
+      },
+      {
+        "id": "1",
+        "text": "La morte di Augusto nel 14"
+      },
+      {
+        "id": "2",
+        "text": "La battaglia di Azio"
+      },
+      {
+        "id": "3",
+        "text": "L’abdicazione del 305"
+      }
+    ],
+    "correct": "0",
+    "explanation": "La fine dei Severi apre la fase 235–284 di forte instabilità.",
+    "source": "b0083"
+  },
+  {
+    "id": "q47",
+    "lesson": "roma-potere-esercito-crisi",
+    "kind": "C",
+    "question": "Chi catturò Valeriano nel 260?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Sapore I"
+      },
+      {
+        "id": "1",
+        "text": "Zenobia"
+      },
+      {
+        "id": "2",
+        "text": "Vercingetorige"
+      },
+      {
+        "id": "3",
+        "text": "Alarico"
+      }
+    ],
+    "correct": "0",
+    "explanation": "La cattura per mano sasanide colpì gravemente il prestigio imperiale.",
+    "source": "b0090"
+  },
+  {
+    "id": "q48",
+    "lesson": "roma-potere-esercito-crisi",
+    "kind": "C",
+    "question": "Quali poteri regionali si affermarono durante la frammentazione?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Impero delle Gallie e Palmira"
+      },
+      {
+        "id": "1",
+        "text": "Regno franco e regno longobardo"
+      },
+      {
+        "id": "2",
+        "text": "Repubbliche di Atene e Sparta"
+      },
+      {
+        "id": "3",
+        "text": "Impero carolingio e califfato"
+      }
+    ],
+    "correct": "0",
+    "explanation": "I poteri occidentale e orientale rispondevano anche alle necessità di difesa locale.",
+    "source": "b0093"
+  },
+  {
+    "id": "q49",
+    "lesson": "roma-potere-esercito-crisi",
+    "kind": "C",
+    "question": "Quale imperatore riunificò l’Impero e fortificò Roma?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Aureliano"
+      },
+      {
+        "id": "1",
+        "text": "Galba"
+      },
+      {
+        "id": "2",
+        "text": "Nerone"
+      },
+      {
+        "id": "3",
+        "text": "Otone"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Aureliano sconfisse Palmira e l’Impero delle Gallie e costruì le nuove mura.",
+    "source": "b0097"
+  },
+  {
+    "id": "q50",
+    "lesson": "roma-potere-esercito-crisi",
+    "kind": "C",
+    "question": "Da chi era composta la tetrarchia iniziale?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Due Augusti e due Cesari"
+      },
+      {
+        "id": "1",
+        "text": "Quattro consoli annuali"
+      },
+      {
+        "id": "2",
+        "text": "Un Augusto e tre re indipendenti"
+      },
+      {
+        "id": "3",
+        "text": "Due senatori e due tribuni"
+      }
+    ],
+    "correct": "0",
+    "explanation": "La gerarchia prevedeva due sovrani maggiori e due collaboratori destinati a succedere.",
+    "source": "b0105"
+  },
+  {
+    "id": "q51",
+    "lesson": "roma-potere-esercito-crisi",
+    "kind": "N",
+    "question": "Perché Vespasiano affiancò diritto e ricostruzione alla vittoria?",
+    "options": [
+      {
+        "id": "0",
+        "text": "La forza militare doveva diventare autorità accettata e governo stabile"
+      },
+      {
+        "id": "1",
+        "text": "La vittoria aboliva ogni bisogno di entrate"
+      },
+      {
+        "id": "2",
+        "text": "Il diritto sostituiva completamente le legioni"
+      },
+      {
+        "id": "3",
+        "text": "Il Senato non riconosceva alcuna legge"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Un vincitore provinciale aveva bisogno di stabilizzare il rapporto con istituzioni, esercito e contribuenti.",
+    "source": "b0043"
+  },
+  {
+    "id": "q52",
+    "lesson": "roma-potere-esercito-crisi",
+    "kind": "N",
+    "question": "Perché la morte di Commodo riaprì il problema delle legioni?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Il sistema non disponeva di un passaggio pacifico del potere garantito"
+      },
+      {
+        "id": "1",
+        "text": "Commodo aveva abolito tutti gli eserciti"
+      },
+      {
+        "id": "2",
+        "text": "L’adozione costituiva una costituzione inderogabile"
+      },
+      {
+        "id": "3",
+        "text": "I provinciali non potevano più combattere"
+      }
+    ],
+    "correct": "0",
+    "explanation": "La stabilità di alcuni regni non cancellava la fragilità strutturale della successione.",
+    "source": "b0064"
+  },
+  {
+    "id": "q53",
+    "lesson": "roma-potere-esercito-crisi",
+    "kind": "N",
+    "question": "Quale contraddizione comportavano paghe militari maggiori?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Rafforzavano la fedeltà ma accrescevano il fabbisogno fiscale"
+      },
+      {
+        "id": "1",
+        "text": "Diminuivano sempre tutte le spese pubbliche"
+      },
+      {
+        "id": "2",
+        "text": "Rendevano inutili i tributi"
+      },
+      {
+        "id": "3",
+        "text": "Eliminavano automaticamente le rivalità"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Il sostegno dei soldati aveva un costo che ricadeva sulla società e sulle risorse dello Stato.",
+    "source": "b0067"
+  },
+  {
+    "id": "q54",
+    "lesson": "roma-potere-esercito-crisi",
+    "kind": "N",
+    "question": "Quale nesso lega cittadinanza e fiscalità sotto Caracalla?",
+    "options": [
+      {
+        "id": "0",
+        "text": "L’estensione ampliava anche la platea di imposte riservate ai cittadini"
+      },
+      {
+        "id": "1",
+        "text": "I nuovi cittadini erano esenti da ogni tributo"
+      },
+      {
+        "id": "2",
+        "text": "La cittadinanza aboliva le eredità"
+      },
+      {
+        "id": "3",
+        "text": "L’editto aveva soltanto effetti militari"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Integrazione e motivazioni fiscali si intrecciano; il provvedimento non si riduce a una sola causa.",
+    "source": "b0074"
+  },
+  {
+    "id": "q55",
+    "lesson": "roma-potere-esercito-crisi",
+    "kind": "N",
+    "question": "Perché le guerre fra pretendenti indebolivano il limes?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Sottraevano soldati e risorse alla difesa comune"
+      },
+      {
+        "id": "1",
+        "text": "Rendevano i confini geograficamente più corti"
+      },
+      {
+        "id": "2",
+        "text": "Impedivano ai nemici di attraversare i fiumi"
+      },
+      {
+        "id": "3",
+        "text": "Abolivano la moneta straniera"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Gli eserciti impiegati contro rivali romani lasciavano più vulnerabili le frontiere.",
+    "source": "b0088"
+  },
+  {
+    "id": "q56",
+    "lesson": "roma-potere-esercito-crisi",
+    "kind": "N",
+    "question": "Perché le secessioni potevano essere anche risposte alla crisi?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Le regioni cercavano difesa quando il centro non la garantiva"
+      },
+      {
+        "id": "1",
+        "text": "Tutte volevano cancellare la cultura romana"
+      },
+      {
+        "id": "2",
+        "text": "Le province non erano mai state romane"
+      },
+      {
+        "id": "3",
+        "text": "La loro nascita fu decisa dalla tetrarchia"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Autonomia regionale e difesa del territorio potevano convivere senza un progetto di distruzione di Roma.",
+    "source": "b0093"
+  },
+  {
+    "id": "q57",
+    "lesson": "roma-potere-esercito-crisi",
+    "kind": "N",
+    "question": "Quale circolo vizioso descrive la crisi?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Guerra, minori risorse, maggiori prelievi e nuova instabilità"
+      },
+      {
+        "id": "1",
+        "text": "Pace, abolizione del fisco e crescita militare gratuita"
+      },
+      {
+        "id": "2",
+        "text": "Riduzione delle spese e scomparsa dei conflitti"
+      },
+      {
+        "id": "3",
+        "text": "Più moneta d’argento puro e prezzi sempre minori"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Crisi militare, politica ed economica si alimentavano reciprocamente.",
+    "source": "b0089"
+  },
+  {
+    "id": "q58",
+    "lesson": "roma-potere-esercito-crisi",
+    "kind": "N",
+    "question": "Perché le mura aureliane sono un segno della trasformazione?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Anche Roma sentiva ormai la necessità di difendersi"
+      },
+      {
+        "id": "1",
+        "text": "Provavano la fine di ogni guerra"
+      },
+      {
+        "id": "2",
+        "text": "Separavano quattro Stati indipendenti"
+      },
+      {
+        "id": "3",
+        "text": "Trasferivano la capitale in Gallia"
+      }
+    ],
+    "correct": "0",
+    "explanation": "La fortificazione della città esprime una nuova percezione dell’insicurezza.",
+    "source": "b0099"
+  },
+  {
+    "id": "q59",
+    "lesson": "roma-potere-esercito-crisi",
+    "kind": "N",
+    "question": "Perché Diocleziano moltiplicò le province?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Per rendere il controllo capillare e ridurre la forza dei governatori"
+      },
+      {
+        "id": "1",
+        "text": "Per concentrare tutte le truppe in un solo governatore"
+      },
+      {
+        "id": "2",
+        "text": "Per abolire la riscossione fiscale"
+      },
+      {
+        "id": "3",
+        "text": "Per restaurare le assemblee cittadine come governo sovrano"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Unità più piccole limitavano l’accumulo di risorse utili a un’usurpazione.",
+    "source": "b0107"
+  },
+  {
+    "id": "q60",
+    "lesson": "roma-potere-esercito-crisi",
+    "kind": "N",
+    "question": "Qual è il prezzo della sopravvivenza descritto nell’epilogo?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Maggiore capacità statale accompagnata da più controllo e coercizione"
+      },
+      {
+        "id": "1",
+        "text": "Il ritorno integrale alla libera competizione repubblicana"
+      },
+      {
+        "id": "2",
+        "text": "La fine di ogni burocrazia"
+      },
+      {
+        "id": "3",
+        "text": "L’abbandono della difesa delle province"
+      }
+    ],
+    "correct": "0",
+    "explanation": "La salvezza passò attraverso una trasformazione dello Stato, non un semplice ritorno al passato.",
+    "source": "b0111"
+  },
+  {
+    "id": "q61",
+    "lesson": "diocleziano-e-costantino",
+    "kind": "C",
+    "question": "Quando nacque il collegio tetrarchico completo?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Nel 293"
+      },
+      {
+        "id": "1",
+        "text": "Nel 27 a.C."
+      },
+      {
+        "id": "2",
+        "text": "Nel 212"
+      },
+      {
+        "id": "3",
+        "text": "Nel 380"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Nel 293 ai due Augusti furono affiancati Galerio e Costanzo Cloro come Cesari.",
+    "source": "b0056"
+  },
+  {
+    "id": "q62",
+    "lesson": "diocleziano-e-costantino",
+    "kind": "C",
+    "question": "Che cos’era una diocesi amministrativa?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Un raggruppamento di province"
+      },
+      {
+        "id": "1",
+        "text": "Una sola legione"
+      },
+      {
+        "id": "2",
+        "text": "Una magistratura repubblicana"
+      },
+      {
+        "id": "3",
+        "text": "Un regno sovrano"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Il termine indica qui una circoscrizione amministrativa sovraprovinciale, non la moderna diocesi ecclesiastica.",
+    "source": "b0060"
+  },
+  {
+    "id": "q63",
+    "lesson": "diocleziano-e-costantino",
+    "kind": "C",
+    "question": "Quale provvedimento risale al 301?",
+    "options": [
+      {
+        "id": "0",
+        "text": "L’Editto dei prezzi massimi"
+      },
+      {
+        "id": "1",
+        "text": "L’accordo religioso di Milano"
+      },
+      {
+        "id": "2",
+        "text": "Il concilio di Nicea"
+      },
+      {
+        "id": "3",
+        "text": "La cittadinanza universale"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Il calmiere fissava massimi per prodotti, salari e trasporti.",
+    "source": "b0074"
+  },
+  {
+    "id": "q64",
+    "lesson": "diocleziano-e-costantino",
+    "kind": "C",
+    "question": "Quando cominciò la Grande persecuzione?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Nel 303"
+      },
+      {
+        "id": "1",
+        "text": "Nel 325"
+      },
+      {
+        "id": "2",
+        "text": "Nel 330"
+      },
+      {
+        "id": "3",
+        "text": "Nel 337"
+      }
+    ],
+    "correct": "0",
+    "explanation": "L’applicazione delle misure persecutorie variò fra regioni dell’Impero.",
+    "source": "b0083"
+  },
+  {
+    "id": "q65",
+    "lesson": "diocleziano-e-costantino",
+    "kind": "C",
+    "question": "Che cosa fecero Diocleziano e Massimiano nel 305?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Abdicarono"
+      },
+      {
+        "id": "1",
+        "text": "Fondarono Costantinopoli"
+      },
+      {
+        "id": "2",
+        "text": "Convocarono Nicea"
+      },
+      {
+        "id": "3",
+        "text": "Conquistarono Roma a ponte Milvio"
+      }
+    ],
+    "correct": "0",
+    "explanation": "L’abdicazione doveva attuare il passaggio programmato dai Cesari al rango di Augusti.",
+    "source": "b0085"
+  },
+  {
+    "id": "q66",
+    "lesson": "diocleziano-e-costantino",
+    "kind": "C",
+    "question": "Quale avversario sconfisse Costantino al ponte Milvio?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Massenzio"
+      },
+      {
+        "id": "1",
+        "text": "Licinio"
+      },
+      {
+        "id": "2",
+        "text": "Galerio"
+      },
+      {
+        "id": "3",
+        "text": "Caracalla"
+      }
+    ],
+    "correct": "0",
+    "explanation": "La vittoria su Massenzio nel 312 diede a Costantino Roma e l’Italia.",
+    "source": "b0094"
+  },
+  {
+    "id": "q67",
+    "lesson": "diocleziano-e-costantino",
+    "kind": "C",
+    "question": "Che cosa stabilirono gli accordi del 313?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Libertà di culto e restituzione dei beni cristiani"
+      },
+      {
+        "id": "1",
+        "text": "Il cristianesimo come unica religione ufficiale"
+      },
+      {
+        "id": "2",
+        "text": "La fine immediata di ogni culto tradizionale"
+      },
+      {
+        "id": "3",
+        "text": "L’abolizione dell’Impero d’Oriente"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Il favore successivo ai cristiani non va confuso con l’istituzione di una religione ufficiale nel 313.",
+    "source": "b0097"
+  },
+  {
+    "id": "q68",
+    "lesson": "diocleziano-e-costantino",
+    "kind": "C",
+    "question": "Quale formula affermò Nicea?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Il Figlio della stessa sostanza del Padre"
+      },
+      {
+        "id": "1",
+        "text": "L’abolizione dei vescovi"
+      },
+      {
+        "id": "2",
+        "text": "La subordinazione del Figlio come dottrina conciliare"
+      },
+      {
+        "id": "3",
+        "text": "L’identità fra imperatore e dio Giove"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Homoousios esprime la stessa sostanza; la controversia non cessò subito.",
+    "source": "b0104"
+  },
+  {
+    "id": "q69",
+    "lesson": "diocleziano-e-costantino",
+    "kind": "C",
+    "question": "Quale moneta d’oro diffuse Costantino?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Il solidus"
+      },
+      {
+        "id": "1",
+        "text": "Il denaro carolingio"
+      },
+      {
+        "id": "2",
+        "text": "Il fiorino"
+      },
+      {
+        "id": "3",
+        "text": "Il tallero"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Il solidus fu importante per la stabilità dell’economia aurea e delle finanze statali.",
+    "source": "b0111"
+  },
+  {
+    "id": "q70",
+    "lesson": "diocleziano-e-costantino",
+    "kind": "C",
+    "question": "Quando fu inaugurata Costantinopoli?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Nel 330"
+      },
+      {
+        "id": "1",
+        "text": "Nel 293"
+      },
+      {
+        "id": "2",
+        "text": "Nel 301"
+      },
+      {
+        "id": "3",
+        "text": "Nel 476"
+      }
+    ],
+    "correct": "0",
+    "explanation": "La nuova capitale fu inaugurata l’11 maggio 330 sul sito di Bisanzio.",
+    "source": "b0116"
+  },
+  {
+    "id": "q71",
+    "lesson": "diocleziano-e-costantino",
+    "kind": "N",
+    "question": "Perché più sovrani sembravano una risposta alla crisi?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Potevano essere presenti su fronti lontani simultaneamente"
+      },
+      {
+        "id": "1",
+        "text": "Eliminavano per legge ogni rivalità personale"
+      },
+      {
+        "id": "2",
+        "text": "Creavano quattro nazioni indipendenti"
+      },
+      {
+        "id": "3",
+        "text": "Rendevano inutili eserciti e funzionari"
+      }
+    ],
+    "correct": "0",
+    "explanation": "La collegialità rispondeva alla distanza geografica e alla molteplicità delle minacce.",
+    "source": "b0054"
+  },
+  {
+    "id": "q72",
+    "lesson": "diocleziano-e-costantino",
+    "kind": "N",
+    "question": "Perché separare autorità civile e comando militare?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Per ostacolare l’accumulo di risorse necessario a ribellarsi"
+      },
+      {
+        "id": "1",
+        "text": "Per rendere ogni governatore un sovrano"
+      },
+      {
+        "id": "2",
+        "text": "Per abolire la giustizia locale"
+      },
+      {
+        "id": "3",
+        "text": "Per impedire ogni riscossione delle imposte"
+      }
+    ],
+    "correct": "0",
+    "explanation": "La riforma migliorava il controllo e limitava la forza potenziale dei governatori.",
+    "source": "b0061"
+  },
+  {
+    "id": "q73",
+    "lesson": "diocleziano-e-costantino",
+    "kind": "N",
+    "question": "Come il bisogno fiscale influì sui coloni?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Favorì vincoli alla mobilità per rendere prevedibili risorse e lavoro"
+      },
+      {
+        "id": "1",
+        "text": "Concesse a tutti libertà illimitata di trasferimento"
+      },
+      {
+        "id": "2",
+        "text": "Creò in un giorno il feudalesimo"
+      },
+      {
+        "id": "3",
+        "text": "Soppresse ogni rapporto con la terra"
+      }
+    ],
+    "correct": "0",
+    "explanation": "La dispensa descrive un processo graduale, distinto dalla servitù medievale.",
+    "source": "b0065"
+  },
+  {
+    "id": "q74",
+    "lesson": "diocleziano-e-costantino",
+    "kind": "N",
+    "question": "Perché il calmiere non bastava a risolvere la crisi?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Fissare prezzi non aumentava le merci né ristabiliva da solo la fiducia monetaria"
+      },
+      {
+        "id": "1",
+        "text": "I prezzi massimi producevano automaticamente grano"
+      },
+      {
+        "id": "2",
+        "text": "La crisi riguardava soltanto la forma delle monete"
+      },
+      {
+        "id": "3",
+        "text": "L’editto cancellava ogni spesa dell’esercito"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Il provvedimento interveniva sui prezzi senza eliminare le cause strutturali dell’inflazione.",
+    "source": "b0075"
+  },
+  {
+    "id": "q75",
+    "lesson": "diocleziano-e-costantino",
+    "kind": "N",
+    "question": "Perché la politica religiosa era anche politica di governo?",
+    "options": [
+      {
+        "id": "0",
+        "text": "L’unità del culto era collegata all’obbedienza e all’ordine imperiale"
+      },
+      {
+        "id": "1",
+        "text": "La religione era del tutto priva di dimensione pubblica"
+      },
+      {
+        "id": "2",
+        "text": "I cristiani controllavano già ogni legione"
+      },
+      {
+        "id": "3",
+        "text": "Il Senato aveva abolito ogni cerimonia"
+      }
+    ],
+    "correct": "0",
+    "explanation": "La sacralizzazione del potere rendeva il rifiuto dei sacrifici una questione pubblica.",
+    "source": "b0082"
+  },
+  {
+    "id": "q76",
+    "lesson": "diocleziano-e-costantino",
+    "kind": "N",
+    "question": "Perché il successo del 305 non assicurò la successione?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Eserciti e legami dinastici continuarono a sostenere candidati esclusi"
+      },
+      {
+        "id": "1",
+        "text": "I Cesari non ricevettero alcun titolo"
+      },
+      {
+        "id": "2",
+        "text": "Diocleziano abolì subito le diocesi"
+      },
+      {
+        "id": "3",
+        "text": "Le province furono tutte conquistate da nemici"
+      }
+    ],
+    "correct": "0",
+    "explanation": "L’acclamazione di Costantino e la proclamazione di Massenzio riaprirono il conflitto.",
+    "source": "b0088"
+  },
+  {
+    "id": "q77",
+    "lesson": "diocleziano-e-costantino",
+    "kind": "N",
+    "question": "Perché Nicea interessava Costantino?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Le divisioni ecclesiastiche minacciavano l’unità che voleva garantire"
+      },
+      {
+        "id": "1",
+        "text": "Voleva scrivere personalmente ogni formula teologica"
+      },
+      {
+        "id": "2",
+        "text": "Intendeva ripristinare la tetrarchia"
+      },
+      {
+        "id": "3",
+        "text": "Il concilio decideva il salario dei soldati"
+      }
+    ],
+    "correct": "0",
+    "explanation": "L’imperatore favorì l’accordo senza essere l’autore unico della teologia conciliare.",
+    "source": "b0102"
+  },
+  {
+    "id": "q78",
+    "lesson": "diocleziano-e-costantino",
+    "kind": "N",
+    "question": "Quale continuità collega Costantino a Diocleziano?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Province, diocesi, burocrazia e controllo statale"
+      },
+      {
+        "id": "1",
+        "text": "La stessa persecuzione dei cristiani"
+      },
+      {
+        "id": "2",
+        "text": "Una tetrarchia rimasta immutata"
+      },
+      {
+        "id": "3",
+        "text": "Il ritorno al consolato repubblicano"
+      }
+    ],
+    "correct": "0",
+    "explanation": "La rottura religiosa e il potere unico non cancellarono le strutture amministrative precedenti.",
+    "source": "b0122"
+  },
+  {
+    "id": "q79",
+    "lesson": "diocleziano-e-costantino",
+    "kind": "N",
+    "question": "Perché Bisanzio era una scelta strategica?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Guardava ai Balcani e all’Asia Minore e controllava il Bosforo"
+      },
+      {
+        "id": "1",
+        "text": "Era lontana da ogni via marittima"
+      },
+      {
+        "id": "2",
+        "text": "Si trovava sul Reno"
+      },
+      {
+        "id": "3",
+        "text": "Eliminava la necessità di difendere l’Oriente"
+      }
+    ],
+    "correct": "0",
+    "explanation": "La posizione collegava aree economiche e militari decisive.",
+    "source": "b0114"
+  },
+  {
+    "id": "q80",
+    "lesson": "diocleziano-e-costantino",
+    "kind": "N",
+    "question": "Quale conclusione descrive meglio il passaggio al Tardo Antico?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Una trasformazione graduale fra continuità e fratture"
+      },
+      {
+        "id": "1",
+        "text": "La scomparsa improvvisa di ogni città nel 284"
+      },
+      {
+        "id": "2",
+        "text": "L’invenzione completa del Medioevo nel 313"
+      },
+      {
+        "id": "3",
+        "text": "Il ritorno alla Repubblica nel 337"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Il testo rifiuta l’idea di una fine istantanea dell’antichità e segue processi diversi.",
+    "source": "b0124"
+  },
+  {
+    "id": "q81",
+    "lesson": "da-costantino-a-carlo-magno",
+    "kind": "C",
+    "question": "Chi divenne unico imperatore nel 361?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Giuliano"
+      },
+      {
+        "id": "1",
+        "text": "Gioviano"
+      },
+      {
+        "id": "2",
+        "text": "Valente"
+      },
+      {
+        "id": "3",
+        "text": "Onorio"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Alla morte di Costanzo II, Giuliano rimase unico sovrano senza combattere la prevista guerra civile.",
+    "source": "b0020"
+  },
+  {
+    "id": "q82",
+    "lesson": "da-costantino-a-carlo-magno",
+    "kind": "C",
+    "question": "Quale ambito colpì il provvedimento di Giuliano del 362?",
+    "options": [
+      {
+        "id": "0",
+        "text": "L’insegnamento pubblico e i docenti cristiani"
+      },
+      {
+        "id": "1",
+        "text": "La sola distribuzione del grano"
+      },
+      {
+        "id": "2",
+        "text": "La successione carolingia"
+      },
+      {
+        "id": "3",
+        "text": "Il governo dei Longobardi"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Il provvedimento e la lettera connessa riguardavano la formazione classica e chi poteva insegnarla.",
+    "source": "b0029"
+  },
+  {
+    "id": "q83",
+    "lesson": "da-costantino-a-carlo-magno",
+    "kind": "C",
+    "question": "Chi morì nella battaglia di Adrianopoli del 378?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Valente"
+      },
+      {
+        "id": "1",
+        "text": "Teodosio"
+      },
+      {
+        "id": "2",
+        "text": "Costantino"
+      },
+      {
+        "id": "3",
+        "text": "Giustiniano"
+      }
+    ],
+    "correct": "0",
+    "explanation": "La sconfitta causò una grave perdita di uomini e la morte dell’imperatore orientale.",
+    "source": "b0054"
+  },
+  {
+    "id": "q84",
+    "lesson": "da-costantino-a-carlo-magno",
+    "kind": "C",
+    "question": "Che cosa indicò l’editto di Tessalonica del 380?",
+    "options": [
+      {
+        "id": "0",
+        "text": "La fede nicena come norma religiosa imperiale"
+      },
+      {
+        "id": "1",
+        "text": "La fine istantanea di ogni culto pagano"
+      },
+      {
+        "id": "2",
+        "text": "La separazione definitiva di tre Stati"
+      },
+      {
+        "id": "3",
+        "text": "L’inizio della tetrarchia"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Una scelta normativa non trasformò immediatamente pratiche e credenze di tutta la popolazione.",
+    "source": "b0066"
+  },
+  {
+    "id": "q85",
+    "lesson": "da-costantino-a-carlo-magno",
+    "kind": "C",
+    "question": "Quale città africana conquistarono i Vandali nel 439?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Cartagine"
+      },
+      {
+        "id": "1",
+        "text": "Alessandria"
+      },
+      {
+        "id": "2",
+        "text": "Nicomedia"
+      },
+      {
+        "id": "3",
+        "text": "Ravenna"
+      }
+    ],
+    "correct": "0",
+    "explanation": "La perdita di Cartagine e dell’Africa sottrasse risorse fiscali cruciali all’Occidente.",
+    "source": "b0089"
+  },
+  {
+    "id": "q86",
+    "lesson": "da-costantino-a-carlo-magno",
+    "kind": "C",
+    "question": "Chi depose Romolo Augustolo?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Odoacre"
+      },
+      {
+        "id": "1",
+        "text": "Teodorico"
+      },
+      {
+        "id": "2",
+        "text": "Alarico"
+      },
+      {
+        "id": "3",
+        "text": "Attila"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Nel 476 Odoacre governò l’Italia come re senza nominare un nuovo imperatore occidentale.",
+    "source": "b0099"
+  },
+  {
+    "id": "q87",
+    "lesson": "da-costantino-a-carlo-magno",
+    "kind": "C",
+    "question": "Quale imperatore promosse la riconquista dell’Italia nel VI secolo?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Giustiniano"
+      },
+      {
+        "id": "1",
+        "text": "Giuliano"
+      },
+      {
+        "id": "2",
+        "text": "Carlo Magno"
+      },
+      {
+        "id": "3",
+        "text": "Costantino II"
+      }
+    ],
+    "correct": "0",
+    "explanation": "La guerra gotica fu parte della renovatio imperii giustinianea.",
+    "source": "b0118"
+  },
+  {
+    "id": "q88",
+    "lesson": "da-costantino-a-carlo-magno",
+    "kind": "C",
+    "question": "Quando entrarono i Longobardi in Italia?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Nel 568"
+      },
+      {
+        "id": "1",
+        "text": "Nel 476"
+      },
+      {
+        "id": "2",
+        "text": "Nel 800"
+      },
+      {
+        "id": "3",
+        "text": "Nel 337"
+      }
+    ],
+    "correct": "0",
+    "explanation": "L’arrivo guidato da Alboino avvenne in una penisola logorata dalla guerra.",
+    "source": "b0123"
+  },
+  {
+    "id": "q89",
+    "lesson": "da-costantino-a-carlo-magno",
+    "kind": "C",
+    "question": "Chi erano i missi dominici?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Inviati del sovrano per controllare l’amministrazione"
+      },
+      {
+        "id": "1",
+        "text": "I quattro tetrarchi"
+      },
+      {
+        "id": "2",
+        "text": "I sacerdoti di El-Gabal"
+      },
+      {
+        "id": "3",
+        "text": "I soli governatori sasanidi"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Carlo utilizzava ispettori, insieme a conti, assemblee e capitolari.",
+    "source": "b0176"
+  },
+  {
+    "id": "q90",
+    "lesson": "da-costantino-a-carlo-magno",
+    "kind": "C",
+    "question": "Che cosa avvenne a Roma il 25 dicembre 800?",
+    "options": [
+      {
+        "id": "0",
+        "text": "L’incoronazione imperiale di Carlo"
+      },
+      {
+        "id": "1",
+        "text": "La deposizione di Romolo"
+      },
+      {
+        "id": "2",
+        "text": "La conquista longobarda di Pavia"
+      },
+      {
+        "id": "3",
+        "text": "La fondazione di Costantinopoli"
+      }
+    ],
+    "correct": "0",
+    "explanation": "La dignità imperiale fu conferita da Leone III entro una complessa alleanza politica.",
+    "source": "b0184"
+  },
+  {
+    "id": "q91",
+    "lesson": "da-costantino-a-carlo-magno",
+    "kind": "N",
+    "question": "Perché le divisioni fra figli di Costantino producevano instabilità?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Corti ed eserciti distinti potevano trasformare interessi divergenti in guerra"
+      },
+      {
+        "id": "1",
+        "text": "Erano già tre nazioni moderne"
+      },
+      {
+        "id": "2",
+        "text": "Il territorio non aveva più eserciti"
+      },
+      {
+        "id": "3",
+        "text": "La collegialità vietava ogni rivalità"
+      }
+    ],
+    "correct": "0",
+    "explanation": "L’unità giuridica non eliminava la concorrenza fra centri di comando.",
+    "source": "b0015"
+  },
+  {
+    "id": "q92",
+    "lesson": "da-costantino-a-carlo-magno",
+    "kind": "N",
+    "question": "Perché la crisi gotica non è soltanto un’invasione?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Un ingresso autorizzato fu gestito con carenze e abusi che favorirono la rivolta"
+      },
+      {
+        "id": "1",
+        "text": "Roma non aveva mai accolto popolazioni esterne"
+      },
+      {
+        "id": "2",
+        "text": "I Goti erano già padroni di tutto l’Impero"
+      },
+      {
+        "id": "3",
+        "text": "Valente aveva abolito ogni frontiera"
+      }
+    ],
+    "correct": "0",
+    "explanation": "La dispensa collega fame, corruzione e cattiva gestione romana alla ribellione.",
+    "source": "b0051"
+  },
+  {
+    "id": "q93",
+    "lesson": "da-costantino-a-carlo-magno",
+    "kind": "N",
+    "question": "Perché la perdita dell’Africa aggravò la debolezza militare?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Ridusse entrate necessarie a pagare esercito e amministrazione"
+      },
+      {
+        "id": "1",
+        "text": "Aumentò automaticamente le tasse riscosse da Ravenna"
+      },
+      {
+        "id": "2",
+        "text": "Eliminò tutte le spese di difesa"
+      },
+      {
+        "id": "3",
+        "text": "Riguardò soltanto il prestigio religioso"
+      }
+    ],
+    "correct": "0",
+    "explanation": "La relazione fra territorio, fisco e capacità militare è un nesso centrale della crisi occidentale.",
+    "source": "b0090"
+  },
+  {
+    "id": "q94",
+    "lesson": "da-costantino-a-carlo-magno",
+    "kind": "N",
+    "question": "Perché il 476 non coincide con la fine di ogni romanità?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Continuarono leggi, amministrazione, lingua e istituzioni locali"
+      },
+      {
+        "id": "1",
+        "text": "L’imperatore occidentale rimase regolarmente al governo"
+      },
+      {
+        "id": "2",
+        "text": "Il Senato conquistò l’Oriente"
+      },
+      {
+        "id": "3",
+        "text": "Non cambiò alcuna struttura politica"
+      }
+    ],
+    "correct": "0",
+    "explanation": "La corte occidentale cessò, mentre molte strutture romane continuarono in nuovi assetti.",
+    "source": "b0101"
+  },
+  {
+    "id": "q95",
+    "lesson": "da-costantino-a-carlo-magno",
+    "kind": "N",
+    "question": "Perché Teodorico impiegò funzionari romani?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Aveva bisogno delle loro competenze e della continuità amministrativa"
+      },
+      {
+        "id": "1",
+        "text": "Intendeva impedire ogni uso del diritto romano"
+      },
+      {
+        "id": "2",
+        "text": "Non disponeva di alcun esercito"
+      },
+      {
+        "id": "3",
+        "text": "Voleva restaurare tutte le assemblee repubblicane"
+      }
+    ],
+    "correct": "0",
+    "explanation": "I nuovi regni governavano anche attraverso risorse istituzionali ereditate dall’Impero.",
+    "source": "b0111"
+  },
+  {
+    "id": "q96",
+    "lesson": "da-costantino-a-carlo-magno",
+    "kind": "N",
+    "question": "Perché la riconquista giustinianea rimase fragile?",
+    "options": [
+      {
+        "id": "0",
+        "text": "La guerra aveva logorato società e risorse, mentre i fronti da difendere erano molti"
+      },
+      {
+        "id": "1",
+        "text": "La vittoria ricreò automaticamente ogni risorsa"
+      },
+      {
+        "id": "2",
+        "text": "L’Italia non aveva subito assedi"
+      },
+      {
+        "id": "3",
+        "text": "Costantinopoli non aveva altri interessi militari"
+      }
+    ],
+    "correct": "0",
+    "explanation": "La vittoria sul campo non bastava a ricostruire le condizioni economiche e difensive precedenti.",
+    "source": "b0120"
+  },
+  {
+    "id": "q97",
+    "lesson": "da-costantino-a-carlo-magno",
+    "kind": "N",
+    "question": "Perché il papato cercò protezione franca?",
+    "options": [
+      {
+        "id": "0",
+        "text": "La minaccia longobarda e i rapporti difficili con Costantinopoli richiedevano nuovi sostegni"
+      },
+      {
+        "id": "1",
+        "text": "Il papa governava già ogni esercito europeo"
+      },
+      {
+        "id": "2",
+        "text": "I Longobardi avevano abbandonato l’Italia"
+      },
+      {
+        "id": "3",
+        "text": "L’Impero d’Oriente non era mai esistito"
+      }
+    ],
+    "correct": "0",
+    "explanation": "Protezione militare e legittimazione religiosa alimentarono una nuova alleanza.",
+    "source": "b0136"
+  },
+  {
+    "id": "q98",
+    "lesson": "da-costantino-a-carlo-magno",
+    "kind": "N",
+    "question": "Come va utilizzata la tesi di Pirenne?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Come interpretazione da discutere insieme a continuità e cambiamenti degli scambi"
+      },
+      {
+        "id": "1",
+        "text": "Come prova che ogni commercio cessò in una data"
+      },
+      {
+        "id": "2",
+        "text": "Come fonte contemporanea a Maometto"
+      },
+      {
+        "id": "3",
+        "text": "Come spiegazione priva di alternative"
+      }
+    ],
+    "correct": "0",
+    "explanation": "La dispensa ricorda il declino precedente di alcuni scambi e la loro sopravvivenza dopo le conquiste.",
+    "source": "b0145"
+  },
+  {
+    "id": "q99",
+    "lesson": "da-costantino-a-carlo-magno",
+    "kind": "N",
+    "question": "Che rapporto univa Pipino e il papa?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Protezione armata e consacrazione religiosa si rafforzavano reciprocamente"
+      },
+      {
+        "id": "1",
+        "text": "Il papa rinunciava a ogni autorità"
+      },
+      {
+        "id": "2",
+        "text": "Pipino ripristinava la tetrarchia"
+      },
+      {
+        "id": "3",
+        "text": "La consacrazione eliminava il bisogno di un esercito"
+      }
+    ],
+    "correct": "0",
+    "explanation": "La dinastia otteneva legittimità e il papato sostegno e territori.",
+    "source": "b0163"
+  },
+  {
+    "id": "q100",
+    "lesson": "da-costantino-a-carlo-magno",
+    "kind": "N",
+    "question": "Perché l’impero di Carlo non fu un semplice ritorno a Roma antica?",
+    "options": [
+      {
+        "id": "0",
+        "text": "Aveva strutture più rurali e legami personali pur usando la tradizione imperiale"
+      },
+      {
+        "id": "1",
+        "text": "Ricostituì integralmente la burocrazia di Costantino"
+      },
+      {
+        "id": "2",
+        "text": "Era già chiamato ufficialmente Sacro Romano Impero"
+      },
+      {
+        "id": "3",
+        "text": "Abolì ogni riferimento religioso"
+      }
+    ],
+    "correct": "0",
+    "explanation": "La corona riutilizzava il linguaggio romano per legittimare un potere diverso.",
+    "source": "b0195"
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "slug": "cesare-e-augusto",
+    "filename": "1-Cesare_e_Augusto_dispensa_didattica_gbprof_Libera.docx",
+    "blocks": 595,
+    "tables": 36,
+    "sha256": "3aef7a93cd597bbbe4709bd8f1ace4d089856124ff7fa58a59d07c7a73a6852d"
+  },
+  {
+    "slug": "il-potere-e-il-sangue",
+    "filename": "2-Il_potere_e_il_sangue_Dispensa_didattica_gbprof_Libera.docx",
+    "blocks": 214,
+    "tables": 2,
+    "sha256": "c1f18b627602552c861010129f8b275115da91113143635295a3ecef3f05fa63"
+  },
+  {
+    "slug": "roma-potere-esercito-crisi",
+    "filename": "3-Dispensa_didattica_Roma_dai_Flavi_a_Diocleziano_gbprof_Libera.docx",
+    "blocks": 455,
+    "tables": 32,
+    "sha256": "01eb4066845050e094c1325864522daf1936fd0742aa6fdab8f24e8e1c63acae"
+  },
+  {
+    "slug": "diocleziano-e-costantino",
+    "filename": "4-Dispensa_Diocleziano_Costantino_gbprof_Libera.docx",
+    "blocks": 312,
+    "tables": 45,
+    "sha256": "db9f8a550eb953cf1459bfe1d2bddae143a31ac317cc865de146d53612a00034"
+  },
+  {
+    "slug": "da-costantino-a-carlo-magno",
+    "filename": "5-Dalla_caduta_di_Roma_all_Impero_carolingio_RACCONTO_STORICO 2.docx",
+    "blocks": 186,
+    "tables": 1,
+    "sha256": "23208fab7b464f9a4440e030b66dc94971e170faa7021e5b35e63bf2d459c472"
+  }
+]
