@@ -1,5 +1,5 @@
 const CACHE = '{{CACHE}}';
-const ESSENTIAL = ['./','./index.html','./content.js','./quiz.js','./app.js','./style.css','./offline.html','./manifest.webmanifest','./icon-192.png','./icon-512.png'];
+const ESSENTIAL = ['./','./index.html','./content.js','./quiz.js','./app.js','./style.css','./scene.svg','./offline.html','./manifest.webmanifest','./icon-192.png','./icon-512.png'];
 self.addEventListener('install',event=>{
   event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ESSENTIAL)).then(()=>self.skipWaiting()));
 });

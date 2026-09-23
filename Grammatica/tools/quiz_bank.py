@@ -5,7 +5,7 @@ In «Ho trovato un quaderno», che cosa suggerisce «un»?|Introduce un quaderno
 In «Il quaderno è sul banco», quale funzione ha «il»?|Presenta un quaderno identificabile nel contesto|Presenta un quaderno qualsiasi da scoprire|Indica una qualità del quaderno descritto|Il determinativo orienta verso un referente già riconoscibile.|7
 Quale accordo è corretto davanti a «studenti»?|Gli studenti hanno consegnato il testo|I studenti hanno consegnato il testo|Le studenti hanno consegnato il testo|Davanti a s più consonante si usa «gli» al plurale maschile.|7
 Quale forma completa «___ amica è arrivata»?|Un’amica è arrivata|Una amica è arrivata|Un amica è arrivata|Davanti a vocale «una» si elide: «un’amica».|7
-Quale forma completa «___ zaino è pesante»?|Lo zaino è pesante|Il zaino è pesante|Un zaino è pesante|Davanti a z si usa «lo» come articolo determinativo maschile.|7
+Quale articolo determinativo completa «___ zaino è pesante»?|«Lo», perché precede una z|«Il», perché precede una z|«La», perché precede una z|Davanti a z si usa «lo» come articolo determinativo maschile.|7
 In «una ragazza / la ragazza», che cosa cambia?|Il grado di identificazione per il lettore|La quantità di ragazze nella scena|La funzione di soggetto nella frase|La scelta dell’articolo modifica il modo in cui il referente è presentato.|7
 Quale sequenza mantiene la concordanza?|Le nuove fotografie|I nuove fotografie|La nuove fotografie|L’articolo concorda con il nome per genere e numero.|7
 In «l’albero», a quale forma risale «l’»?|All’articolo determinativo «lo»|All’articolo indeterminativo «un»|Alla preposizione articolata «allo»|L’elisione di «lo» davanti a vocale dà «l’».|7
@@ -181,7 +181,7 @@ In «Il tetto fu danneggiato dal vento», «dal vento» è…|causa efficiente|c
 Quale trasformazione conserva chi agisce?|«Sara apre la porta» → «La porta è aperta da Sara»|«Sara apre la porta» → «Sara è aperta dalla porta»|«Sara apre la porta» → «La porta apre Sara»|La trasformazione passiva cambia il soggetto senza cambiare l’agente.|30
 Come distinguere causa e fine?|La causa spiega il motivo; il fine il risultato cercato|La causa segue sempre il verbo; il fine lo precede|La causa è sempre persona; il fine sempre oggetto|Il rapporto di significato decide la funzione.|26
 In «Fu convinto dalle parole di Marta», che cosa agisce?|Le parole, come causa efficiente|Marta, come destinataria|Il soggetto, come agente espresso|Il sintagma «dalle parole» indica un elemento non personale che produce l’effetto.|30
-Quale domanda viene prima del nome «agente»?|Chi compie l’azione espressa al passivo?|Dove si trova il soggetto della frase?|Quanti nomi propri sono presenti?|L’agente si riconosce ricostruendo l’azione della frase passiva.|30
+Nel laboratorio «Dal fatto alla scena», che cosa va chiarito prima di classificare?|Chi agisce, che cosa accade e quale effetto ha la scelta|Quante preposizioni ricorrono in ogni riga del testo|Quale etichetta può essere assegnata senza leggere il fatto|Il laboratorio ricostruisce il fatto e ne precisa i rapporti prima di usare le etichette.|31
 """,
 "termine-specificazione": """
 In «Consegno il libro a Sara», «a Sara» indica…|a chi è destinato il libro|chi compie la consegna|di chi è il libro|Il termine esprime il punto verso cui va la relazione.|28

@@ -18,8 +18,13 @@ momento della ricognizione.
 
 Le unità grammaticali sono 11, di cui due laboratori di scrittura; le unità
 logiche sono 9. `tools/quiz_bank.py` contiene 200 domande curate, dieci per
-unità. Le verifiche finali pescano due domande da ciascuna unità (22 e 18
-domande). Ogni errore rimanda al documento sorgente pertinente.
+unità. Ciascuna delle 84 lezioni e laboratori numerati offre l'accesso alla
+verifica di dieci domande della propria unità: almeno una domanda di ogni
+verifica riguarda direttamente la tappa aperta; le restanti esercitano i
+rapporti con le altre tappe della stessa unità. Le verifiche finali pescano
+due domande da ciascuna unità (22 e 18 domande). Ogni errore rimanda al
+documento sorgente pertinente. Per avere dieci domande tutte distinte e
+specifiche per ogni singola tappa servirà estendere la banca editoriale.
 
 ## Rigenerazione
 
@@ -30,8 +35,9 @@ Prima di rigenerare dopo una modifica su Drive, aggiornare lo snapshot della
 lezione relativa e verificare le dieci domande dell’unità.
 
 I service worker hanno scope limitato alle rispettive cartelle, precache
-versionata dei file essenziali e fallback offline. Se cambiano gli asset,
-incrementare il numero di versione della cache nel generatore.
+versionata dei file essenziali (incluse le scene SVG della copertina) e
+fallback offline. Se cambiano gli asset, incrementare il numero di versione
+della cache nel generatore.
 
 I test non inviano dati; l’eventuale punteggio e l’ordine precedente sono
 memorizzati solo nel browser usato dallo studente.

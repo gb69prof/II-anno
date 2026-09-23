@@ -101,6 +101,7 @@ for app, rows, title, sub, symbol, color in [
     (folder/"index.html").write_text(template)
     for name in ["app.js","style.css","offline.html","sw.js"]:
         shutil.copy(ROOT/"tools"/"pwa-assets"/name,folder/name)
+    shutil.copy(ROOT/"tools"/f"scene-{app.removeprefix('analisi-')}.svg",folder/"scene.svg")
     (folder/"manifest.webmanifest").write_text(json.dumps({
         "name":title+" — gbprof e Libera","short_name":title,"description":sub,
         "lang":"it","start_url":"./index.html","scope":"./","display":"standalone",
@@ -119,6 +120,6 @@ for app, rows, title, sub, symbol, color in [
         d.text(((size-(b[2]-b[0]))/2,(size-(b[3]-b[1]))/2-b[1]),symbol,font=font,fill="#fff4da")
         im.save(folder/f"icon-{size}.png")
     # Each worker is restricted to its own directory. All core content is cached.
-    sw=(folder/"sw.js").read_text().replace("{{CACHE}}",f"gbprof-{app}-v1").replace("{{PREFIX}}",f"gbprof-{app}-")
+    sw=(folder/"sw.js").read_text().replace("{{CACHE}}",f"gbprof-{app}-v2").replace("{{PREFIX}}",f"gbprof-{app}-")
     (folder/"sw.js").write_text(sw)
 print("Built",len(GRAM),"grammar chapters,",len(LOG),"logic chapters; 84 original lessons retained.")
