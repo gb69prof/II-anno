@@ -32,7 +32,7 @@ Tutti i percorsi elencati qui sotto sono relativi ad `Antologia/`.
 - `assets/js/app.js`: routing, interazioni, preferenze locali e installazione;
 - `assets/js/work-view.js`: vista modulare riutilizzabile per le singole opere;
 - `assets/js/prevert-view.js`: lettura interattiva di Prévert, con ritmo, verifica e recupero;
-- `assets/js/author-view.js`: percorso d’autore in sei movimenti, con verifiche e recupero;
+- `assets/js/author-view.js`: percorso Pirandello in sei lezioni, con mappe, video, domande e autovalutazione;
 - `assets/js/form-lab-view.js`: attività interattive del laboratorio della forma;
 - `assets/css/app.css`: sistema visivo responsive;
 - `manifest.webmanifest`, `sw.js`, `icons/`: installabilità e funzionamento offline.
@@ -44,6 +44,10 @@ Per una verifica locale è sufficiente eseguire `npm run dev` e aprire l'indiriz
 ## Aggiungere gli autori
 
 L'area autori usa una grammatica comune: grande domanda, mondo ricevuto, frattura, immagine del mondo, forma/poetica, opere e dialogo con noi. Tra il percorso introduttivo e gli autori si trova il `Laboratorio della forma`, strumento trasversale per leggere poesia. Le lezioni disponibili sono `L'Infinito` di Giacomo Leopardi, `I ragazzi che si amano` di Jacques Prévert e il percorso d’autore su Luigi Pirandello. I contenuti successivi possono essere aggiunti come moduli separati senza riscrivere l'interfaccia generale.
+
+## Percorso Pirandello
+
+Il percorso segue integralmente le fonti numerate 01–06: filosofia, maschere, *Così è (se vi pare)*, monologo, commento e ripasso. Mappe e testi sono disponibili offline; il video locale richiede la connessione e non viene memorizzato dal service worker. Fonti, struttura e verifiche sono documentate in [`Antologia/PIRANDELLO.md`](Antologia/PIRANDELLO.md).
 
 ## Privacy
 

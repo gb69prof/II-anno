@@ -1,209 +1,705 @@
+// Fonti: documenti 01–06 della cartella Drive indicata nelle source di ogni lezione.
+// Testi e risposte conservati integralmente; solo la presentazione è adattata al web.
 export const pirandelloLesson = {
-  id: 'pirandello',
-  author: 'Luigi Pirandello',
-  title: 'La forma e il contrario',
-  label: 'INCONTRIAMO UN AUTORE',
-  question: 'Chi sono io, se gli altri mi vedono diversamente e io stesso cambio?',
-  answer: 'Non possediamo un’identità unica che gli altri possano conoscere una volta per tutte: viviamo attraverso forme necessarie, ma provvisorie.',
-  color: '#7d4035',
-  opening: {
-    title: 'Quante persone entrano nella stanza insieme a te?',
-    text: 'Immagina che ti descrivano un genitore, un amico, un insegnante e qualcuno che ti ha incontrato una sola volta. Nessuno sta necessariamente mentendo, eppure ognuno costruisce una persona diversa.',
-    prompt: 'Quale frase ti sembra più vicina al problema di Pirandello?',
-    choices: [
-      ['Solo io so chi sono davvero', 'Sembra rassicurante, ma anche l’immagine che abbiamo di noi cambia e non è uno sguardo neutrale.'],
-      ['Gli altri decidono completamente chi sono', 'Lo sguardo degli altri produce conseguenze reali, ma nessuna immagine esaurisce tutta la vita.'],
-      ['Esisto in forme diverse, senza coincidere del tutto con nessuna', 'È la soglia pirandelliana: le forme sono reali e necessarie, ma non contengono l’intera persona.']
-    ]
-  },
-  perspectives: [
-    ['Io', 'Mi penso coerente e continuo: raccolgo esperienze diverse dentro un solo racconto.'],
-    ['Un amico', 'Conosce gesti, parole e fragilità che mostro soltanto in alcune relazioni.'],
-    ['Un insegnante', 'Mi vede dentro un ruolo, attraverso comportamenti osservabili e attese precise.'],
-    ['Uno sconosciuto', 'Costruisce un’immagine rapida da un dettaglio, un abito, una frase o una fotografia.']
-  ],
-  lifeFormCases: [
-    ['Un nome sul registro', 'forma', 'Rende una persona riconoscibile e responsabile dentro una comunità.'],
-    ['Un’emozione che cambia mentre la proviamo', 'vita', 'Non resta identica abbastanza a lungo da coincidere con una definizione.'],
-    ['La reputazione di “persona affidabile”', 'forma', 'Orienta ciò che gli altri si aspettano e può diventare difficile da contraddire.'],
-    ['Un desiderio improvviso di ricominciare', 'vita', 'Interrompe il personaggio che avevamo imparato a recitare.']
-  ],
-  humor: {
-    scene: 'Una signora anziana appare truccata e vestita come una ragazza.',
-    comic: 'Avvertiamo subito il contrario rispetto alle convenzioni sull’età: il contrasto può provocare il sorriso.',
-    humorous: 'La riflessione immagina che tenti di trattenere l’amore di un marito più giovane. Il contrasto resta, ma ora contiene anche paura, solitudine e dolore.'
-  },
-  testimonies: [
-    ['Signor Ponza', 'La figlia della signora Frola è morta; la donna che vive con lui è la seconda moglie. La suocera, sconvolta, la crede ancora sua figlia.'],
-    ['Signora Frola', 'La donna è davvero sua figlia; è Ponza a non riconoscerla e la famiglia sostiene una finzione per non distruggerne l’equilibrio.'],
-    ['Signora Ponza', '«Io sono colei che mi si crede». La sua risposta non consegna alla comunità la verità definitiva che pretende.']
-  ],
-  sections: [
+  "id": "pirandello",
+  "author": "Luigi Pirandello",
+  "title": "Così è (se vi pare) · Identità, maschere e verità",
+  "label": "PERCORSO IN SEI LEZIONI",
+  "question": "Chi sono io, se gli altri mi vedono diversamente e io stesso cambio?",
+  "color": "#7d4035",
+  "version": 2,
+  "sections": [
     {
-      id: 'mondo', number: '01', eyebrow: 'IL MONDO PRECEDENTE', title: 'Un io che crede di conoscersi',
-      question: 'Quale realtà riceve Pirandello?',
-      thesis: 'La società borghese ottocentesca tende a pensare l’identità come una costruzione stabile e la realtà come qualcosa che può essere osservato, ordinato e spiegato.',
-      blocks: [
-        ['Un individuo riconoscibile', 'Nome, famiglia, professione, reputazione e carattere dovrebbero comporre una persona coerente. I ruoli sociali permettono agli altri di sapere chi siamo e a noi di riconoscerci dentro una storia continua.'],
-        ['L’ordine delle forme', 'Il marito, la moglie, il padre, l’impiegato e il cittadino incontrano attese precise. La forma sociale non è soltanto costrizione: rende possibili responsabilità, relazioni e vita comune.'],
-        ['La fiducia nella conoscenza', 'Il Positivismo rafforza la fiducia nell’osservazione e nella classificazione. I successi della scienza alimentano l’idea che anche l’uomo e la società possano diventare sempre più leggibili.'],
-        ['Il limite nascosto', 'Se una persona deve coincidere con un carattere e un ruolo, ogni cambiamento appare una deviazione. Il mondo resta ordinato soltanto finché la vita accetta di farsi contenere dalle definizioni.']
-      ],
-      bridge: 'Tra la fine dell’Ottocento e l’inizio del Novecento le forme non scompaiono: è la fiducia nella loro solidità che comincia a incrinarsi.',
-      summary: 'Pirandello riceve un mondo che tende a immaginare l’individuo come soggetto coerente e la realtà come ordine conoscibile. Nome, famiglia, lavoro e reputazione costruiscono forme sociali necessarie: consentono di essere riconosciuti e di assumere responsabilità. Il Positivismo alimenta inoltre la fiducia nella possibilità di osservare e spiegare anche l’uomo. Questo equilibrio possiede però un limite: funziona soltanto se la vita coincide con le definizioni che la società le assegna. Quando l’esperienza cambia, il ruolo può trasformarsi da sostegno in prigione. La frattura novecentesca nascerà proprio dalla scoperta che l’io e la realtà non sono trasparenti come sembravano.',
-      essentials: [
-        'L’identità borghese ottocentesca si fonda su nome, famiglia, professione e reputazione.',
-        'I ruoli sociali rendono l’individuo riconoscibile.',
-        'La forma è anche uno strumento necessario alla vita comune.',
-        'Il Positivismo rafforza la fiducia nella conoscenza della realtà.',
-        'L’equilibrio entra in crisi quando la vita non coincide più con la definizione.'
-      ],
-      glossary: [['Identità', 'Immagine relativamente coerente con cui una persona riconosce se stessa.'], ['Ruolo', 'Comportamento atteso da chi occupa una posizione sociale.'], ['Positivismo', 'Cultura che attribuisce valore centrale all’osservazione e al sapere scientifico.'], ['Forma', 'Definizione stabile che rende la vita riconoscibile.']],
-      map: './assets/maps/pirandello-mondo.svg',
-      mapAlt: 'Mappa: società borghese e Positivismo producono identità, ruoli e fiducia nella conoscenza; la vita eccede le definizioni e prepara la frattura.',
-      quiz: [
-        {q:'Da quali elementi è sostenuta l’identità borghese descritta nella lezione?',a:['Da nome, famiglia, professione e reputazione','Soltanto dai desideri interiori','Dalla rinuncia a ogni ruolo'],c:0,e:'L’identità appare stabile perché è sostenuta da forme pubbliche riconoscibili.',r:['Identità borghese','Rileggi “Un individuo riconoscibile”: il ruolo non è un dettaglio esterno.','Un impiegato è riconosciuto anche attraverso lavoro e reputazione.']},
-        {q:'Perché la forma non è soltanto una prigione?',a:['Perché elimina ogni conflitto','Perché rende possibili riconoscimento e responsabilità','Perché coincide sempre con la vita'],c:1,e:'Senza forme comuni sarebbe difficile comunicare e assumere responsabilità.',r:['La funzione della forma','Rileggi “L’ordine delle forme”: Pirandello non propone una vita sociale senza definizioni.','Il nome sul registro identifica una persona e le sue responsabilità.']},
-        {q:'Quale fiducia rafforza il Positivismo?',a:['Che la realtà sia inconoscibile','Che soltanto l’arte produca verità','Che osservazione e scienza possano spiegare la realtà'],c:2,e:'Il Positivismo estende la fiducia nel metodo scientifico anche allo studio dell’uomo.',r:['Positivismo','Rileggi “La fiducia nella conoscenza”.','Classificare significa cercare regolarità osservabili.']},
-        {q:'Quando la forma diventa problematica?',a:['Quando viene scambiata per l’intera vita','Quando permette agli altri di riconoscerci','Quando resta provvisoria'],c:0,e:'Il problema nasce quando una definizione parziale pretende di essere definitiva.',r:['Il limite nascosto','Una forma è utile finché non pretende di contenere tutto.','“Studente diligente” non esaurisce la persona che descrive.']},
-        {q:'Quale tensione prepara la frattura?',a:['Scienza contro letteratura','Vita mutevole contro identità stabile','Campagna contro città'],c:1,e:'La vita cambia, mentre le forme sociali cercano di fissarla.',r:['Il ponte verso la frattura','Confronta movimento e definizione.','Un’emozione cambia più rapidamente della reputazione.']}
+      "number": "01",
+      "id": "filosofia",
+      "title": "La filosofia di Pirandello",
+      "source": {
+        "title": "01-La filosofia di Pirandello",
+        "url": "https://docs.google.com/document/d/1l846zJw4OZT77FL25m2gNqKASMkhKo9L6_ZZYfvlyuQ/edit"
+      },
+      "map": "./assets/maps/pirandello/Pirandello-filosofia.png",
+      "mapAlt": "Mappa della filosofia di Pirandello: dal flusso perenne al contrasto fra vita e forma, identità, incomunicabilità e follia.",
+      "mapWidth": 1055,
+      "mapHeight": 1491,
+      "blocks": [
+        {
+          "heading": "Il flusso perenne",
+          "paragraphs": [
+            "Per Pirandello la vita è un flusso continuo, mobile, mutevole, impossibile da fissare una volta per tutte. L’individuo cambia continuamente: nei pensieri, nei sentimenti, nel modo di percepire sé stesso e il mondo.",
+            "Il problema nasce quando questo flusso viene bloccato in una forma. La società, le convenzioni, il lavoro, la famiglia e soprattutto lo sguardo degli altri ci attribuiscono un’identità precisa: il professore, il marito, la moglie, il rispettabile cittadino, il pazzo. Ma quella forma non coincide mai completamente con la vita reale della persona.",
+            "Nasce così il contrasto fondamentale tra vita e forma: la vita è movimento, la forma è qualcosa di rigido che cerca di immobilizzarla.",
+            "Per questo l’uomo pirandelliano scopre spesso di non essere «uno», ma di avere molte identità, diverse a seconda di chi lo guarda. Quando prende coscienza di questa situazione, può entrare in crisi: comprende che l’immagine che ha di sé non coincide necessariamente con quella che gli altri hanno costruito.",
+            "Da qui derivano molti temi tipici di Pirandello: la maschera, la relatività della verità, l’incomunicabilità e persino la follia, che talvolta diventa il modo estremo per uscire dalle forme imposte dalla società.",
+            "In sintesi: la vita scorre continuamente, mentre noi tentiamo di fermarla in identità stabili. Ma ogni identità è soltanto una forma provvisoria del flusso della vita."
+          ]
+        }
       ]
     },
     {
-      id: 'fratture', number: '02', eyebrow: 'LE FRATTURE', title: 'Quando le certezze non bastano più',
-      question: 'Che cosa rende insufficiente il mondo ricevuto?',
-      thesis: 'La crisi culturale della modernità e alcune esperienze biografiche rendono visibile lo scarto fra le forme ordinate e una vita che non riesce più a starvi dentro.',
-      blocks: [
-        ['La crisi dell’io unitario', 'Psicologia e filosofia indagano processi non pienamente controllati dalla coscienza e insistono sul divenire. L’osservatore non appare più come uno sguardo neutrale posto fuori dal mondo.'],
-        ['La società moderna', 'Città, burocrazia, lavoro impiegatizio e opinione pubblica moltiplicano i ruoli. Proprio mentre la società chiede identità più definite, l’esperienza interiore le sente insufficienti.'],
-        ['Il dissesto del 1903', 'L’allagamento di una miniera provoca il dissesto economico della famiglia. Nello stesso periodo si aggrava la sofferenza psichica della moglie Antonietta Portulano. Casa, lavoro e famiglia diventano forme che proteggono e soffocano.'],
-        ['Biografia senza determinismo', 'Questi fatti offrono un contesto per comprendere alcune tensioni, ma non “producono” automaticamente le opere. Pirandello trasforma esperienze personali e crisi europee in una ricerca letteraria autonoma.'],
-        ['Lo scrittore pubblico', 'Il successo teatrale lo rende un autore europeo. Nel 1924 aderisce al Partito fascista: il dato va riconosciuto senza trasformarlo né in assoluzione né nella spiegazione unica delle opere. Nel 1934 riceve il Nobel.']
-      ],
-      bridge: 'Quando la realtà non coincide più con le definizioni che dovrebbero ordinarla, cambia l’immagine dell’essere umano.',
-      summary: 'Pirandello scrive dentro una crisi europea dell’io e della conoscenza. Psicologia, filosofia e nuove forme della società moderna rendono meno credibile l’immagine di un individuo perfettamente unitario. Anche la sua esperienza offre fratture concrete: nel 1903 il dissesto economico familiare e l’aggravarsi della malattia della moglie trasformano la casa in un luogo insieme necessario e soffocante. Questi fatti non spiegano meccanicamente le opere, ma rendono intelligibile la tensione fra vita e forma. Il successo teatrale, l’adesione al fascismo e il Nobel appartengono alla biografia pubblica e vanno distinti dalle interpretazioni. Dalla frattura emerge una nuova domanda: che cosa resta dell’io quando le definizioni non coincidono più con la vita?',
-      essentials: ['La modernità mette in crisi l’io unitario.','La società moltiplica ruoli e sguardi.','Il 1903 segna una grave frattura economica e familiare.','Biografia e opera non vanno collegate in modo automatico.','L’adesione al fascismo è un dato storico reale.','La crisi modifica l’immagine dell’uomo.'],
-      glossary: [['Frattura', 'Evento o trasformazione che rende insufficiente l’equilibrio precedente.'], ['Divenire', 'Realtà intesa come processo e mutamento.'], ['Burocrazia', 'Sistema di ruoli e procedure che identifica le persone attraverso funzioni.'], ['Determinismo biografico', 'Errore di spiegare un’opera come effetto automatico della vita dell’autore.']],
-      map:'./assets/maps/pirandello-fratture.svg',
-      mapAlt:'Mappa: crisi culturale, società moderna e fratture del 1903 mettono in crisi l’io unitario e conducono alla nuova immagine dell’uomo.',
-      quiz:[
-        {q:'Che cosa mette in crisi l’idea di un io trasparente?',a:['La sola perdita economica','L’indagine di processi non pienamente coscienti','La fine del teatro'],c:1,e:'La psicologia mostra che la coscienza non controlla tutto ciò che siamo.',r:['Crisi dell’io','Rileggi “La crisi dell’io unitario”.','Una reazione può sorprenderci e contraddire l’immagine di noi.']},
-        {q:'Quale effetto ha la società moderna?',a:['Elimina i ruoli','Rende ogni identità privata','Moltiplica ruoli, classificazioni e sguardi'],c:2,e:'Burocrazia e opinione pubblica chiedono identità sempre più riconoscibili.',r:['Società moderna','Rileggi il secondo snodo.','La stessa persona è cittadino, impiegato, genitore e utente.']},
-        {q:'Che cosa avviene nel 1903?',a:['Un dissesto economico e una grave crisi familiare','L’assegnazione del Nobel','L’adesione al fascismo'],c:0,e:'Il 1903 unisce la rovina economica e l’aggravarsi della malattia della moglie.',r:['La frattura del 1903','Distingui la cronologia essenziale.','Nobel e adesione politica appartengono agli anni successivi.']},
-        {q:'Perché non bisogna spiegare le opere soltanto con la biografia?',a:['Perché la biografia è inventata','Perché l’opera trasforma anche problemi culturali e forme artistiche','Perché Pirandello non ebbe esperienze personali'],c:1,e:'La biografia offre contesto, non una causa automatica e sufficiente.',r:['Biografia senza determinismo','Rileggi il quarto snodo.','Una crisi personale non contiene già un romanzo o una tecnica teatrale.']},
-        {q:'Quale formulazione è storicamente corretta?',a:['Pirandello non ebbe rapporti con il fascismo','Tutte le opere sono propaganda fascista','Pirandello aderì al fascismo, ma il dato non spiega da solo tutte le opere'],c:2,e:'La lezione conserva il fatto e rifiuta una chiave interpretativa unica.',r:['Lo scrittore pubblico','Distingui il dato politico dall’interpretazione totale.','Un’adesione è reale senza diventare la sola origine di ogni testo.']}
+      "number": "02",
+      "id": "maschere",
+      "title": "Le maschere",
+      "source": {
+        "title": "02-Le maschere",
+        "url": "https://docs.google.com/document/d/1sHpVSuDWtinxs38sHhZ8KefZA_avOls8b4-b1ZxyIhE/edit"
+      },
+      "map": "./assets/maps/pirandello/Pirandello-maschere.png",
+      "mapAlt": "Mappa delle maschere: identità sociale, sguardo degli altri e percorso di Uno, nessuno e centomila.",
+      "mapWidth": 1312,
+      "mapHeight": 1199,
+      "blocks": [
+        {
+          "paragraphs": [
+            "Le maschere sono una delle conseguenze più importanti del contrasto pirandelliano tra vita e forma.",
+            "Per vivere nella società siamo costretti ad assumere delle forme, cioè delle identità riconoscibili: il professore, il padre, il marito, l’impiegato, la persona seria, il pazzo. Queste forme diventano delle maschere.",
+            "Il problema è che la maschera non coincide completamente con ciò che siamo. La nostra vita interiore cambia continuamente, mentre gli altri tendono a considerarci sempre nello stesso modo.",
+            "Inoltre non abbiamo una sola maschera: ne possediamo molte, perché ogni persona che ci conosce costruisce un’immagine diversa di noi. Io posso pensare di essere in un certo modo, mentre gli altri mi vedono diversamente.",
+            "Per Pirandello, quindi, l’identità diventa frammentata:",
+            "io credo di essere uno → gli altri vedono in me molte persone diverse → alla fine scopro di non possedere un’identità unica e definitiva.",
+            "È il percorso che arriverà alla sua formulazione più radicale in Uno, nessuno e centomila: uno perché credo di essere una persona precisa; centomila perché esisto diversamente per tutti quelli che mi guardano; nessuno perché nessuna di queste immagini coincide definitivamente con il mio vero essere.",
+            "La maschera, dunque, è la forma rigida con cui noi stessi e gli altri cerchiamo di fermare il flusso mutevole della vita."
+          ]
+        }
       ]
     },
     {
-      id:'mondo-nuovo', number:'03', eyebrow:'L’IMMAGINE DEL MONDO', title:'La vita non coincide con la forma',
-      question:'Come appare ora la realtà?',
-      thesis:'L’essere umano vive nel conflitto fra il movimento della vita e le forme con cui se stesso e gli altri cercano di fissarlo.',
-      blocks:[
-        ['Vita e forma','La vita cambia, reagisce e contraddice ciò che era un momento prima. Per vivere insieme dobbiamo però darle un nome, un carattere, un ruolo e una storia riconoscibile.'],
-        ['Uno, centomila, nessuno','Siamo uno nell’immagine coerente che costruiamo di noi; centomila nelle immagini prodotte dagli altri; nessuno quando non troviamo un io unico capace di raccoglierle tutte.'],
-        ['Le maschere','La maschera è il ruolo con cui veniamo riconosciuti. Può essere scelta o assegnata; più gli altri vi credono, più diventa difficile contraddirla.'],
-        ['Nessun vero io immobile','Dire “basta essere se stessi” semplifica Pirandello. Non possediamo un’essenza perfettamente trasparente sotto le maschere: anche l’immagine che abbiamo di noi è una forma.'],
-        ['Verità e prospettiva','Ogni esperienza dei fatti è situata e interpretata. Questo non significa che tutto sia ugualmente vero: significa che nessuna prospettiva possiede automaticamente l’intero.']
-      ],
-      bridge:'Se la persona non coincide con la propria forma, la letteratura deve mostrare quella frattura mentre accade.',
-      summary:'La nuova immagine del mondo nasce dal conflitto fra vita e forma. La vita è movimento, ma la società ha bisogno di nomi, ruoli e identità riconoscibili. Siamo “uno” per noi stessi, “centomila” nelle immagini degli altri e “nessuno” quando cerchiamo una definizione unica capace di contenerle tutte. Le maschere non sono soltanto false: producono effetti reali e rendono possibile la relazione, ma diventano prigioni quando pretendono di essere definitive. Non esiste neppure un io puro e immobile sotto ogni maschera. Anche la verità umana è prospettica: i fatti non scompaiono, ma nessuno sguardo li possiede completamente. La poetica dovrà far vivere al lettore questa instabilità.',
-      essentials:['La vita è movimento continuo.','La forma rende la vita riconoscibile.','Uno, centomila e nessuno descrivono tre aspetti dell’identità.','Le maschere sono necessarie e limitanti.','Non esiste un io puro perfettamente trasparente.','La verità prospettica non equivale a “tutto è vero”.'],
-      glossary:[['Vita','Movimento dell’esistenza che eccede ogni definizione.'],['Maschera','Ruolo attraverso cui siamo riconosciuti.'],['Prospettiva','Posizione limitata da cui interpretiamo i fatti.'],['Incomunicabilità','Difficoltà di far coincidere esperienza e immagine compresa dagli altri.'],['Nessuno','Impossibilità di trovare un io unico e definitivo.']],
-      map:'./assets/maps/pirandello-mondo-nuovo.svg',
-      mapAlt:'Mappa: la vita entra nelle forme, diventa uno e centomila, scopre le maschere e giunge alla crisi dell’io e alla verità prospettica.',
-      quiz:[
-        {q:'Che rapporto esiste fra vita e forma?',a:['La forma contiene sempre tutta la vita','La vita cambia e la forma la rende provvisoriamente riconoscibile','La vita esiste soltanto fuori dalla società'],c:1,e:'La forma è necessaria, ma non esaurisce il movimento della vita.',r:['Vita e forma','Rileggi il primo snodo.','Un nome resta uguale mentre la persona cambia.']},
-        {q:'Perché siamo “centomila”?',a:['Perché cambiamo nome ogni giorno','Perché non abbiamo rapporti sociali','Perché gli altri costruiscono immagini diverse di noi'],c:2,e:'Ogni relazione produce una forma differente della stessa persona.',r:['Uno, centomila, nessuno','Rileggi il secondo snodo.','Amico e insegnante osservano aspetti diversi.']},
-        {q:'Che cos’è una maschera?',a:['Il ruolo con cui veniamo riconosciuti','Una bugia cosciente e sempre volontaria','La libertà assoluta dalle forme'],c:0,e:'La maschera può essere scelta o assegnata e produce conseguenze reali.',r:['Le maschere','Non ridurre la maschera a menzogna intenzionale.','La reputazione di persona affidabile è una maschera sociale.']},
-        {q:'Perché “essere finalmente se stessi” non risolve il problema?',a:['Perché dobbiamo imitare gli altri','Perché anche l’immagine che abbiamo di noi è una forma mutevole','Perché l’identità è fissata alla nascita'],c:1,e:'Pirandello non colloca sotto le maschere un’essenza immobile.',r:['Nessun vero io immobile','Rileggi il quarto snodo.','Anche il racconto che facciamo di noi seleziona e ordina.']},
-        {q:'Che cosa significa verità prospettica?',a:['I fatti non esistono','Ogni opinione è corretta','Ogni sguardo è situato e deve essere motivato'],c:2,e:'La prospettiva limita la conoscenza senza rendere equivalenti tutte le affermazioni.',r:['Verità e prospettiva','Distingui limite della conoscenza e indifferenza ai fatti.','Due testimonianze vanno confrontate con dati e motivazioni.']}
+      "number": "03",
+      "id": "cosi-e-se-vi-pare",
+      "title": "Così è (se vi pare)",
+      "source": {
+        "title": "03-Così é (se vi pare)",
+        "url": "https://docs.google.com/document/d/1giio0RCPw9v8NRrr36XH2y1xKkEczuaJNeEOxH57ZKg/edit"
+      },
+      "map": "./assets/maps/pirandello/Cosi-e-se-vi-pare.png",
+      "mapAlt": "Mappa di Così è (se vi pare): le versioni di Ponza e Frola, il ruolo di Laudisi e il finale senza una verità definitiva.",
+      "mapWidth": 1312,
+      "mapHeight": 1199,
+      "blocks": [
+        {
+          "heading": "Il mistero centrale",
+          "paragraphs": [
+            "Così è (se vi pare) è una commedia di Luigi Pirandello, rappresentata per la prima volta nel 1917. Al centro dell’opera c’è un mistero che coinvolge tre personaggi: il signor Ponza, sua moglie e la signora Frola, madre della donna. Attraverso la loro vicenda Pirandello mette in discussione la possibilità di conoscere con certezza la verità.",
+            "La storia si svolge in una città di provincia, dove sono da poco arrivati il signor Ponza, un impiegato, sua moglie e la suocera, la signora Frola. Il loro comportamento appare subito molto strano agli abitanti del luogo. La moglie del signor Ponza vive infatti separata dalla madre e le due donne non si incontrano mai direttamente. La signora Frola comunica con la figlia soltanto da lontano, mentre Ponza controlla attentamente ogni rapporto tra le due.",
+            "Questa situazione suscita una grande curiosità negli abitanti della città, che vogliono a tutti i costi capire quale sia la verità."
+          ]
+        },
+        {
+          "heading": "Le due versioni incompatibili",
+          "paragraphs": [
+            "La signora Frola sostiene che il genero, il signor Ponza, sia impazzito. Secondo lei, sua figlia Lina è realmente la moglie di Ponza, ma l’uomo, dopo una grave crisi mentale, si sarebbe convinto che la prima moglie fosse morta e di essersi successivamente risposato. Per non sconvolgerlo, la famiglia avrebbe deciso di assecondare questa sua convinzione.",
+            "Il signor Ponza racconta invece una versione completamente diversa. Egli afferma che la signora Frola è impazzita dopo la morte della figlia Lina. La sua prima moglie sarebbe realmente morta e lui avrebbe sposato successivamente un’altra donna, Giulia. Per pietà verso la signora Frola, la seconda moglie fingerebbe però di essere Lina, permettendo alla donna di credere che la figlia sia ancora viva.",
+            "Le due versioni sono quindi perfettamente opposte, ma entrambe sembrano credibili."
+          ]
+        },
+        {
+          "heading": "La ricerca della verità e Laudisi",
+          "paragraphs": [
+            "Gli abitanti della città cercano allora prove, testimonianze e documenti che possano chiarire definitivamente la situazione. Tuttavia ogni tentativo fallisce. La città da cui provengono i tre personaggi è stata infatti distrutta da un terremoto e molti documenti sono andati perduti.",
+            "L’unico personaggio che non partecipa ossessivamente alla ricerca della verità è Lamberto Laudisi. Egli osserva divertito il comportamento degli altri e sostiene che gli uomini pretendono di conoscere una realtà oggettiva, mentre in realtà ciascuno vede il mondo attraverso il proprio punto di vista.",
+            "Laudisi cerca continuamente di far comprendere agli altri che una persona non è mai soltanto ciò che pensa di essere: esiste anche nelle immagini diverse che gli altri costruiscono di lei. Per questo una verità unica e definitiva può essere impossibile da raggiungere.",
+            "Nel corso della commedia la curiosità degli abitanti cresce sempre di più. Essi interrogano ripetutamente il signor Ponza e la signora Frola e cercano di farli incontrare, sperando che una contraddizione permetta finalmente di scoprire chi dei due sia pazzo e quale versione sia vera."
+          ]
+        },
+        {
+          "heading": "Il finale",
+          "paragraphs": [
+            "Alla fine decidono di interrogare direttamente la moglie di Ponza, l’unica persona che potrebbe apparentemente risolvere il mistero.",
+            "La donna compare velata davanti agli altri. Tutti le chiedono di dichiarare finalmente chi sia veramente: Lina, la figlia della signora Frola e prima moglie di Ponza, oppure Giulia, la seconda moglie di Ponza?",
+            "La risposta, però, non risolve nulla.",
+            "La donna afferma di essere, per la signora Frola, sua figlia Lina, e per il signor Ponza, la sua seconda moglie Giulia. Quando le chiedono quale sia la sua vera identità, risponde:",
+            "«Io sono colei che mi si crede.»",
+            "Con questa frase si conclude il mistero."
+          ]
+        },
+        {
+          "heading": "Il significato della commedia",
+          "paragraphs": [
+            "Pirandello non permette allo spettatore di conoscere una verità definitiva. Non sappiamo se sia pazzo Ponza, se sia pazza la signora Frola o se dietro la loro vicenda ci sia una realtà ancora diversa.",
+            "Il titolo Così è (se vi pare) sintetizza proprio questa idea: la realtà non appare uguale a tutti. Ognuno costruisce la propria interpretazione delle persone e degli eventi e ciò che per qualcuno è vero può apparire falso a un altro.",
+            "La commedia diventa quindi una riflessione sull’identità, sulla relatività della verità e sulla difficoltà di conoscere davvero gli altri.",
+            "La curiosità degli abitanti assume anche un significato importante: essi non riescono ad accettare che qualcosa rimanga senza spiegazione. Vogliono stabilire necessariamente chi abbia ragione e chi abbia torto, chi sia sano e chi sia pazzo. Ma proprio questa pretesa viene messa in crisi da Pirandello.",
+            "Laudisi, con le sue risate e i suoi ragionamenti, rappresenta la voce più vicina alla concezione pirandelliana: l'uomo crede di possedere la verità, mentre spesso possiede soltanto una delle possibili immagini della realtà.",
+            "Il finale non offre quindi una soluzione al mistero, ma pone una domanda più profonda: esiste davvero una verità assoluta sull'identità di una persona, oppure ciascuno di noi esiste in modo diverso nello sguardo degli altri?"
+          ]
+        }
       ]
     },
     {
-      id:'poetica', number:'04', eyebrow:'LA POETICA', title:'Un’arte della frattura',
-      question:'Come deve scrivere Pirandello per dire una realtà instabile?',
-      thesis:'La forma artistica non ricompone la contraddizione: la rende visibile e costringe il lettore a passare dal giudizio immediato alla riflessione.',
-      blocks:[
-        ['L’avvertimento del contrario','Davanti a una signora anziana truccata come una ragazza percepiamo subito il contrasto rispetto alle convenzioni sull’età. È il momento del comico.'],
-        ['Il sentimento del contrario','La riflessione immagina ragioni, paura e dolore dentro quel comportamento. Il contrasto non scompare, ma non possiamo più guardarlo con un giudizio semplice.'],
-        ['Non semplice compassione','L’umorismo tiene insieme comico e doloroso. Non assolve automaticamente il personaggio e non elimina la contraddizione: impedisce di ridurla a una sola lettura.'],
-        ['Tecniche narrative','Punti di vista incompatibili, narratori coinvolti, titoli paradossali, ragionamenti nervosi e mescolanza di tragico e comico fanno sentire l’instabilità.'],
-        ['Metateatro','Nel teatro la frattura invade il palcoscenico: personaggio, attore, regista e pubblico non restano separati. L’opera mostra il proprio funzionamento.']
+      "number": "04",
+      "id": "monologo",
+      "title": "Monologo di Laudisi",
+      "source": {
+        "title": "04-Monologo Laudisi",
+        "url": "https://docs.google.com/document/d/1oYrV2O-ZJ_krSYCnqYBU9YhgVYSKUhe4QfcAmZblmcE/edit"
+      },
+      "map": "./assets/maps/pirandello/monologo-Laudisi.png",
+      "mapAlt": "Mappa del monologo di Laudisi: specchio, identità, fantasma, maschera e relatività della verità.",
+      "mapWidth": 1312,
+      "mapHeight": 1199,
+      "theater": [
+        {
+          "kind": "speech",
+          "text": "Laudisi: Eh, caro mio… chi è il pazzo tra noi due?"
+        },
+        {
+          "kind": "direction",
+          "text": "Alza una mano e punta l’indice contro la propria immagine nello specchio, che naturalmente gli restituisce lo stesso gesto. Sghignazza ancora, poi continua:"
+        },
+        {
+          "kind": "speech",
+          "text": "Eh, lo so. Io dico: «Tu!» e tu dici: «Io!»."
+        },
+        {
+          "kind": "speech",
+          "text": "Tu! Proprio tu!"
+        },
+        {
+          "kind": "speech",
+          "text": "E già… io."
+        },
+        {
+          "kind": "speech",
+          "text": "Ma dai, tra noi possiamo dircelo: ci conosciamo bene, noi due!"
+        },
+        {
+          "kind": "speech",
+          "text": "Il problema è che gli altri non ti vedono come ti vedo io."
+        },
+        {
+          "kind": "speech",
+          "text": "E allora, caro mio, che cosa diventi?"
+        },
+        {
+          "kind": "speech",
+          "text": "Io sono qui, davanti a te: mi vedo, mi tocco, so di esserci. Ma tu, quello che gli altri vedono al posto mio, che cosa sei?"
+        },
+        {
+          "kind": "speech",
+          "text": "Un fantasma, caro mio. Un fantasma!"
+        },
+        {
+          "kind": "speech",
+          "text": "Eppure guarda questi pazzi: senza nemmeno accorgersi del fantasma che si portano dentro, corrono pieni di curiosità dietro ai fantasmi degli altri."
+        },
+        {
+          "kind": "speech",
+          "text": "E sono convinti che siano qualcosa di diverso…"
+        }
       ],
-      bridge:'Romanzi, novelle e teatro diventano esperimenti diversi sul momento in cui una forma non riesce più a contenere la vita.',
-      summary:'La poetica pirandelliana trasforma la frattura in esperienza. Il comico nasce dall’avvertimento immediato di un contrario; l’umoristico comincia quando la riflessione scopre ragioni e dolore dentro ciò che appariva soltanto ridicolo. Il sentimento del contrario non è semplice compassione e non cancella il sorriso: tiene insieme percezioni incompatibili. Anche la tecnica rifiuta una versione unica. Narratori coinvolti, prospettive discordanti, titoli paradossali e mescolanza di tragico e comico impediscono una conclusione comoda. Nel metateatro, infine, l’opera porta in scena il proprio funzionamento e confonde i confini fra attore, personaggio e realtà. Le opere metteranno alla prova queste scelte.',
-      essentials:['Il comico nasce dall’avvertimento del contrario.','L’umoristico richiede l’intervento della riflessione.','Il sentimento del contrario tiene insieme riso e dolore.','L’umorismo non coincide con la compassione.','La moltiplicazione dei punti di vista è una scelta formale.','Il metateatro interroga la rappresentazione.'],
-      glossary:[['Comico','Reazione immediata a un contrasto rispetto alle attese.'],['Umorismo','Sguardo riflessivo che coglie insieme contrario e ragioni.'],['Grottesco','Unione deformante di comico, tragico e inquietante.'],['Narratore inaffidabile','Voce la cui versione non può essere accettata come completa.'],['Metateatro','Teatro che mette in scena il proprio farsi.']],
-      map:'./assets/maps/pirandello-poetica.svg',
-      mapAlt:'Mappa: contrasto produce avvertimento del contrario; la riflessione produce sentimento del contrario; tecniche narrative e metateatro trasformano la frattura in forma.',
-      quiz:[
-        {q:'Da che cosa nasce il comico?',a:['Dall’avvertimento immediato di un contrario','Dalla ricostruzione completa della biografia','Dalla soluzione della contraddizione'],c:0,e:'Il comico è la prima percezione del contrasto.',r:['Avvertimento del contrario','Rileggi il primo snodo.','Notiamo subito lo scarto fra età e abbigliamento.']},
-        {q:'Che cosa aggiunge la riflessione?',a:['Una regola morale','Le ragioni e il dolore dentro il comportamento','La certezza che il personaggio abbia ragione'],c:1,e:'La riflessione trasforma il semplice contrasto in sentimento del contrario.',r:['Sentimento del contrario','Rileggi il secondo snodo.','Immaginare la paura della solitudine cambia il nostro sguardo.']},
-        {q:'Perché l’umorismo non è semplice compassione?',a:['Perché elimina il dolore','Perché rifiuta ogni comprensione','Perché mantiene insieme il ridicolo e il doloroso'],c:2,e:'L’umorismo non sostituisce una lettura con l’altra: le fa coesistere.',r:['Non semplice compassione','Conserva entrambi i lati della scena.','La signora resta contraddittoria anche quando ne comprendiamo la paura.']},
-        {q:'Quale tecnica è coerente con la verità prospettica?',a:['Un’unica voce onnisciente sempre certa','Punti di vista incompatibili','Una cronologia senza conflitti'],c:1,e:'Versioni discordanti obbligano il lettore a confrontare le prospettive.',r:['Tecniche narrative','Rileggi il quarto snodo.','Ponza e Frola costruiscono realtà incompatibili.']},
-        {q:'Che cosa fa il metateatro?',a:['Nasconde il funzionamento dello spettacolo','Elimina i personaggi','Porta sulla scena il problema della rappresentazione'],c:2,e:'Attori, personaggi e regista diventano parti del conflitto.',r:['Metateatro','Rileggi il quinto snodo.','Una prova teatrale può diventare il contenuto dell’opera.']}
+      "readingTitle": "Monologo allo specchio",
+      "video": {
+        "src": "./assets/video/pirandello/il-fantasma-nello-specchio.mp4",
+        "title": "Guarda il monologo di Laudisi – “Il fantasma nello specchio”"
+      }
+    },
+    {
+      "number": "05",
+      "id": "commento",
+      "title": "Commento al monologo",
+      "source": {
+        "title": "05-Monologo commento",
+        "url": "https://docs.google.com/document/d/1xGS32t97sW-XkiYiOAo9CohcNyKpEVpMmBLyeiPmUZE/edit"
+      },
+      "map": "./assets/maps/pirandello/monologo-Laudisi.png",
+      "mapAlt": "Mappa del monologo di Laudisi: specchio, identità, fantasma, maschera e relatività della verità.",
+      "mapWidth": 1312,
+      "mapHeight": 1199,
+      "blocks": [
+        {
+          "heading": "Analisi del monologo di Laudisi allo specchio",
+          "paragraphs": [
+            "Nel monologo allo specchio di Così è (se vi pare), Laudisi si trova davanti alla propria immagine e le parla come se avesse davanti un’altra persona. La scena, apparentemente comica e quasi assurda, contiene in realtà alcuni dei temi fondamentali del pensiero di Pirandello."
+          ]
+        },
+        {
+          "heading": "«Chi è il pazzo tra noi due?»",
+          "paragraphs": [
+            "Il monologo comincia con una domanda provocatoria:",
+            "«Chi è il pazzo tra noi due?»",
+            "Laudisi si rivolge alla propria immagine riflessa e immediatamente mette in discussione qualcosa che normalmente consideriamo sicuro: la nostra identità.",
+            "Davanti allo specchio sembrerebbe esserci una situazione semplicissima: Laudisi è la persona reale, mentre quella nello specchio è soltanto la sua immagine. Pirandello, però, complica immediatamente le cose.",
+            "Laudisi indica lo specchio e l'immagine indica lui:",
+            "«Io dico: “Tu!” e tu dici: “Io!”.»",
+            "Chi è dunque l'«io» e chi è il «tu»?",
+            "La domanda introduce uno dei problemi centrali della filosofia pirandelliana: l'identità non è qualcosa di unico e stabile."
+          ]
+        },
+        {
+          "heading": "Il contrasto tra vita e forma",
+          "paragraphs": [
+            "Secondo la concezione pirandelliana, la vita è un flusso continuo e mutevole. L'individuo cambia continuamente nei pensieri, nei sentimenti e nel modo di percepire sé stesso.",
+            "Questo movimento, però, viene continuamente fermato in una forma.",
+            "Noi stessi cerchiamo di costruirci un'identità precisa, ma anche gli altri ci attribuiscono continuamente delle identità: l'uomo serio, il marito, il professore, l'impiegato, il pazzo.",
+            "Nel momento in cui una persona viene definita in questo modo, il flusso della vita viene come bloccato dentro una forma.",
+            "L'immagine che Laudisi vede nello specchio rappresenta proprio questa situazione: è un'immagine di sé che appare stabile, mentre l'essere reale è continuamente mutevole."
+          ]
+        },
+        {
+          "heading": "Lo sguardo degli altri",
+          "paragraphs": [
+            "Il passaggio decisivo del monologo arriva quando Laudisi dice:",
+            "«Il problema è che gli altri non ti vedono come ti vedo io.»",
+            "Qui Pirandello introduce un elemento fondamentale: noi non siamo soltanto ciò che crediamo di essere.",
+            "Ogni persona che ci incontra costruisce una propria immagine di noi.",
+            "Per questo non esiste soltanto il Laudisi che Laudisi conosce: esistono anche tutti i diversi Laudisi che vivono nella mente delle persone che lo conoscono.",
+            "Nasce quindi una frattura tra:",
+            "ciò che io credo di essere → ciò che gli altri credono che io sia.",
+            "Ed è proprio da questa frattura che nascono le maschere."
+          ]
+        },
+        {
+          "heading": "Le maschere",
+          "paragraphs": [
+            "Per vivere nella società assumiamo inevitabilmente delle maschere, cioè delle identità riconoscibili.",
+            "Ma la maschera non coincide mai completamente con la persona.",
+            "Una persona può credere di essere generosa e apparire egoista a qualcun altro; può considerarsi coraggiosa ed essere giudicata codarda; può ritenersi perfettamente normale ed essere considerata pazza.",
+            "E nessuna di queste immagini esaurisce completamente la realtà dell'individuo.",
+            "Non esiste quindi una sola maschera: esistono tante maschere quanti sono gli sguardi degli altri su di noi.",
+            "Laudisi comprende questa condizione e proprio per questo può riderne. Gli altri personaggi della commedia, invece, continuano a cercare disperatamente una verità unica."
+          ]
+        },
+        {
+          "heading": "Il «fantasma»",
+          "paragraphs": [
+            "Il termine più importante del monologo è probabilmente «fantasma».",
+            "Laudisi domanda alla propria immagine:",
+            "«Ma tu, quello che gli altri vedono al posto mio, che cosa sei?»",
+            "E risponde:",
+            "«Un fantasma, caro mio. Un fantasma!»",
+            "Il fantasma non è semplicemente qualcosa che non esiste.",
+            "È l'immagine di noi che esiste nella mente degli altri.",
+            "Io sono vivo, mobile, mutevole; ma quando un'altra persona mi osserva costruisce una certa immagine di me e tende a considerarmi attraverso quell'immagine.",
+            "Quell'immagine diventa il mio «fantasma».",
+            "Il paradosso è che ciascuno di noi vive circondato dai propri fantasmi: le immagini che gli altri hanno costruito di noi e quelle che noi abbiamo costruito degli altri."
+          ]
+        },
+        {
+          "heading": "La follia degli altri personaggi",
+          "paragraphs": [
+            "Per questo Laudisi conclude osservando:",
+            "«Senza nemmeno accorgersi del fantasma che si portano dentro, corrono pieni di curiosità dietro ai fantasmi degli altri.»",
+            "Qui il monologo si collega direttamente alla vicenda di Così è (se vi pare).",
+            "Gli abitanti della città vogliono disperatamente sapere chi siano veramente il signor Ponza, la signora Frola e soprattutto la signora Ponza.",
+            "Vogliono sapere chi dice la verità e chi è pazzo.",
+            "Il loro errore consiste nel credere che esista necessariamente una verità unica e oggettiva che possa essere scoperta.",
+            "Laudisi invece ha già compreso che ciò che chiamiamo realtà è sempre anche il risultato di un punto di vista.",
+            "Per questo ride continuamente degli altri.",
+            "La sua risata non nasce semplicemente dal divertimento: nasce dalla consapevolezza dell'assurdità della loro ricerca.",
+            "Essi vogliono conoscere la «vera» identità degli altri, ma non si rendono conto di non poter stabilire con assoluta certezza neppure la propria."
+          ]
+        },
+        {
+          "heading": "«Chi è il pazzo?»",
+          "paragraphs": [
+            "A questo punto anche la domanda iniziale assume un significato più profondo.",
+            "Chi è veramente pazzo?",
+            "Laudisi, che parla con la propria immagine nello specchio?",
+            "Oppure gli altri, che credono ingenuamente di poter stabilire definitivamente quale sia la realtà?",
+            "Pirandello rovescia così il significato tradizionale della follia.",
+            "Chi sembra pazzo può aver compreso qualcosa che le persone considerate normali non riescono a vedere: la precarietà delle identità che costruiamo."
+          ]
+        },
+        {
+          "heading": "Il monologo anticipa il finale della commedia",
+          "paragraphs": [
+            "Il monologo allo specchio prepara direttamente il finale di Così è (se vi pare).",
+            "Per tutta la commedia gli altri personaggi vogliono sapere se la signora Ponza sia Lina, come sostiene la signora Frola, oppure Giulia, come sostiene Ponza.",
+            "Quando finalmente la donna appare, sembra che il mistero possa essere risolto.",
+            "Ma ella dichiara di essere Lina per la signora Frola e Giulia per il signor Ponza, concludendo:",
+            "«Io sono colei che mi si crede.»",
+            "Il principio è esattamente quello espresso da Laudisi davanti allo specchio.",
+            "La signora Ponza non offre agli altri una presunta identità autentica nascosta dietro le apparenze. Riconosce invece di esistere in forme diverse nello sguardo degli altri.",
+            "Per la signora Frola è una persona.",
+            "Per Ponza è un'altra.",
+            "E stabilire chi ella sia «veramente» diventa impossibile."
+          ]
+        },
+        {
+          "heading": "Dal monologo a Uno, nessuno e centomila",
+          "paragraphs": [
+            "Il ragionamento contenuto nel monologo anticipa anche ciò che Pirandello svilupperà in maniera ancora più radicale in Uno, nessuno e centomila.",
+            "L'individuo crede inizialmente di essere uno, cioè di possedere una precisa identità.",
+            "Scopre poi di essere centomila, perché ciascuna persona lo vede in maniera differente.",
+            "Infine comprende di essere nessuno, perché nessuna di quelle immagini può essere identificata definitivamente con il suo vero essere.",
+            "Il breve dialogo di Laudisi con lo specchio contiene già questo percorso:",
+            "io credo di conoscermi → scopro l'immagine che gli altri vedono → comprendo che quella immagine non coincide con me → l'identità unica si dissolve."
+          ]
+        },
+        {
+          "heading": "Significato complessivo",
+          "paragraphs": [
+            "Il monologo di Laudisi non è quindi una semplice parentesi comica della commedia. È una vera chiave interpretativa dell'opera.",
+            "Attraverso lo specchio Pirandello rappresenta simbolicamente il problema dell'identità umana.",
+            "La vita è continua trasformazione.",
+            "La forma tenta di fermarla.",
+            "La maschera è l'identità rigida che noi stessi o gli altri costruiamo.",
+            "Il fantasma è l'immagine di noi che vive nella mente degli altri.",
+            "Da qui deriva anche la relatività della verità: se ciascuno osserva la realtà da una prospettiva diversa, nessuno può pretendere facilmente di possederne una conoscenza assoluta.",
+            "Ecco perché Laudisi ride.",
+            "Gli altri corrono alla ricerca della verità su Ponza, Frola e sua moglie; lui ha già compreso che il problema è molto più radicale:",
+            "prima di domandarci chi siano veramente gli altri, dovremmo chiederci se sappiamo davvero chi siamo noi."
+          ]
+        }
+      ],
+      "connections": [
+        [
+          "filosofia",
+          "01 · Flusso perenne, vita e forma"
+        ],
+        [
+          "maschere",
+          "02 · Maschera e molteplicità dell’io"
+        ],
+        [
+          "cosi-e-se-vi-pare",
+          "03 · Le versioni di Ponza e Frola"
+        ],
+        [
+          "monologo",
+          "04 · Rileggi il monologo"
+        ]
       ]
     },
     {
-      id:'opere', number:'05', eyebrow:'LE OPERE', title:'Sei esperimenti sull’identità',
-      question:'Dove la poetica diventa forma e conflitto?',
-      thesis:'Ogni opera mette un personaggio davanti a una diversa impossibilità: vivere senza nome, distruggere le immagini degli altri, possedere la verità o uscire dalla rappresentazione.',
-      blocks:[
-        ['Il fu Mattia Pascal','Creduto morto, Mattia assume il nome di Adriano Meis. Scopre che senza identità giuridica non può sposarsi, denunciare un furto o partecipare pienamente alla società. La vecchia forma è una prigione, ma l’assenza di forma lo rende invisibile.'],
-        ['Uno, nessuno e centomila','Vitangelo Moscarda scopre che il suo naso pende verso destra: un dettaglio minimo rivela l’immagine sconosciuta che gli altri possiedono di lui. Ogni tentativo di distruggerla produce nuove interpretazioni.'],
-        ['Novelle per un anno','Una crepa interrompe vite apparentemente normali. In Il treno ha fischiato il suono di un treno apre a Belluca uno spazio immaginario e rivela quanto lavoro e famiglia abbiano compresso la sua esistenza.'],
-        ['Così è (se vi pare)','Ponza e Frola offrono versioni incompatibili. La comunità trasforma il dolore privato in un’inchiesta e pretende che la signora Ponza consegni una verità definitiva. La risposta finale sottrae la donna al possesso degli osservatori.'],
-        ['Sei personaggi in cerca d’autore','Sei personaggi irrompono durante le prove e rifiutano la copia proposta dagli attori. Realtà e finzione, persona e personaggio, vita e forma scenica non coincidono più.'],
-        ['Enrico IV','Un uomo continua a recitare la follia anche dopo avere recuperato la lucidità. La maschera diventa rifugio, scelta e prigione.']
+      "number": "06",
+      "id": "ripasso",
+      "title": "Saperi, vocabolario e domande",
+      "source": {
+        "title": "06-Domande - vocabolario",
+        "url": "https://docs.google.com/document/d/1xID_On3bK7KO2WGw5iwN-GF3gSN6Lo5Dms_nGiMle0s/edit"
+      },
+      "groups": [
+        {
+          "title": "1. IL FLUSSO PERENNE",
+          "lesson": "filosofia",
+          "essentials": [
+            "Per Pirandello la vita è un flusso continuo, in perenne trasformazione.",
+            "L'individuo cambia continuamente nei pensieri, nei sentimenti e nella percezione di sé.",
+            "La società e gli altri cercano però di fermare questo continuo mutamento attribuendo alla persona una forma, cioè un'identità definita.",
+            "Nasce così il contrasto fondamentale tra vita e forma.",
+            "La vita è mobile e mutevole; la forma è rigida e tende a fissare l'individuo.",
+            "L'uomo può scoprire che l'immagine che possiede di sé non coincide con quella costruita dagli altri.",
+            "Da questo contrasto derivano temi fondamentali di Pirandello: maschera, identità, relatività della verità, incomunicabilità e follia.",
+            "Ogni identità è quindi soltanto una forma provvisoria che cerca di fermare il movimento della vita."
+          ],
+          "glossary": [
+            [
+              "Flusso perenne",
+              "Il continuo movimento e cambiamento della vita."
+            ],
+            [
+              "Vita",
+              "La realtà autentica dell'individuo, mutevole e continuamente in trasformazione."
+            ],
+            [
+              "Forma",
+              "L'identità stabile e rigida nella quale noi stessi o gli altri cerchiamo di fissare una persona."
+            ],
+            [
+              "Identità",
+              "L'immagine attraverso cui definiamo noi stessi o veniamo definiti dagli altri."
+            ],
+            [
+              "Sguardo degli altri",
+              "Il modo in cui le altre persone ci vedono e costruiscono una propria immagine di noi."
+            ],
+            [
+              "Incomunicabilità",
+              "La difficoltà di comprendere veramente gli altri e di far coincidere la nostra visione della realtà con la loro."
+            ],
+            [
+              "Follia",
+              "In Pirandello può rappresentare anche una rottura delle forme e delle convenzioni imposte dalla società."
+            ]
+          ],
+          "questions": [
+            [
+              "1. Che cosa significa per Pirandello che la vita è un flusso perenne?",
+              "Significa che la vita cambia continuamente e che l'individuo non possiede un'identità immobile e definitiva."
+            ],
+            [
+              "2. Qual è il contrasto fondamentale della filosofia pirandelliana?",
+              "Il contrasto tra vita e forma: la vita è movimento, mentre la forma cerca di fissarla in un'identità stabile."
+            ],
+            [
+              "3. Da che cosa vengono create le forme?",
+              "Dalla società, dalle convenzioni, dal lavoro, dalla famiglia, dallo sguardo degli altri e anche dall'immagine che costruiamo di noi stessi."
+            ],
+            [
+              "4. Perché la forma può diventare un problema?",
+              "Perché cerca di rendere stabile qualcosa che in realtà continua a cambiare."
+            ],
+            [
+              "5. Perché l'uomo pirandelliano entra in crisi?",
+              "Perché scopre che ciò che crede di essere non coincide necessariamente con ciò che gli altri vedono in lui."
+            ]
+          ]
+        },
+        {
+          "title": "2. LE MASCHERE",
+          "lesson": "maschere",
+          "essentials": [
+            "Le maschere derivano direttamente dal contrasto tra vita e forma.",
+            "Per vivere nella società assumiamo inevitabilmente delle identità riconoscibili: padre, marito, professore, impiegato, persona seria, pazzo.",
+            "Queste identità diventano delle maschere.",
+            "La maschera non coincide mai completamente con la vita interiore dell'individuo.",
+            "Non possediamo una sola maschera, perché ogni persona costruisce una diversa immagine di noi.",
+            "Esiste quindi una differenza tra ciò che credo di essere e ciò che gli altri credono che io sia.",
+            "L'identità diventa frammentata e molteplice.",
+            "Questa concezione verrà portata alle estreme conseguenze in Uno, nessuno e centomila.",
+            "Siamo uno per noi stessi, centomila nelle immagini costruite dagli altri e infine nessuno, perché nessuna di queste immagini rappresenta completamente ciò che siamo."
+          ],
+          "glossary": [
+            [
+              "Maschera",
+              "L'identità rigida che assumiamo nella società o che gli altri ci attribuiscono."
+            ],
+            [
+              "Forma",
+              "L'immagine stabile nella quale viene bloccato il continuo mutamento della persona."
+            ],
+            [
+              "Identità frammentata",
+              "L'idea secondo cui non possediamo una sola identità, ma molte immagini diverse di noi stessi."
+            ],
+            [
+              "Uno",
+              "La persona che crediamo di essere."
+            ],
+            [
+              "Centomila",
+              "Le molte persone diverse che siamo nello sguardo degli altri."
+            ],
+            [
+              "Nessuno",
+              "La scoperta che nessuna di queste immagini rappresenta definitivamente il nostro vero essere."
+            ]
+          ],
+          "questions": [
+            [
+              "1. Che cos'è una maschera per Pirandello?",
+              "È l'identità stabile che noi stessi costruiamo o che la società e gli altri ci attribuiscono."
+            ],
+            [
+              "2. Perché la maschera non coincide completamente con la persona?",
+              "Perché la persona cambia continuamente, mentre la maschera tende a rimanere stabile."
+            ],
+            [
+              "3. Abbiamo una sola maschera?",
+              "No. Ogni persona che ci conosce può costruire un'immagine diversa di noi."
+            ],
+            [
+              "4. Che rapporto esiste tra forma e maschera?",
+              "La maschera è una delle forme attraverso cui la vita mutevole dell'individuo viene fissata in un'identità."
+            ],
+            [
+              "5. Che cosa significano “uno, nessuno e centomila”?",
+              "“Uno” è ciò che credo di essere; “centomila” sono le diverse immagini che gli altri hanno di me; “nessuno” significa che nessuna di queste immagini coincide definitivamente con il mio essere."
+            ]
+          ]
+        },
+        {
+          "title": "3. COSÌ È (SE VI PARE)",
+          "lesson": "cosi-e-se-vi-pare",
+          "essentials": [
+            "Così è (se vi pare) è una commedia di Pirandello rappresentata per la prima volta nel 1917.",
+            "Al centro della vicenda ci sono il signor Ponza, la signora Frola e la moglie di Ponza.",
+            "La signora Frola sostiene che Ponza sia impazzito e che sua figlia Lina sia ancora viva.",
+            "Ponza sostiene invece che Lina sia morta e che la donna con cui vive sia la sua seconda moglie, Giulia.",
+            "Le due versioni sono opposte ma entrambe sembrano credibili.",
+            "Gli abitanti della città vogliono scoprire quale sia la verità.",
+            "Lamberto Laudisi è l'unico personaggio che mette in dubbio la possibilità di raggiungere una verità oggettiva.",
+            "Per Laudisi ogni individuo vede la realtà dal proprio punto di vista.",
+            "Alla fine viene interrogata direttamente la moglie di Ponza.",
+            "La donna non risolve il mistero e afferma: «Io sono colei che mi si crede.»",
+            "La commedia mette quindi in discussione l'esistenza di una verità assoluta sull'identità di una persona.",
+            "I temi fondamentali sono identità, relatività della verità e difficoltà di conoscere realmente gli altri."
+          ],
+          "glossary": [
+            [
+              "Verità oggettiva",
+              "Una verità che dovrebbe essere valida indipendentemente dal punto di vista delle persone."
+            ],
+            [
+              "Relatività della verità",
+              "L'idea secondo cui ciò che consideriamo vero può dipendere dal punto di vista da cui osserviamo la realtà."
+            ],
+            [
+              "Punto di vista",
+              "La prospettiva particolare attraverso cui ciascun individuo interpreta la realtà."
+            ],
+            [
+              "Identità",
+              "Ciò che una persona crede di essere e ciò che gli altri vedono in lei."
+            ],
+            [
+              "Laudisi",
+              "Personaggio che mette continuamente in discussione la pretesa degli altri di conoscere una verità assoluta."
+            ]
+          ],
+          "questions": [
+            [
+              "1. Qual è il mistero al centro di Così è (se vi pare)?",
+              "Stabilire chi sia realmente la moglie di Ponza e quale tra le versioni di Ponza e della signora Frola sia vera."
+            ],
+            [
+              "2. Che cosa sostiene la signora Frola?",
+              "Sostiene che sua figlia Lina sia viva e che Ponza sia impazzito, convincendosi di aver sposato una seconda donna."
+            ],
+            [
+              "3. Che cosa sostiene invece Ponza?",
+              "Sostiene che Lina sia morta, che la signora Frola sia impazzita e che la sua seconda moglie finga di essere Lina per non farla soffrire."
+            ],
+            [
+              "4. Perché non è possibile verificare facilmente quale versione sia vera?",
+              "Perché molti documenti sono andati perduti dopo la distruzione della città da cui provengono i personaggi."
+            ],
+            [
+              "5. Quale funzione svolge Laudisi?",
+              "Mette in discussione la pretesa degli altri di conoscere una verità assoluta e mostra che ogni persona interpreta la realtà dal proprio punto di vista."
+            ],
+            [
+              "6. Come termina la ricerca della verità?",
+              "La moglie di Ponza compare davanti agli altri ma non chiarisce quale sia la sua vera identità."
+            ],
+            [
+              "7. Che cosa significa «Io sono colei che mi si crede»?",
+              "Significa che la donna esiste in maniera diversa nello sguardo degli altri: per la signora Frola è Lina, mentre per Ponza è Giulia."
+            ],
+            [
+              "8. Qual è il significato del titolo Così è (se vi pare)?",
+              "Il titolo suggerisce che ciò che consideriamo realtà dipende anche dal nostro punto di vista."
+            ]
+          ]
+        },
+        {
+          "title": "4. IL MONOLOGO DI LAUDISI ALLO SPECCHIO",
+          "lesson": "monologo",
+          "essentials": [
+            "Laudisi parla con la propria immagine riflessa nello specchio.",
+            "Lo specchio permette a Pirandello di rappresentare simbolicamente il problema dell'identità.",
+            "La domanda «Chi è il pazzo tra noi due?» mette immediatamente in crisi la distinzione tra l'io e l'immagine dell'io.",
+            "Laudisi comprende che ciò che egli vede di sé non coincide necessariamente con ciò che vedono gli altri.",
+            "Ogni persona costruisce una propria immagine degli altri.",
+            "Da questa situazione nascono le diverse maschere.",
+            "Laudisi definisce l'immagine che gli altri costruiscono di noi un fantasma.",
+            "Il fantasma non è qualcosa di inesistente: è l'immagine di noi che vive nella mente degli altri.",
+            "Gli uomini, secondo Laudisi, cercano continuamente di conoscere i “fantasmi” degli altri senza accorgersi del proprio.",
+            "La sua risata esprime la consapevolezza dell'assurdità della ricerca di una verità assoluta.",
+            "Il monologo anticipa il finale di Così è (se vi pare).",
+            "La domanda su chi sia veramente la signora Ponza ripete infatti lo stesso problema posto dallo specchio: esiste una vera identità indipendente dallo sguardo degli altri?",
+            "Il monologo contiene quindi in forma sintetica i temi di vita, forma, maschera, identità e relatività della verità."
+          ],
+          "glossary": [
+            [
+              "Specchio",
+              "Simbolo attraverso cui Pirandello rappresenta la divisione tra ciò che crediamo di essere e l'immagine che può essere vista dagli altri."
+            ],
+            [
+              "Fantasma",
+              "Nel monologo è l'immagine di una persona che esiste nella mente degli altri."
+            ],
+            [
+              "Io",
+              "L'identità attraverso cui una persona percepisce sé stessa."
+            ],
+            [
+              "Tu",
+              "L'immagine che può essere osservata dall'esterno e che può non coincidere con l'io."
+            ],
+            [
+              "Maschera",
+              "L'identità con cui una persona viene riconosciuta e definita."
+            ],
+            [
+              "Relatività",
+              "L'impossibilità di considerare un unico punto di vista come necessariamente assoluto."
+            ],
+            [
+              "Follia",
+              "Nel monologo viene problematizzata: potrebbe essere più “pazzo” chi parla allo specchio o chi pretende di conoscere definitivamente la realtà degli altri."
+            ]
+          ],
+          "questions": [
+            [
+              "1. Perché Laudisi parla con la propria immagine allo specchio?",
+              "Per mettere in scena il problema dell'identità e mostrare la distanza tra ciò che una persona crede di essere e ciò che può apparire agli altri."
+            ],
+            [
+              "2. Che cosa significa «Io dico: “Tu!” e tu dici: “Io!”»?",
+              "Significa che la distinzione tra l'io e l'immagine dell'io non è così semplice: ciascuno può essere soggetto per sé stesso e oggetto nello sguardo degli altri."
+            ],
+            [
+              "3. Perché lo specchio è importante?",
+              "Perché rende visibile una seconda immagine dell'individuo e permette di rappresentare concretamente la moltiplicazione dell'identità."
+            ],
+            [
+              "4. Che cosa intende Laudisi quando parla di “fantasma”?",
+              "Intende l'immagine di noi che gli altri costruiscono nella loro mente e che non coincide necessariamente con ciò che noi crediamo di essere."
+            ],
+            [
+              "5. Che rapporto esiste tra il fantasma e la maschera?",
+              "Entrambi rappresentano immagini dell'individuo che non coincidono completamente con il continuo mutamento della sua vita interiore."
+            ],
+            [
+              "6. Perché Laudisi considera “pazzi” gli altri personaggi?",
+              "Perché cercano con ostinazione la vera identità degli altri senza rendersi conto che anche la propria identità dipende da immagini e punti di vista differenti."
+            ],
+            [
+              "7. Perché Laudisi ride?",
+              "Perché ha compreso l'assurdità della pretesa degli altri di raggiungere una verità unica e definitiva."
+            ],
+            [
+              "8. In che modo il monologo anticipa il finale di Così è (se vi pare)?",
+              "Nel monologo Laudisi mostra che una persona esiste diversamente nello sguardo degli altri. Nel finale la signora Ponza afferma proprio di essere ciò che gli altri credono che sia."
+            ],
+            [
+              "9. Qual è il collegamento tra il monologo e il flusso perenne?",
+              "La persona reale è continuamente mutevole, mentre l'immagine nello specchio e le immagini create dagli altri tendono a fissarla in una forma."
+            ],
+            [
+              "10. Qual è il significato complessivo del monologo?",
+              "Non possiamo ridurre una persona a un'unica identità stabile, perché ciò che siamo, ciò che crediamo di essere e ciò che gli altri vedono in noi non coincidono necessariamente."
+            ]
+          ]
+        }
       ],
-      bridge:'Le opere non risolvono l’instabilità: la consegnano al lettore come responsabilità di interpretare senza possedere.',
-      summary:'Le opere pirandelliane sono esperimenti sull’identità. Mattia Pascal scopre che non basta cambiare nome: senza una forma riconosciuta non può vivere socialmente. Vitangelo Moscarda tenta di distruggere le immagini degli altri, ma ogni gesto ne produce di nuove. Le novelle sorprendono persone comuni nel momento in cui una crepa interrompe la loro forma. In Così è (se vi pare) due testimonianze incompatibili mostrano il limite della verità posseduta e la violenza della curiosità collettiva. Sei personaggi in cerca d’autore porta la frattura dentro il teatro; Enrico IV mostra una maschera scelta consapevolmente che diventa prigione. In ogni opera la poetica diventa struttura e conflitto.',
-      essentials:['Mattia non può vivere né nella vecchia identità né senza identità.','Moscarda scopre se stesso attraverso lo sguardo altrui.','Le novelle aprono crepe nel quotidiano.','Così è (se vi pare) non dimostra che i fatti non esistano.','Sei personaggi è un’opera metateatrale.','Enrico IV sceglie una maschera che lo imprigiona.'],
-      glossary:[['Identità giuridica','Forma pubblica che permette diritti e responsabilità.'],['Epifania', 'Rivelazione improvvisa che modifica lo sguardo sul quotidiano.'],['Testimonianza','Versione dei fatti offerta da un personaggio situato.'],['Personaggio','Forma artistica che pretende una realtà propria.'],['Rappresentazione','Trasformazione della vita in racconto o scena.']],
-      map:'./assets/maps/pirandello-opere.svg',
-      mapAlt:'Mappa: Mattia cambia nome, Moscarda distrugge immagini, Belluca evade, Ponza e Frola dividono la verità, i Sei personaggi spezzano il teatro ed Enrico IV resta nella maschera.',
-      quiz:[
-        {q:'Che cosa scopre Mattia vivendo come Adriano Meis?',a:['Che basta cambiare nome per essere liberi','Che senza identità riconosciuta non può esercitare diritti','Che la società non usa forme'],c:1,e:'L’assenza di forma giuridica lo rende socialmente invisibile.',r:['Il fu Mattia Pascal','Rileggi il primo esperimento.','Non può denunciare un furto senza rivelare chi è.']},
-        {q:'Che cosa avvia la crisi di Moscarda?',a:['Un’osservazione sul suo naso','La perdita del lavoro','Una rappresentazione teatrale'],c:0,e:'Un dettaglio minimo rivela che gli altri vedono un Moscarda sconosciuto a lui.',r:['Uno, nessuno e centomila','Rileggi il secondo esperimento.','Lo specchio non gli aveva mostrato lo stesso naso visto dalla moglie.']},
-        {q:'Che funzione ha il fischio del treno per Belluca?',a:['Conferma che è soltanto pazzo','Lo obbliga a cambiare famiglia','Apre l’immaginazione e rivela la compressione della sua vita'],c:2,e:'Il suono interrompe la forma impiegatizia e apre uno spazio mentale.',r:['Il treno ha fischiato','Rileggi il terzo esperimento.','Un suono reale produce un viaggio immaginario.']},
-        {q:'Che cosa mostra Così è (se vi pare)?',a:['Che non esistono fatti','Che la comunità possiede sempre la verità','Che versioni e curiosità possono diventare strumenti di violenza'],c:2,e:'L’opera mette in crisi il diritto degli osservatori di possedere la vita altrui.',r:['Così è (se vi pare)','Rileggi il quarto esperimento.','La comunità convoca e interroga una famiglia sofferente.']},
-        {q:'Perché Sei personaggi è metateatro?',a:['Perché mette in scena una compagnia e il problema della rappresentazione','Perché racconta soltanto la vita dell’autore','Perché elimina il pubblico'],c:0,e:'Il teatro mostra se stesso e i suoi limiti.',r:['Sei personaggi','Rileggi il quinto esperimento.','Gli attori tentano di rappresentare personaggi che rifiutano la copia.']}
-      ]
-    },
-    {
-      id:'conclusione', number:'06', eyebrow:'CONCLUSIONE', title:'Vivere senza diventare una definizione',
-      question:'Quale traiettoria resta viva e discutibile?',
-      thesis:'Pirandello non ci libera dalle forme: ci obbliga a riconoscerne la necessità, il potere e il carattere parziale.',
-      blocks:[
-        ['Un nuovo personaggio','Dopo Pirandello è più difficile pensare il personaggio come un carattere compatto, pienamente spiegabile dall’esterno. L’io diventa una relazione instabile fra vita, forme e sguardi.'],
-        ['Non “ognuno ha la sua verità”','La formula è troppo debole. Pirandello mostra che una prospettiva parziale diventa pericolosa quando pretende di trasformarsi nella definizione assoluta di un’altra persona.'],
-        ['Il dubbio e la responsabilità','Riconoscere il limite della conoscenza non elimina la responsabilità. Ci obbliga a distinguere dati e interpretazioni, confrontare le versioni e motivare ciò che crediamo.'],
-        ['Le forme digitali','Profili, fotografie e reputazioni online sono forme pubbliche reali ma parziali. Non dimostrano che Pirandello “aveva previsto i social”: rendono nuovamente visibile il conflitto che aveva analizzato.'],
-        ['La domanda aperta','Non possiamo vivere completamente senza maschere, ma possiamo evitare di scambiarle per l’intera persona. La libertà possibile comincia dalla consapevolezza delle forme.']
-      ],
-      bridge:'Il percorso torna alla domanda iniziale: nessuno sguardo contiene tutta la persona, neppure quello con cui guardiamo noi stessi.',
-      summary:'Pirandello modifica profondamente la rappresentazione dell’individuo: il personaggio non è più un carattere compatto, ma una relazione instabile fra vita, forme e sguardi. La sua eredità non coincide con lo slogan “ognuno ha la sua verità”. Il problema è più preciso: ogni prospettiva è parziale e diventa violenta quando pretende di definire completamente un’altra persona. Il dubbio non cancella la responsabilità; richiede di distinguere dati e interpretazioni e di motivare meglio i giudizi. Anche le identità digitali rendono visibile questa tensione, perché profili e reputazioni producono effetti reali senza contenere tutta la persona. Non possiamo vivere fuori da ogni forma, ma possiamo riconoscerne il limite.',
-      essentials:['Pirandello trasforma il personaggio moderno.','La sua lezione non coincide con il relativismo facile.','Una prospettiva parziale può diventare violenta.','Il dubbio richiede più responsabilità, non meno.','Le identità digitali sono forme reali ma parziali.','La libertà possibile nasce dalla consapevolezza delle maschere.'],
-      glossary:[['Relativismo facile','Riduzione secondo cui tutte le opinioni varrebbero allo stesso modo.'],['Responsabilità interpretativa','Dovere di distinguere dati, prospettive e motivazioni.'],['Reputazione','Immagine pubblica prodotta nel tempo dagli sguardi altrui.'],['Consapevolezza','Capacità di riconoscere una forma senza scambiarla per il tutto.']],
-      map:'./assets/maps/pirandello-conclusione.svg',
-      mapAlt:'Mappa finale: mondo stabile, fratture, vita e forma, umorismo e opere confluiscono nella responsabilità di riconoscere il limite delle maschere.',
-      quiz:[
-        {q:'Che cosa cambia nel personaggio dopo Pirandello?',a:['Diventa sempre autobiografico','Diventa una relazione instabile fra vita, forma e sguardi','Ritrova un carattere immutabile'],c:1,e:'Il personaggio non è più pienamente spiegabile con una sola definizione.',r:['Un nuovo personaggio','Rileggi il primo snodo.','Mattia è insieme vivo, morto e “fu” nella propria storia sociale.']},
-        {q:'Perché “ognuno ha la sua verità” è una sintesi insufficiente?',a:['Perché cancella il problema di dati, limiti e responsabilità','Perché Pirandello crede in una sola opinione','Perché i personaggi conoscono tutti i fatti'],c:0,e:'La pluralità delle prospettive non rende equivalenti tutte le affermazioni.',r:['Non “ognuno ha la sua verità”','Rileggi il secondo snodo.','Una versione va confrontata con dati e conseguenze.']},
-        {q:'Che cosa richiede il dubbio pirandelliano?',a:['Rinunciare a ogni giudizio','Accettare sempre la prima versione','Motivare meglio le interpretazioni'],c:2,e:'Il limite della conoscenza aumenta la responsabilità del lettore.',r:['Dubbio e responsabilità','Rileggi il terzo snodo.','Distinguere dato e interpretazione rende il giudizio più rigoroso.']},
-        {q:'In che senso un profilo digitale è una forma?',a:['È falso in ogni sua parte','È un’immagine reale ma parziale della persona','Coincide con l’intera identità'],c:1,e:'La forma digitale produce conseguenze, ma non contiene tutta la vita.',r:['Le forme digitali','Rileggi il quarto snodo.','Una fotografia mostra qualcosa di reale, non tutto ciò che siamo.']},
-        {q:'Quale libertà resta possibile?',a:['Vivere senza nomi e relazioni','Imporre agli altri la nostra immagine','Riconoscere le forme senza scambiarle per l’intera persona'],c:2,e:'La consapevolezza non elimina le maschere, ma ne limita il potere assoluto.',r:['La domanda aperta','Rileggi l’ultimo snodo.','Un ruolo può essere abitato senza diventare una definizione definitiva.']}
-      ]
+      "conclusion": {
+        "heading": "SAPERI IRRINUNCIABILI DELL'INTERO PERCORSO",
+        "intro": "Alla fine del percorso uno studente dovrebbe almeno saper spiegare questi concetti:",
+        "concepts": [
+          [
+            "1. Vita come flusso perenne",
+            "La vita cambia continuamente e non può essere fissata definitivamente."
+          ],
+          [
+            "2. Contrasto vita-forma",
+            "La società e gli individui cercano di trasformare il flusso della vita in identità stabili."
+          ],
+          [
+            "3. Maschera",
+            "La forma attraverso cui noi stessi e gli altri definiamo una persona."
+          ],
+          [
+            "4. Molteplicità dell'identità",
+            "Non siamo soltanto ciò che pensiamo di essere: esistiamo anche nelle diverse immagini che gli altri costruiscono di noi."
+          ],
+          [
+            "5. Relatività della verità",
+            "Ogni individuo osserva la realtà da un proprio punto di vista; per questo la pretesa di possedere una verità assoluta viene messa in discussione."
+          ],
+          [
+            "6. Significato di Laudisi",
+            "Laudisi è il personaggio che comprende questa condizione e smaschera l'illusione degli altri di poter conoscere definitivamente la realtà."
+          ],
+          [
+            "7. Significato del finale di Così è (se vi pare)",
+            "«Io sono colei che mi si crede» porta alle estreme conseguenze il problema dell'identità: una persona può esistere in forme differenti a seconda dello sguardo degli altri."
+          ]
+        ],
+        "sequenceIntro": "La sequenza concettuale fondamentale può essere ricordata così:",
+        "sequence": "FLUSSO DELLA VITA → FORMA → MASCHERA → MOLTE IDENTITÀ → RELATIVITÀ DELLA VERITÀ"
+      }
     }
-  ],
-  finalSummary: [
-    ['La grande domanda','Chi sono io, se gli altri mi vedono diversamente e io stesso cambio?'],
-    ['Il mondo precedente','Identità, ruoli e verità sembrano stabili e conoscibili.'],
-    ['La frattura','Modernità e biografia rendono insufficiente quell’ordine.'],
-    ['L’immagine del mondo','La vita eccede le forme; l’io diventa uno, centomila e nessuno.'],
-    ['La poetica','Umorismo, prospettive e metateatro fanno sperimentare la contraddizione.'],
-    ['Le opere','Ogni testo mette alla prova una diversa maschera.'],
-    ['Ciò che resta','Nessuna immagine è l’intera persona, ma ogni immagine produce conseguenze reali.']
-  ],
-  carry:'Se non possiamo vivere senza forme, come possiamo impedire che le nostre maschere diventino prigioni?'
+  ]
 };

@@ -19,6 +19,7 @@ const confirmInstall = document.querySelector('#confirmInstall');
 const installHelp = document.querySelector('#installHelp');
 const state = readState();
 let deferredInstall = null;
+let cleanupAuthor = null;
 
 function readState() {
   try {
@@ -146,6 +147,8 @@ function bindInteractions() {
 }
 
 function render() {
+  cleanupAuthor?.();
+  cleanupAuthor = null;
   const route = location.hash.replace(/^#/, '') || 'home';
   if (route.startsWith('autore/pirandello')) {
     main.innerHTML = authorTemplate(pirandelloLesson);
@@ -174,9 +177,13 @@ function render() {
   }
   bindInteractions();
   if (route.startsWith('autore/pirandello')) {
-    bindAuthorInteractions(main, pirandelloLesson);
+    cleanupAuthor = bindAuthorInteractions(main, pirandelloLesson);
     const section = route.split('/')[2];
-    if (section) requestAnimationFrame(() => document.querySelector(`#pirandello-${section}`)?.scrollIntoView());
+    if (section) requestAnimationFrame(() => {
+      const target = document.getElementById(`pirandello-${section}`) || document.getElementById('pirandello-filosofia');
+      target.scrollIntoView();
+      target.querySelector('h2, h3')?.focus({ preventScroll: true });
+    });
     else window.scrollTo(0, 0);
   } else if (route.startsWith('laboratorio-forma')) {
     bindFormLabInteractions(main, formLab);
