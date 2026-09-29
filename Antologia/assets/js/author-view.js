@@ -2,212 +2,149 @@ function esc(value) {
   return String(value).replace(/[&<>'"]/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[char]));
 }
 
-function quizTemplate(section) {
-  return `<div class="author-quiz" data-quiz="${section.id}">
-    ${section.quiz.map((item, qi) => `<fieldset data-author-question="${qi}">
-      <legend>${qi + 1}. ${item.q}</legend>
-      ${item.a.map((answer, ai) => `<button type="button" data-author-answer="${ai}">${answer}</button>`).join('')}
-      <p class="author-answer-note" data-answer-note hidden></p>
-    </fieldset>`).join('')}
-    <div class="author-quiz-result" data-quiz-result hidden></div>
-    <div class="author-recovery" data-recovery hidden></div>
+const route = id => `#autore/pirandello/${id}`;
+
+function mapTemplate(section) {
+  if (!section.map) return '';
+  return `<figure class="author-map"><button type="button" class="map-button" data-map-src="${esc(section.map)}" data-map-alt="${esc(section.mapAlt)}" aria-label="Ingrandisci la mappa: ${esc(section.title)}"><img src="${esc(section.map)}" alt="${esc(section.mapAlt)}" width="${section.mapWidth}" height="${section.mapHeight}" loading="lazy"><span>Ingrandisci la mappa</span></button></figure>`;
+}
+
+function reviewTemplate(section) {
+  return `<div class="author-review">
+    <nav class="review-index" aria-label="Argomenti del ripasso">${section.groups.map((group, i) => `<a href="${route(`ripasso-${i + 1}`)}">${esc(group.title)}</a>`).join('')}<a href="${route('sintesi')}">Sintesi dell’intero percorso</a></nav>
+    <p>Prova a rispondere prima di aprire la soluzione. Dopo il confronto, indica se sai spiegarla o se vuoi ripassarla.</p>
+    <p class="recall-status" data-recall-status role="status"></p>
+    <button type="button" class="button quiet" data-recall-filter aria-pressed="false">Mostra solo le domande da ripassare</button>
+    ${section.groups.map((group, gi) => `<article class="review-group" id="pirandello-ripasso-${gi + 1}">
+      <h3 tabindex="-1">${esc(group.title)}</h3>
+      <h4>Saperi irrinunciabili</h4><ul>${group.essentials.map(text => `<li>${esc(text)}</li>`).join('')}</ul>
+      <h4>Vocabolario essenziale</h4><dl class="review-glossary">${group.glossary.map(([term, meaning]) => `<div><dt>${esc(term)}</dt><dd>${esc(meaning)}</dd></div>`).join('')}</dl>
+      <h4>Domande principali con risposta</h4><div class="study-kit review-questions">${group.questions.map(([question, answer], qi) => `<details data-recall="${gi}-${qi}"><summary>${esc(question)} <span class="recall-label" data-recall-label></span></summary><p>${esc(answer)}</p><div class="recall-actions"><button type="button" data-recall-value="known" aria-pressed="false">So spiegarla</button><button type="button" data-recall-value="review" aria-pressed="false">Da ripassare</button><a href="${route(group.lesson)}">Rileggi la lezione</a></div></details>`).join('')}</div>
+    </article>`).join('')}
+    <article class="review-conclusion" id="pirandello-sintesi"><h3 tabindex="-1">${esc(section.conclusion.heading)}</h3><p>${esc(section.conclusion.intro)}</p><dl>${section.conclusion.concepts.map(([term, meaning]) => `<div><dt>${esc(term)}</dt><dd>${esc(meaning)}</dd></div>`).join('')}</dl><p>${esc(section.conclusion.sequenceIntro)}</p><blockquote class="author-thesis">${esc(section.conclusion.sequence)}</blockquote></article>
   </div>`;
 }
 
-function studyKitTemplate(section) {
-  return `<div class="study-kit">
-    <details><summary>Riassunto della sezione</summary><p>${section.summary}</p></details>
-    <details><summary>Saperi irrinunciabili</summary><ul>${section.essentials.map(item => `<li>${item}</li>`).join('')}</ul></details>
-    <details><summary>Vocabolario</summary><dl>${section.glossary.map(([term, meaning]) => `<div><dt>${term}</dt><dd>${meaning}</dd></div>`).join('')}</dl></details>
-    <details class="map-detail"><summary>Mappa concettuale</summary><button type="button" class="map-button" data-map-src="${section.map}" data-map-alt="${esc(section.mapAlt)}"><img src="${section.map}" alt="${esc(section.mapAlt)}"><span>Apri a tutto schermo</span></button></details>
-    <details class="quiz-detail"><summary>Verifica e recupero</summary>${quizTemplate(section)}</details>
-  </div>`;
-}
-
-function specialInteraction(lesson, section) {
-  if (section.id === 'mondo-nuovo') {
-    return `<div class="author-interaction identity-orbit">
-      <div class="identity-core"><span>IO</span><small data-perspective-copy>Mi penso coerente e continuo.</small></div>
-      <div class="perspective-buttons">${lesson.perspectives.map(([label], i) => `<button type="button" data-perspective="${i}">${label}</button>`).join('')}</div>
-      <p class="interaction-caption">Ogni sguardo produce una forma reale, ma parziale.</p>
-    </div>
-    <div class="author-interaction life-form-lab">
-      <p class="eyebrow">VITA O FORMA?</p><h3>Quattro casi, nessun nemico assoluto.</h3>
-      <div>${lesson.lifeFormCases.map(([label, kind, note]) => `<button type="button" data-life-form data-kind="${kind}" data-note="${esc(note)}"><span>${label}</span><b>Scopri</b></button>`).join('')}</div>
-      <p data-life-form-feedback>Scegli un caso: vita e forma hanno funzioni diverse e restano in tensione.</p>
-    </div>`;
-  }
-  if (section.id === 'poetica') {
-    return `<div class="author-interaction humor-lab">
-      <p class="eyebrow">IL LABORATORIO DEL CONTRARIO</p><h3>${lesson.humor.scene}</h3>
-      <div class="humor-switch"><button type="button" class="selected" data-humor="comic">Avvertimento</button><button type="button" data-humor="humorous">Sentimento</button></div>
-      <p class="humor-output" data-humor-output>${lesson.humor.comic}</p>
-      <div class="humor-depth" data-humor-depth><span>superficie</span><i></i><span>riflessione</span></div>
-    </div>`;
-  }
-  if (section.id === 'opere') {
-    return `<div class="author-interaction works-lab">
-      <p class="eyebrow">ESPLORA LE OPERE</p><div class="work-selector">${section.blocks.map(([title], i) => `<button type="button" class="${i === 0 ? 'selected' : ''}" data-author-work="${i}">${title.split(' — ')[0]}</button>`).join('')}</div>
-      <article data-work-panel><h3>${section.blocks[0][0]}</h3><p>${section.blocks[0][1]}</p></article>
-    </div>
-    <div class="author-interaction truth-lab">
-      <p class="eyebrow">IL TRIBUNALE DELLA VERITÀ</p><h3>Chi possiede la signora Ponza?</h3>
-      <div class="testimony-buttons">${lesson.testimonies.map(([name], i) => `<button type="button" data-testimony="${i}">${name}</button>`).join('')}</div>
-      <p data-testimony-output>Scegli una testimonianza. Il laboratorio non assegnerà automaticamente un vincitore.</p>
-    </div>`;
-  }
-  return '';
-}
-
-function sectionTemplate(lesson, section) {
-  return `<section class="author-section" id="pirandello-${section.id}" data-author-section="${section.id}">
-    <div class="author-section-head"><span>${section.number}</span><div><p class="eyebrow">${section.eyebrow}</p><h2>${section.title}</h2><p class="section-question">${section.question}</p></div></div>
-    <blockquote class="author-thesis">${section.thesis}</blockquote>
-    <div class="author-blocks">${section.blocks.map(([title, text]) => `<article><h3>${title}</h3><p>${text}</p></article>`).join('')}</div>
-    ${specialInteraction(lesson, section)}
-    <div class="author-bridge"><span>VERSO IL PASSAGGIO SUCCESSIVO</span><p>${section.bridge}</p></div>
-    ${studyKitTemplate(section)}
+function sectionTemplate(lesson, section, index) {
+  const prev = lesson.sections[index - 1], next = lesson.sections[index + 1];
+  return `<section class="author-section" id="pirandello-${section.id}" data-author-section="${section.id}" aria-labelledby="heading-${section.id}">
+    <div class="author-section-head"><span>${section.number}</span><div><p class="eyebrow">LEZIONE ${section.number} DI 06</p><h2 id="heading-${section.id}" tabindex="-1">${esc(section.title)}</h2></div></div>
+    ${mapTemplate(section)}
+    ${section.video ? `<div class="author-video"><h3 id="laudisi-video-title">${esc(section.video.title)}</h3><video controls playsinline preload="metadata" width="1920" height="1080" aria-labelledby="laudisi-video-title" aria-describedby="laudisi-video-note"><source src="${section.video.src}" type="video/mp4">Il browser non supporta il video. <a href="${section.video.src}">Apri il video del monologo</a>.</video><p id="laudisi-video-note">Premi Play per avviare il video. Richiede una connessione; il testo resta disponibile qui sotto anche offline.</p><p data-video-error role="status" hidden>Il video non è disponibile in questo momento. Puoi leggere il monologo qui sotto e riprovare quando la connessione è disponibile.</p></div>` : ''}
+    ${section.blocks ? `<div class="author-prose">${section.blocks.map(block => `<article>${block.heading ? `<h3>${esc(block.heading)}</h3>` : ''}${block.paragraphs.map(text => `<p>${esc(text)}</p>`).join('')}</article>`).join('')}</div>` : ''}
+    ${section.theater ? `<div class="author-theater"><h3>${esc(section.readingTitle)}</h3><p class="theater-note">Testo in italiano attuale, come nel materiale della lezione.</p>${section.theater.map(line => `<p class="theater-${line.kind}">${line.kind === 'direction' ? `<em>${esc(line.text)}</em>` : esc(line.text)}</p>`).join('')}</div>` : ''}
+    ${section.connections ? `<nav class="author-connections" aria-label="Collegamenti concettuali">${section.connections.map(([id, label]) => `<a href="${route(id)}">${esc(label)}</a>`).join('')}</nav>` : ''}
+    ${section.groups ? reviewTemplate(section) : ''}
+    <nav class="stage-nav author-step-nav" aria-label="Navigazione della lezione ${section.number}">${prev ? `<a href="${route(prev.id)}" rel="prev"><small>← Precedente</small>${prev.number} · ${esc(prev.title)}</a>` : '<a href="#autori"><small>← Torna</small>Indice autori</a>'}${next ? `<a href="${route(next.id)}" rel="next"><small>Successiva →</small>${next.number} · ${esc(next.title)}</a>` : '<a href="#autori"><small>Percorso concluso →</small>Indice autori</a>'}</nav>
   </section>`;
 }
 
 export function authorTemplate(lesson) {
-  return `<article class="author-page" style="--author:${lesson.color}">
-    <header class="author-hero"><div class="shell author-hero-grid"><div><p class="eyebrow">${lesson.label}</p><h1>${lesson.author}</h1><p class="author-subtitle">${lesson.title}</p></div><div class="author-question"><span>LA GRANDE DOMANDA</span><p>${lesson.question}</p></div></div></header>
-    <nav class="author-nav" aria-label="Sezioni della lezione"><div class="shell">${lesson.sections.map(section => `<a href="#autore/${lesson.id}/${section.id}" data-author-nav="${section.id}"><span>${section.number}</span>${section.eyebrow.toLowerCase()}</a>`).join('')}</div></nav>
-    <div class="author-tools"><div class="shell"><div class="author-progress"><span data-author-progress>0 di ${lesson.sections.length} movimenti</span><i><b data-author-progress-bar></b></i></div><button type="button" data-author-focus>Concentrazione</button><a href="#autori">Indice autori</a></div></div>
-    <div class="author-body">
-      <section class="author-opening">
-        <p class="eyebrow">PRIMA DI STUDIARE</p><h2>${lesson.opening.title}</h2><p>${lesson.opening.text}</p><p class="interaction-prompt">${lesson.opening.prompt}</p>
-        <div class="author-opening-choices">${lesson.opening.choices.map(([label, feedback]) => `<button type="button" data-author-opening data-feedback="${esc(feedback)}">${label}</button>`).join('')}</div>
-        <p class="author-opening-feedback" data-author-opening-feedback hidden></p>
-        <blockquote class="author-answer"><span>LA RISPOSTA CHE METTEREMO ALLA PROVA</span>${lesson.answer}</blockquote>
-      </section>
-      ${lesson.sections.map(section => sectionTemplate(lesson, section)).join('')}
-      <section class="author-final">
-        <p class="eyebrow">IL PERCORSO RICOMPOSTO</p><h2>Una sola domanda, sei movimenti.</h2>
-        <div class="author-summary-grid">${lesson.finalSummary.map(([label, text]) => `<article><h3>${label}</h3><p>${text}</p></article>`).join('')}</div>
-        <blockquote>${lesson.carry}</blockquote>
-        <div class="author-notebook"><label for="pirandelloNotes">Taccuino personale</label><textarea id="pirandelloNotes" data-author-notes placeholder="Annota una domanda, un dubbio o un collegamento. Resta soltanto su questo dispositivo."></textarea><small data-notes-status>Salvataggio locale automatico.</small></div>
-        <div class="author-reset"><button type="button" data-author-reset>Azzera progresso, verifiche e appunti</button></div>
-      </section>
+  return `<article class="author-page pirandello-course" style="--author:${lesson.color}">
+    <header class="author-hero"><div class="shell author-hero-grid"><div><p class="eyebrow">${esc(lesson.label)}</p><h1>${esc(lesson.author)}</h1><p class="author-subtitle">${esc(lesson.title)}</p></div><div class="author-question"><span>LA GRANDE DOMANDA</span><p>${esc(lesson.question)}</p></div></div></header>
+    <nav class="author-nav" aria-label="Le sei lezioni"><div class="shell">${lesson.sections.map(section => `<a href="${route(section.id)}" data-author-nav="${section.id}"><span>${section.number}</span>${esc(section.title)}</a>`).join('')}</div></nav>
+    <div class="author-tools"><div class="shell"><div class="author-progress"><span data-author-progress>0 di 6 lezioni visitate</span><i><b data-author-progress-bar></b></i></div><button type="button" data-author-focus aria-pressed="false">Concentrazione</button><a href="#autori">Indice autori</a></div></div>
+    <div class="author-body">${lesson.sections.map((section, index) => sectionTemplate(lesson, section, index)).join('')}
+      <footer class="author-final"><div class="author-notebook"><label for="pirandelloNotes">Taccuino personale</label><textarea id="pirandelloNotes" data-author-notes placeholder="Annota una domanda, un dubbio o un collegamento. Resta soltanto su questo dispositivo."></textarea><small data-notes-status>Salvataggio locale automatico.</small></div><div class="author-reset"><button type="button" data-author-reset>Azzera progresso, ripasso e appunti</button></div></footer>
     </div>
-    <dialog class="map-lightbox" data-map-dialog><button type="button" data-map-close aria-label="Chiudi la mappa">×</button><img data-map-image alt=""></dialog>
+    <dialog class="map-lightbox" data-map-dialog aria-label="Mappa concettuale ingrandita"><div class="map-dialog-tools"><button type="button" data-map-zoom aria-pressed="false">Dimensione originale</button><button type="button" data-map-close aria-label="Chiudi la mappa">Chiudi ×</button></div><div class="map-viewport" tabindex="0" aria-label="Mappa: usa i tasti freccia per scorrerla quando ingrandita"><img data-map-image alt=""></div></dialog>
   </article>`;
 }
 
-function readLearningState() {
-  try { return JSON.parse(localStorage.getItem('pirandello-learning-state')) || { visited: [], notes: '', attempts: {} }; }
-  catch { return { visited: [], notes: '', attempts: {} }; }
-}
-
-function saveLearningState(state) {
-  localStorage.setItem('pirandello-learning-state', JSON.stringify(state));
-}
-
-function showQuizResult(root, section, state) {
-  const quiz = root.querySelector(`[data-quiz="${section.id}"]`);
-  const fields = [...quiz.querySelectorAll('[data-author-question]')];
-  if (fields.some(field => field.dataset.answered !== 'true')) return;
-  const wrong = fields.filter(field => field.dataset.correct !== 'true');
-  const correct = fields.length - wrong.length;
-  const percent = Math.round(correct / fields.length * 100);
-  const grade = Math.max(1, Math.round(percent / 10));
-  const result = quiz.querySelector('[data-quiz-result]');
-  result.hidden = false;
-  result.innerHTML = `<strong>${correct}/${fields.length}</strong><p>${percent}% · voto ${grade}/10</p><small>Formula: voto = max(1, arrotonda(percentuale ÷ 10)).</small>`;
-  state.attempts[section.id] ||= [];
-  state.attempts[section.id].push({ at: Date.now(), correct, total: fields.length });
-  state.attempts[section.id] = state.attempts[section.id].slice(-5);
-  saveLearningState(state);
-  const recovery = quiz.querySelector('[data-recovery]');
-  if (!wrong.length) {
-    recovery.hidden = false;
-    recovery.innerHTML = '<h4>Padronanza raggiunta</h4><p>Hai riconosciuto tutti i nessi della sezione. Ora prova a spiegarli senza usare le parole della lezione.</p>';
-    return;
-  }
-  recovery.hidden = false;
-  recovery.innerHTML = `<h4>Recupero mirato: soltanto gli errori</h4>${wrong.map(field => {
-    const qi = Number(field.dataset.authorQuestion), item = section.quiz[qi];
-    return `<article><span>${item.r[0]}</span><p>${item.r[1]}</p><small>Esempio: ${item.r[2]}</small></article>`;
-  }).join('')}<button type="button" data-retry-wrong>Riprova soltanto le domande sbagliate</button>`;
-  recovery.querySelector('[data-retry-wrong]').addEventListener('click', () => {
-    wrong.forEach(field => {
-      delete field.dataset.answered; delete field.dataset.correct;
-      field.querySelectorAll('[data-author-answer]').forEach(button => { button.disabled = false; button.classList.remove('correct','wrong'); });
-      const note = field.querySelector('[data-answer-note]'); note.hidden = true; note.textContent = '';
-    });
-    result.hidden = true; recovery.hidden = true;
-    wrong[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
-  });
+const STORAGE_KEY = 'pirandello-learning-state';
+function readLearningState(lesson) {
+  let saved;
+  try { saved = JSON.parse(localStorage.getItem(STORAGE_KEY)); } catch { /* Storage unavailable. */ }
+  const ids = lesson.sections.map(section => section.id);
+  return { version: lesson.version, visited: saved?.version === lesson.version && Array.isArray(saved.visited) ? [...new Set(saved.visited.filter(id => ids.includes(id)))] : [], notes: typeof saved?.notes === 'string' ? saved.notes : '', recall: saved?.version === lesson.version && saved.recall && typeof saved.recall === 'object' ? saved.recall : {} };
 }
 
 export function bindAuthorInteractions(root, lesson) {
-  const state = readLearningState();
-  root.querySelectorAll('[data-author-opening]').forEach(button => button.addEventListener('click', () => {
-    root.querySelectorAll('[data-author-opening]').forEach(item => item.classList.toggle('selected', item === button));
-    const feedback = root.querySelector('[data-author-opening-feedback]'); feedback.textContent = button.dataset.feedback; feedback.hidden = false;
+  const state = readLearningState(lesson);
+  const page = root.querySelector('.author-page');
+  root.querySelectorAll('a[href^="#autore/pirandello/"]').forEach(link => link.addEventListener('click', event => {
+    if (link.getAttribute('href') !== location.hash) return;
+    event.preventDefault();
+    const target = document.getElementById(`pirandello-${location.hash.split('/')[2]}`);
+    target?.scrollIntoView();
+    target?.querySelector('h2, h3')?.focus({ preventScroll: true });
   }));
-  root.querySelectorAll('[data-perspective]').forEach(button => button.addEventListener('click', () => {
-    const item = lesson.perspectives[Number(button.dataset.perspective)];
-    root.querySelectorAll('[data-perspective]').forEach(b => b.classList.toggle('selected', b === button));
-    root.querySelector('[data-perspective-copy]').textContent = item[1];
-  }));
-  root.querySelectorAll('[data-life-form]').forEach(button => button.addEventListener('click', () => {
-    root.querySelectorAll('[data-life-form]').forEach(b => b.classList.toggle('selected', b === button));
-    button.querySelector('b').textContent = button.dataset.kind === 'vita' ? 'VITA' : 'FORMA';
-    root.querySelector('[data-life-form-feedback]').textContent = button.dataset.note;
-  }));
-  root.querySelectorAll('[data-humor]').forEach(button => button.addEventListener('click', () => {
-    const mode = button.dataset.humor;
-    root.querySelectorAll('[data-humor]').forEach(b => b.classList.toggle('selected', b === button));
-    root.querySelector('[data-humor-output]').textContent = lesson.humor[mode];
-    root.querySelector('[data-humor-depth]').classList.toggle('deep', mode === 'humorous');
-  }));
-  const works = lesson.sections.find(section => section.id === 'opere')?.blocks || [];
-  root.querySelectorAll('[data-author-work]').forEach(button => button.addEventListener('click', () => {
-    const item = works[Number(button.dataset.authorWork)];
-    root.querySelectorAll('[data-author-work]').forEach(b => b.classList.toggle('selected', b === button));
-    root.querySelector('[data-work-panel]').innerHTML = `<h3>${item[0]}</h3><p>${item[1]}</p>`;
-  }));
-  root.querySelectorAll('[data-testimony]').forEach(button => button.addEventListener('click', () => {
-    const item = lesson.testimonies[Number(button.dataset.testimony)];
-    root.querySelectorAll('[data-testimony]').forEach(b => b.classList.toggle('selected', b === button));
-    root.querySelector('[data-testimony-output]').innerHTML = `<strong>${item[0]}</strong><br>${item[1]}`;
-  }));
-  lesson.sections.forEach(section => {
-    const quiz = root.querySelector(`[data-quiz="${section.id}"]`);
-    quiz.querySelectorAll('[data-author-question]').forEach((field, qi) => field.querySelectorAll('[data-author-answer]').forEach(button => button.addEventListener('click', () => {
-      if (field.dataset.answered === 'true') return;
-      const chosen = Number(button.dataset.authorAnswer), item = section.quiz[qi], correct = chosen === item.c;
-      field.dataset.answered = 'true'; field.dataset.correct = String(correct);
-      field.querySelectorAll('[data-author-answer]').forEach((answer, ai) => { answer.disabled = true; answer.classList.toggle('correct', ai === item.c); answer.classList.toggle('wrong', ai === chosen && !correct); });
-      const note = field.querySelector('[data-answer-note]'); note.textContent = item.e; note.hidden = false;
-      showQuizResult(root, section, state);
-    })));
-  });
-  const updateProgress = () => {
-    const count = state.visited.length;
-    root.querySelector('[data-author-progress]').textContent = `${count} di ${lesson.sections.length} movimenti visitati`;
-    root.querySelector('[data-author-progress-bar]').style.width = `${count / lesson.sections.length * 100}%`;
-    root.querySelectorAll('[data-author-nav]').forEach(link => link.classList.toggle('visited', state.visited.includes(link.dataset.authorNav)));
+  const save = () => {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); return true; }
+    catch { root.querySelector('[data-notes-status]').textContent = 'Salvataggio locale non disponibile: copia gli appunti prima di uscire.'; return false; }
   };
+  const updateProgress = id => {
+    if (id && !state.visited.includes(id)) { state.visited.push(id); save(); }
+    root.querySelector('[data-author-progress]').textContent = `${state.visited.length} di ${lesson.sections.length} lezioni visitate`;
+    root.querySelector('[data-author-progress-bar]').style.width = `${state.visited.length / lesson.sections.length * 100}%`;
+    root.querySelectorAll('[data-author-nav]').forEach(link => {
+      link.classList.toggle('visited', state.visited.includes(link.dataset.authorNav));
+      if (id) {
+        const active = link.dataset.authorNav === id;
+        link.classList.toggle('active', active);
+        if (active) {
+          link.setAttribute('aria-current', 'step');
+          const nav = link.closest('.author-nav');
+          const itemRect = link.getBoundingClientRect(), navRect = nav.getBoundingClientRect();
+          if (itemRect.left < navRect.left || itemRect.right > navRect.right) nav.scrollLeft += itemRect.left - navRect.left;
+        } else link.removeAttribute('aria-current');
+      }
+    });
+  };
+  // Observe section headings: a long prose section may never reach a 20% threshold.
   const observer = new IntersectionObserver(entries => entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
-    const id = entry.target.dataset.authorSection;
-    if (!state.visited.includes(id)) { state.visited.push(id); saveLearningState(state); updateProgress(); }
-    root.querySelectorAll('[data-author-nav]').forEach(link => link.classList.toggle('active', link.dataset.authorNav === id));
-  }), { threshold: .2, rootMargin: '-15% 0px -55%' });
-  root.querySelectorAll('[data-author-section]').forEach(section => observer.observe(section));
+    if (entry.isIntersecting) updateProgress(entry.target.closest('[data-author-section]').dataset.authorSection);
+  }), { rootMargin: '0px 0px -35% 0px', threshold: 0 });
+  root.querySelectorAll('.author-section-head').forEach(head => observer.observe(head));
   updateProgress();
-  const notes = root.querySelector('[data-author-notes]'); notes.value = state.notes || '';
-  notes.addEventListener('input', () => { state.notes = notes.value; saveLearningState(state); root.querySelector('[data-notes-status]').textContent = 'Salvato su questo dispositivo.'; });
-  root.querySelector('[data-author-focus]').addEventListener('click', event => { root.classList.toggle('focus-mode'); event.currentTarget.classList.toggle('selected'); });
+  const notes = root.querySelector('[data-author-notes]'); notes.value = state.notes;
+  notes.addEventListener('input', () => { state.notes = notes.value; if (save()) root.querySelector('[data-notes-status]').textContent = 'Salvato su questo dispositivo.'; });
+  root.querySelector('[data-author-focus]').addEventListener('click', event => {
+    const active = page.classList.toggle('focus-mode');
+    event.currentTarget.classList.toggle('selected', active); event.currentTarget.setAttribute('aria-pressed', String(active));
+  });
+  const filter = root.querySelector('[data-recall-filter]');
+  const updateRecall = () => {
+    const cards = [...root.querySelectorAll('[data-recall]')];
+    cards.forEach(card => {
+      const value = state.recall[card.dataset.recall];
+      card.querySelector('[data-recall-label]').textContent = value === 'known' ? '· So spiegarla' : value === 'review' ? '· Da ripassare' : '';
+      card.querySelectorAll('[data-recall-value]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.recallValue === value)));
+      card.hidden = filter.getAttribute('aria-pressed') === 'true' && value === 'known';
+    });
+    const known = cards.filter(card => state.recall[card.dataset.recall] === 'known').length;
+    root.querySelector('[data-recall-status]').textContent = `Autovalutazione: ${known} di ${cards.length} risposte che sai spiegare; ${cards.length - known} da verificare o ripassare.`;
+  };
+  root.querySelectorAll('[data-recall-value]').forEach(button => button.addEventListener('click', () => {
+    state.recall[button.closest('[data-recall]').dataset.recall] = button.dataset.recallValue; save();
+    if (filter.getAttribute('aria-pressed') === 'true' && button.dataset.recallValue === 'known') filter.focus();
+    updateRecall();
+  }));
+  filter.addEventListener('click', () => { filter.setAttribute('aria-pressed', String(filter.getAttribute('aria-pressed') !== 'true')); updateRecall(); });
+  updateRecall();
   const dialog = root.querySelector('[data-map-dialog]'), image = dialog.querySelector('[data-map-image]');
-  root.querySelectorAll('[data-map-src]').forEach(button => button.addEventListener('click', () => { image.src = button.dataset.mapSrc; image.alt = button.dataset.mapAlt; dialog.showModal(); }));
+  const zoom = dialog.querySelector('[data-map-zoom]');
+  root.querySelectorAll('[data-map-src]').forEach(button => button.addEventListener('click', () => {
+    image.src = button.dataset.mapSrc; image.alt = button.dataset.mapAlt;
+    dialog.classList.remove('original-size'); zoom.setAttribute('aria-pressed', 'false'); zoom.textContent = 'Dimensione originale';
+    dialog.showModal();
+  }));
+  zoom.addEventListener('click', () => {
+    const active = dialog.classList.toggle('original-size'); zoom.setAttribute('aria-pressed', String(active)); zoom.textContent = active ? 'Adatta allo schermo' : 'Dimensione originale';
+  });
   dialog.querySelector('[data-map-close]').addEventListener('click', () => dialog.close());
   dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
+  const video = root.querySelector('video');
+  const videoError = () => { root.querySelector('[data-video-error]').hidden = false; };
+  video.addEventListener('error', videoError); video.querySelector('source').addEventListener('error', videoError);
+  video.addEventListener('playing', () => { root.querySelector('[data-video-error]').hidden = true; });
   root.querySelector('[data-author-reset]').addEventListener('click', () => {
-    if (!window.confirm('Vuoi cancellare progresso, tentativi e appunti di questa lezione?')) return;
-    localStorage.removeItem('pirandello-learning-state'); location.reload();
+    if (!window.confirm('Vuoi cancellare progresso, ripasso e appunti di questa lezione?')) return;
+    state.visited = []; state.recall = {}; state.notes = ''; notes.value = ''; save(); updateProgress(); updateRecall();
   });
+  // Keep the sticky lesson navigation below the app toolbar at every reading size.
+  const toolbar = document.querySelector('.topbar');
+  const resize = new ResizeObserver(() => page.style.setProperty('--toolbar-height', `${toolbar.getBoundingClientRect().height}px`));
+  resize.observe(toolbar);
+  return () => { observer.disconnect(); resize.disconnect(); video.pause(); if (dialog.open) dialog.close(); };
 }

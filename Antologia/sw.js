@@ -1,7 +1,7 @@
 const APP_BASE = new URL('./', self.location.href);
 // Cache ownership is specific to this installation, even on a shared origin.
 const CACHE_PREFIX = `antologia-domande:${APP_BASE.pathname}:`;
-const CACHE = `${CACHE_PREFIX}v8`;
+const CACHE = `${CACHE_PREFIX}v9`;
 const FALLBACK = new URL('index.html', APP_BASE).href;
 const CORE = [
   '', 'index.html', 'privacy.html', 'accessibilita.html', 'manifest.webmanifest',
@@ -9,8 +9,8 @@ const CORE = [
   'assets/css/app.css', 'assets/js/app.js', 'assets/js/work-view.js', 'assets/js/form-lab-view.js', 'assets/js/author-view.js', 'assets/js/prevert-view.js',
   'content/percorso.js', 'content/laboratorio-forma.js', 'content/autori/leopardi-infinito.js', 'content/autori/pirandello.js', 'content/autori/prevert-ragazzi.js',
   'assets/maps/prevert-ragazzi-percorso.svg',
-  'assets/maps/pirandello-mondo.svg', 'assets/maps/pirandello-fratture.svg', 'assets/maps/pirandello-mondo-nuovo.svg',
-  'assets/maps/pirandello-poetica.svg', 'assets/maps/pirandello-opere.svg', 'assets/maps/pirandello-conclusione.svg',
+  'assets/maps/pirandello/Pirandello-filosofia.png', 'assets/maps/pirandello/Pirandello-maschere.png',
+  'assets/maps/pirandello/Cosi-e-se-vi-pare.png', 'assets/maps/pirandello/monologo-Laudisi.png',
   'assets/copertina-antologia-domande.png',
   'icons/icon.svg', 'icons/icon-192.png', 'icons/icon-512.png'
 ].map(path => new URL(path, APP_BASE).href);
@@ -31,6 +31,8 @@ self.addEventListener('fetch', event => {
   if (event.request.method !== 'GET') return;
   const url = new URL(event.request.url);
   if (url.origin !== self.location.origin || !url.pathname.startsWith(APP_BASE.pathname)) return;
+  // Native media/range requests stay on the network: never cache partial video responses.
+  if (url.pathname.endsWith('.mp4') || event.request.headers.has('range')) return;
   if (event.request.mode === 'navigate') {
     event.respondWith(fetch(event.request).then(response => {
       const copy = response.clone();
