@@ -1,7 +1,16 @@
-# Officina della frase — due PWA
+# Officina della frase — tre PWA
 
-Porta di ingresso: `index.html`. Le due applicazioni sono autonome:
-`analisi-grammaticale/` e `analisi-logica/`.
+Porta di ingresso: `index.html`. Le tre applicazioni sono autonome:
+`analisi-grammaticale/`, `analisi-logica/` e `analisi-periodo/`.
+
+## Analisi del periodo
+
+`analisi-periodo/` riprende il PDF `periodo.pdf` di gbprof: 14 lezioni con
+esempi, seguite da 14 schemi riassuntivi sul modello delle slide originali.
+Comprende quattro analisi guidate, una banca di 28 domande, verifiche di
+14 domande e recupero mirato, viste stampabili e funzionamento offline.
+Fonti, correzioni e manutenzione sono documentate nel suo `README.md`.
+Questa PWA è autonoma anche dal generatore dei primi due percorsi.
 
 ## Materiali e struttura
 
