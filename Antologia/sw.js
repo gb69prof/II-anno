@@ -1,12 +1,12 @@
 const APP_BASE = new URL('./', self.location.href);
 // Cache ownership is specific to this installation, even on a shared origin.
 const CACHE_PREFIX = `antologia-domande:${APP_BASE.pathname}:`;
-const CACHE = `${CACHE_PREFIX}v9`;
+const CACHE = `${CACHE_PREFIX}v10`;
 const FALLBACK = new URL('index.html', APP_BASE).href;
 const CORE = [
   '', 'index.html', 'privacy.html', 'accessibilita.html', 'manifest.webmanifest',
   'pwa-common/gbprof-accessibility.css', 'pwa-common/gbprof-accessibility.js',
-  'assets/css/app.css', 'assets/js/app.js', 'assets/js/work-view.js', 'assets/js/form-lab-view.js', 'assets/js/author-view.js', 'assets/js/prevert-view.js',
+  'assets/css/app.css', 'assets/css/pirandello-labs.css', 'assets/js/app.js', 'assets/js/pirandello-labs.js', 'assets/js/work-view.js', 'assets/js/form-lab-view.js', 'assets/js/author-view.js', 'assets/js/prevert-view.js',
   'content/percorso.js', 'content/laboratorio-forma.js', 'content/autori/leopardi-infinito.js', 'content/autori/pirandello.js', 'content/autori/prevert-ragazzi.js',
   'assets/maps/prevert-ragazzi-percorso.svg',
   'assets/maps/pirandello/Pirandello-filosofia.png', 'assets/maps/pirandello/Pirandello-maschere.png',
