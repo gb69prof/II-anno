@@ -110,10 +110,20 @@
 @media(prefers-reduced-motion:reduce){.pirandello-course .pirlab *{transition:none!important;animation:none!important}}
 body.high-contrast .pirandello-course .pirlab,body.high-contrast .pirandello-course .pirlab-control-board{color:#141414}
 @media print{
- .pirandello-course .topbar,.pirandello-course .pirlab-intro,.pirandello-course .pirlab:not(.pirlab-monologo){display:none!important}
- .pirandello-course .pirlab-monologo .pirlab-head,.pirandello-course .pirlab-monologo .pirlab-mirror-intro,.pirandello-course .pirlab-monologo .pirlab-poster-controls,.pirandello-course .pirlab-monologo>.pirlab-bridge{display:none!important}
- .pirandello-course .pirlab-monologo{position:fixed;inset:0;background:#fff;z-index:9999;border:0;margin:0;box-shadow:none;width:100vw;height:100vh}
- .pirandello-course .pirlab-monologo .pirlab-mirror-layout{display:block}
- .pirandello-course .pirlab-monologo .pirlab-poster{width:100%;height:100vh;min-height:0;print-color-adjust:exact;-webkit-print-color-adjust:exact}
- @page{size:A4 portrait;margin:0}
+  body:has(.pirandello-course) .topbar,
+  body:has(.pirandello-course) .site-footer,
+  body:has(.pirandello-course) .author-hero,
+  body:has(.pirandello-course) .author-nav,
+  body:has(.pirandello-course) .author-tools,
+  body:has(.pirandello-course) .pirlab-intro,
+  body:has(.pirandello-course) .author-final,
+  body:has(.pirandello-course) .author-section:not(:has(.pirlab-monologo)),
+  body:has(.pirandello-course) .author-section:has(.pirlab-monologo)>:not(.pirlab-monologo){display:none!important}
+  body:has(.pirandello-course) .author-page,body:has(.pirandello-course) .author-body{margin:0!important;padding:0!important;max-width:none!important;border:0!important;background:white!important}
+  body:has(.pirandello-course) .author-section:has(.pirlab-monologo){margin:0!important;padding:0!important;border:0!important}
+  .pirandello-course .pirlab-monologo{display:block!important;position:static!important;width:210mm!important;height:297mm!important;min-height:0!important;border:0!important;border-radius:0!important;margin:0!important;box-shadow:none!important;overflow:hidden!important;break-inside:avoid!important}
+  .pirandello-course .pirlab-monologo .pirlab-head,.pirandello-course .pirlab-monologo .pirlab-mirror-intro,.pirandello-course .pirlab-monologo .pirlab-poster-controls,.pirandello-course .pirlab-monologo>.pirlab-bridge{display:none!important}
+  .pirandello-course .pirlab-monologo .pirlab-mirror-layout{display:block!important}
+  .pirandello-course .pirlab-monologo .pirlab-poster{box-sizing:border-box;width:210mm!important;height:297mm!important;min-height:0!important;padding:17mm!important;print-color-adjust:exact;-webkit-print-color-adjust:exact}
+  @page{size:A4 portrait;margin:0}
 }
