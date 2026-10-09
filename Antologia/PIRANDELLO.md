@@ -49,3 +49,26 @@ Sono rimossi i sei vecchi SVG specifici di Pirandello: `pirandello-mondo`, `pira
 - Nessun errore JavaScript e nessun 404 per i nuovi asset durante i test online.
 
 Le verifiche responsive sono eseguite con viewport simulati in Chromium, non su iPad/iPhone fisici o Safari. La pubblicazione in produzione non è eseguita: il workflow del repository distribuisce soltanto dopo un merge su `main`. Il video richiede una connessione; testi e mappe restano leggibili offline dopo il primo caricamento completo della PWA.
+
+
+## Laboratori visuali per la seconda tecnico grafico — ottobre 2026
+
+Si affiancano **tre laboratori visuali interattivi** ai materiali originali, senza eliminare né riscrivere le sei lezioni, le mappe, il monologo, il video o il ripasso. Sono integrati direttamente nel percorso `#autore/pirandello`:
+
+1. **Lo specchio degli altri**, nella sezione 02 *Le maschere* e prima del testo espositivo: ritratto vettoriale di Andrea, tre punti di vista, informazione successiva, distinzione tra comportamento osservato e giudizio definitivo, ritorno al contrasto vita/forma.
+2. **Il dossier delle due verità**, all'apertura della sezione 03 *Così è (se vi pare)*: scena teatrale illustrata, testimonianze di Frola e Ponza, schede-indizio, ipotesi e scelta del giudizio sospeso, rivelazione del finale. È deliberatamente posto prima della mappa e della trama per non anticipare la soluzione drammaturgica.
+3. **Progetta l'identità**, dopo il testo del monologo nella sezione 04: tre stati visivi del medesimo manifesto (*Uno*, *Centomila*, *Nessuno*), che modificano tipografia, colori, sovrapposizione dei ritratti e messaggio; lettura dell'effetto delle scelte grafiche, stampa del poster, rimando al commento.
+
+L'ingresso visivo in tre schede è collocato dopo l'introduzione d'autore. I pulsanti portano ai laboratori senza lasciare la pagina o alterare il router. Ogni laboratorio si conclude riportando lo studente alle nozioni e ai testi di Pirandello. Non sono presenti punteggi, classifiche, login né richieste di dati personali: l'intento è osservare, interpretare, argomentare.
+
+### File e compatibilità
+
+- `assets/js/pirandello-labs.js`: template delle tre esperienze, illustrazioni SVG inline, interazioni con stato a livello di pagina, pulizia degli handler.
+- `assets/css/pirandello-labs.css`: impaginazione editoriale responsiva, poster e tipografia visiva, supporto ad alto contrasto, movimento ridotto e stampa.
+- `assets/js/author-view.js`: import, punti d'inserimento, collegamenti e cleanup.
+- `index.html`: carica il nuovo CSS.
+- `sw.js`: cache v10, precaricamento di CSS e JS, conservazione del comportamento offline e dell'esclusione del video dalla cache.
+
+### Verifiche del codice
+
+Verificate la sintassi JavaScript dei due moduli aggiornati, la creazione dinamica dei tre template e della lezione completa: sei sezioni e tre laboratori, tre SVG, nessun ID HTML duplicato, conservazione dei contenuti, della navigazione, del ripasso e del video. Questi controlli non equivalgono a un collaudo manuale del layout nei browser o su dispositivi fisici: per l'uso in classe è consigliata una rapida prova su LIM e telefono.
