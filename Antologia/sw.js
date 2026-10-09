@@ -1,7 +1,7 @@
 const APP_BASE = new URL('./', self.location.href);
 // Cache ownership is specific to this installation, even on a shared origin.
 const CACHE_PREFIX = `antologia-domande:${APP_BASE.pathname}:`;
-const CACHE = `${CACHE_PREFIX}v10`;
+const CACHE = `${CACHE_PREFIX}v11`;
 const FALLBACK = new URL('index.html', APP_BASE).href;
 const CORE = [
   '', 'index.html', 'privacy.html', 'accessibilita.html', 'manifest.webmanifest',
