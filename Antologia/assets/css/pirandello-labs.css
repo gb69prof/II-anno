@@ -1,0 +1,119 @@
+
+.pirandello-course .pirlab-intro{padding:clamp(2.5rem,6vw,5.5rem) max(1.25rem,calc((100vw - 75rem)/2));background:#182b32;color:#f6efe4}
+.pirandello-course .pirlab-intro-heading{display:grid;grid-template-columns:1.15fr .85fr;gap:2rem;align-items:end}
+.pirandello-course .pirlab-intro-heading h2{font-size:clamp(2.35rem,5.3vw,5.5rem);letter-spacing:-.06em;line-height:1;margin:.4rem 0 0;max-width:12ch}
+.pirandello-course .pirlab-intro-heading h2 em{font-weight:400;color:#f4b57c}
+.pirandello-course .pirlab-intro-heading>p{font-size:clamp(1rem,1.4vw,1.25rem);line-height:1.6;max-width:35rem}
+.pirandello-course .pirlab-kicker,.pirandello-course .pirlab-mini{font:800 .77rem/1.3 var(--sans,Arial,sans-serif);letter-spacing:.17em;text-transform:uppercase}
+.pirandello-course .pirlab-kicker{color:#f0b17b}.pirandello-course .pirlab-mini{color:#bb724c}
+.pirandello-course .pirlab-entry-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-top:2.25rem}
+.pirandello-course .pirlab-entry{position:relative;display:flex;flex-direction:column;min-height:26rem;padding:1.5rem;border:1px solid rgba(255,255,255,.24);border-radius:1rem;color:#fff;text-align:left;overflow:hidden;cursor:pointer;font-family:var(--sans,Arial,sans-serif);transition:transform .22s,border-color .22s}
+.pirandello-course .pirlab-entry:hover{transform:translateY(-4px);border-color:#ffd3a1}.pirandello-course .pirlab-entry:focus-visible{outline:3px solid #ffd3a1}
+.pirandello-course .pirlab-entry-one{background:#5f353c}.pirandello-course .pirlab-entry-two{background:#334a4c}.pirandello-course .pirlab-entry-three{background:#745b3d}
+.pirandello-course .pirlab-entry-art{display:flex;align-items:center;justify-content:center;position:relative;flex:1;min-height:12rem;margin:-1.5rem -1.5rem 1.5rem;overflow:hidden;background:radial-gradient(circle,#fff2ce38,transparent 60%)}
+.pirandello-course .pirlab-entry-art i{position:absolute;display:block;width:31%;height:68%;border:2px solid #f7e6d2;border-radius:47% 47% 31% 31%;background:linear-gradient(155deg,#eac29b 20%,#986a63 100%);transform:rotate(-9deg)}
+.pirandello-course .pirlab-entry-art i:nth-child(2){transform:translateX(-50%) rotate(-20deg);opacity:.46;mix-blend-mode:screen}.pirandello-course .pirlab-entry-art i:nth-child(3){transform:translateX(50%) rotate(20deg);opacity:.4;mix-blend-mode:screen}
+.pirandello-course .pirlab-entry-two .pirlab-entry-art i{height:70%;width:26%;background:#d5d2bf;border-radius:45% 45% 0 0;transform:translateX(-130%) rotate(13deg)}.pirandello-course .pirlab-entry-two .pirlab-entry-art i:nth-child(2){transform:translateX(130%) rotate(-13deg);opacity:1;background:#e0a985;mix-blend-mode:normal}.pirandello-course .pirlab-entry-two .pirlab-entry-art i:nth-child(3){transform:translateX(0);width:16%;border-radius:48% 48% 0 0;background:#fff;opacity:.85}
+.pirandello-course .pirlab-entry-three .pirlab-entry-art i{transform:none;width:40%;border-radius:48% 48% 0 0;background:#e8ca9a}.pirandello-course .pirlab-entry-three .pirlab-entry-art i:nth-child(2){transform:translateX(-52%) rotate(-20deg);opacity:.35}.pirandello-course .pirlab-entry-three .pirlab-entry-art i:nth-child(3){transform:translateX(52%) rotate(20deg);opacity:.35}
+.pirandello-course .pirlab-entry-number{font-size:.77rem;letter-spacing:.13em;font-weight:800;opacity:.85}
+.pirandello-course .pirlab-entry strong{font-size:clamp(1.25rem,2vw,1.75rem);line-height:1.13;margin:.45rem 0}
+.pirandello-course .pirlab-entry small{font-size:.94rem;opacity:.9}.pirandello-course .pirlab-entry>b{font-size:.86rem;margin-top:1.5rem;color:#ffe2b5}
+.pirandello-course .pirlab-intro-foot{font:600 .87rem var(--sans,Arial,sans-serif);color:#e1d6ca;margin:1.5rem 0 0}
+.pirandello-course .pirlab{--ink:#1b292f;--sun:#ffd7ad;--paper:#f6eedf;margin:clamp(2.5rem,6vw,5rem) 0;border-radius:1.4rem;overflow:hidden;background:var(--paper);border:1px solid #c5b49e;box-shadow:0 20px 50px rgba(34,28,28,.13);color:#1c292c;scroll-margin-top:calc(var(--toolbar-height,70px) + 6rem)}
+.pirandello-course .pirlab-head{display:flex;align-items:end;justify-content:space-between;gap:1rem;background:#20333b;color:#fff;padding:clamp(1.25rem,3.5vw,2.5rem)}
+.pirandello-course .pirlab-head-copy{position:relative;z-index:1}.pirandello-course .pirlab-head h3{color:#fff;font-size:clamp(2.1rem,4.5vw,4.75rem);letter-spacing:-.055em;line-height:1.02;max-width:13ch;margin:.25rem 0 .5rem}
+.pirandello-course .pirlab-head p:last-child{font-size:clamp(1rem,1.4vw,1.25rem);max-width:39rem;margin:.65rem 0 0;line-height:1.5;color:#f0e4d5}
+.pirandello-course .pirlab-big-number{font:900 clamp(5rem,11vw,10rem)/.8 var(--sans,Arial,sans-serif);letter-spacing:-.14em;color:rgba(255,255,255,.14);padding-right:.4em}
+.pirandello-course .pirlab-layout{display:grid;grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr)}
+.pirandello-course .pirlab-art-board{position:relative;min-height:520px;background:#202b36;overflow:hidden}
+.pirandello-course .pirlab-mask-art svg{display:block;width:100%;height:100%;min-height:520px;object-fit:cover}
+.pirandello-course .pirlab-mask-art{transition:filter .25s}
+.pirandello-course .pirlab-mask-art[data-view="madre"]{filter:sepia(.22) hue-rotate(330deg) saturate(1.18)}
+.pirandello-course .pirlab-mask-art[data-view="andrea"]{filter:hue-rotate(35deg) saturate(.8)}
+.pirandello-course .pirlab-image-caption{position:absolute;right:1.5rem;top:1.5rem;display:flex;flex-direction:column;gap:.3rem;max-width:85%;padding:.9rem 1.15rem;background:#f6ecdc;color:#15262d;box-shadow:8px 8px 0 #17252b}
+.pirandello-course .pirlab-image-caption span{font:800 .7rem var(--sans,Arial,sans-serif);letter-spacing:.2em}
+.pirandello-course .pirlab-image-caption strong{font:900 clamp(1.15rem,2vw,1.85rem)/1 var(--sans,Arial,sans-serif);letter-spacing:-.04em;overflow-wrap:anywhere}
+.pirandello-course .pirlab-control-board{padding:clamp(1.25rem,3vw,2.5rem)}
+.pirandello-course .pirlab-control-board>p:not(.pirlab-mini){font-size:1.08rem;line-height:1.65}
+.pirandello-course .pirlab-control-board h4,.pirandello-course .pirlab-reflection h4,.pirandello-course .pirlab-dossier h4,.pirandello-course .pirlab-verdict h4,.pirandello-course .pirlab-poster-controls h4{font-size:clamp(1.28rem,2.1vw,1.9rem);line-height:1.15;margin:1.25rem 0 .9rem;letter-spacing:-.03em}
+.pirandello-course .pirlab-view-buttons{display:flex;flex-wrap:wrap;gap:.55rem}
+.pirandello-course .pirlab-view-buttons button,.pirandello-course .pirlab-answers button,.pirandello-course .pirlab-verdict-choices button,.pirandello-course .pirlab-poster-options button{border:1px solid #bba890;border-radius:.7rem;background:#fffcf6;color:#1b292f;font:700 .94rem/1.3 var(--sans,Arial,sans-serif);min-height:44px;padding:.8rem;cursor:pointer;transition:background .2s,color .2s,border .2s}
+.pirandello-course .pirlab-view-buttons button span{color:#a16549;margin-right:.35rem}.pirandello-course .pirlab-view-buttons button.is-active,.pirandello-course .pirlab-answers button.is-active,.pirandello-course .pirlab-poster-options button.is-active{background:#213c44;border-color:#213c44;color:#fff}
+.pirandello-course .pirlab-testimony{margin:1.5rem 0 0;padding:1.3rem 1.5rem;border-left:5px solid #ba7250;background:#fff9ef;font-size:clamp(1.2rem,2vw,1.55rem);line-height:1.4;font-style:italic}
+.pirandello-course .pirlab-caption{font-size:.96rem;color:#544c46}
+.pirandello-course .pirlab-reveal,.pirandello-course .pirlab-download{display:flex;align-items:center;justify-content:space-between;gap:1rem;width:100%;margin:1.25rem 0;padding:.9rem 1.1rem;border:1px solid #223e46;border-radius:.6rem;background:#223e46;color:white;cursor:pointer;font:800 .92rem/1.35 var(--sans,Arial,sans-serif)}
+.pirandello-course .pirlab-reveal span{font-size:1.4rem}
+.pirandello-course .pirlab-new-evidence{border-left:4px solid #bd6445;padding:1rem;background:#fff}
+.pirandello-course .pirlab-new-evidence strong{font:800 .77rem var(--sans,Arial,sans-serif);letter-spacing:.1em;color:#8c452d}
+.pirandello-course .pirlab-new-evidence p{line-height:1.5;margin:.5rem 0}
+.pirandello-course .pirlab-reflection{padding:clamp(1.25rem,3vw,2.5rem);background:#e8dbc7}
+.pirandello-course .pirlab-answers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.65rem}
+.pirandello-course .pirlab-answers button{text-align:left;min-height:6rem}
+.pirandello-course .pirlab-feedback{margin:1.2rem 0;padding:1rem 1.25rem;border-left:4px solid #ab633c;background:#fff7e9;line-height:1.6}
+.pirandello-course .pirlab-bridge{margin-top:1.7rem;padding:1.3rem 1.5rem;border-radius:.8rem;background:#21333b;color:#fff}
+.pirandello-course .pirlab-bridge span{font:800 .78rem var(--sans,Arial,sans-serif);letter-spacing:.13em;color:#edb78f}
+.pirandello-course .pirlab-bridge p{max-width:75ch;line-height:1.65}.pirandello-course .pirlab-bridge a,.pirandello-course .pirlab-ending a{color:#ffce9c;font-weight:800;text-underline-offset:4px}
+.pirandello-course .pirlab-alert{padding:1rem clamp(1.25rem,3vw,2.5rem);margin:0;background:#ffe5bd;color:#47331f;line-height:1.55}
+.pirandello-course .pirlab-theater-art{background:#17212b}.pirandello-course .pirlab-theater-art svg{width:100%;height:auto;display:block}
+.pirandello-course .pirlab-theater-art-footer{display:flex;justify-content:space-between;align-items:center;gap:.5rem;background:#1a222d;color:#f5e8d8;padding:.8rem 1.5rem;font:800 .77rem/1.2 var(--sans,Arial,sans-serif);letter-spacing:.1em}
+.pirandello-course .pirlab-theater-art-footer strong{color:#f5bd87;text-align:center}
+.pirandello-course .pirlab-dossier{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;padding:clamp(1.25rem,3vw,2.5rem)}
+.pirandello-course .pirlab-case-card{margin-top:1.2rem;padding:1.35rem;background:#e5d5bf;border:1px solid #c7b299;min-height:13rem}
+.pirandello-course .pirlab-case-card[data-view="ponza"]{background:#cedfe0;border-color:#a2bdc1}
+.pirandello-course .pirlab-case-card>span{font:800 .76rem var(--sans,Arial,sans-serif);letter-spacing:.09em;color:#784c39}
+.pirandello-course .pirlab-case-card h5{font-size:1.6rem;line-height:1.2;margin:.65rem 0}
+.pirandello-course .pirlab-case-card p{margin-bottom:0;line-height:1.6}
+.pirandello-course .pirlab-clues{display:grid;gap:.6rem}
+.pirandello-course .pirlab-clues button{display:flex;text-align:left;gap:.85rem;align-items:center;padding:.8rem;background:#fff9ef;border:1px solid #cbb8a4;border-radius:.5rem;min-height:52px;color:#1b292f;cursor:pointer;font:700 .96rem var(--sans,Arial,sans-serif)}
+.pirandello-course .pirlab-clues button[aria-pressed="true"]{border-color:#27414a;box-shadow:inset 4px 0 #27414a}
+.pirandello-course .pirlab-clues button span{color:#9e563a;font-weight:900}
+.pirandello-course .pirlab-clue-output{padding:1rem;border-left:4px solid #ab674a;background:#fff;min-height:5.2rem;line-height:1.5}
+.pirandello-course .pirlab-verdict{padding:clamp(1.25rem,3vw,2.5rem);background:#ded8cd}
+.pirandello-course .pirlab-verdict>div:first-child p:not(.pirlab-mini){max-width:60rem;line-height:1.55}
+.pirandello-course .pirlab-verdict-choices{display:flex;gap:.55rem;flex-wrap:wrap}
+.pirandello-course .pirlab-verdict-choices button[aria-pressed="true"]{background:#223b43;color:white;border-color:#223b43}
+.pirandello-course .pirlab-ending{padding:1.5rem;background:#243b43;color:#fff;border-radius:.8rem}
+.pirandello-course .pirlab-ending blockquote{margin:.8rem 0;border-left:4px solid #e7b68a;padding:.9rem 1.3rem;font-size:clamp(1.6rem,3vw,2.5rem);line-height:1.15;color:#ffe4c8}
+.pirandello-course .pirlab-ending p{line-height:1.6}
+.pirandello-course .pirlab-mirror-intro{padding:1.3rem clamp(1.25rem,3vw,2.5rem);background:#efe1cb;font-size:1.14rem;line-height:1.6}
+.pirandello-course .pirlab-mirror-intro p{max-width:85ch}
+.pirandello-course .pirlab-mirror-layout{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:0}
+.pirandello-course .pirlab-poster{--poster-bg:#b96548;--poster-ink:#221d28;--poster-face:#f5c9a7;position:relative;display:flex;flex-direction:column;align-items:stretch;min-height:660px;background:var(--poster-bg);color:var(--poster-ink);padding:clamp(1rem,2.5vw,2rem);overflow:hidden;transition:background .3s,color .3s}
+.pirandello-course .pirlab-poster[data-identity="uno"]{--poster-bg:#e6d2b2;--poster-ink:#222b2d;--poster-face:#3a6265}
+.pirandello-course .pirlab-poster[data-identity="nessuno"]{--poster-bg:#252d37;--poster-ink:#f6dfc0;--poster-face:#b58e8f}
+.pirandello-course .pirlab-poster-top,.pirandello-course .pirlab-poster-bottom{display:flex;justify-content:space-between;gap:.6rem;align-items:center;font:800 .65rem/1.3 var(--sans,Arial,sans-serif);letter-spacing:.12em}
+.pirandello-course .pirlab-poster-symbol{position:relative;flex:1;display:flex;align-items:center;justify-content:center;min-height:240px}
+.pirandello-course .pirlab-poster-symbol svg{display:block;width:100%;max-height:390px;overflow:visible;color:var(--poster-face);filter:drop-shadow(16px 13px 0 rgba(22,24,32,.25));transition:transform .3s}
+.pirandello-course .pirlab-poster[data-identity="uno"] .pirlab-ghost{opacity:0}
+.pirandello-course .pirlab-poster[data-identity="uno"] .pirlab-poster-symbol svg{transform:scale(.92)}
+.pirandello-course .pirlab-poster[data-identity="nessuno"] .pirlab-poster-symbol svg{opacity:.3;transform:scale(1.08) translateY(-8px)}
+.pirandello-course .pirlab-poster[data-identity="nessuno"] .pirlab-ghost{opacity:.12}
+.pirandello-course .pirlab-poster-word{position:relative;z-index:1;font:1000 clamp(3.3rem,6.1vw,7.1rem)/.85 var(--sans,Arial,sans-serif);letter-spacing:-.095em;overflow-wrap:anywhere;text-transform:uppercase;max-width:100%;transition:transform .25s}
+.pirandello-course .pirlab-poster[data-identity="uno"] .pirlab-poster-word{letter-spacing:-.055em;text-align:center;font-size:clamp(5rem,10vw,10rem)}
+.pirandello-course .pirlab-poster[data-identity="nessuno"] .pirlab-poster-word{letter-spacing:.02em;font-weight:500;font-style:italic;transform:translateX(.4em);font-size:clamp(3rem,6vw,6rem)}
+.pirandello-course .pirlab-poster>p{margin:.8rem 0 2rem;font-weight:750;font-size:1.12rem}
+.pirandello-course .pirlab-poster-bottom{margin-top:auto;border-top:2px solid currentColor;padding-top:.8rem;font-size:.58rem}
+.pirandello-course .pirlab-poster-controls{padding:clamp(1.25rem,3vw,2.5rem)}
+.pirandello-course .pirlab-poster-controls>p:not(.pirlab-mini){line-height:1.65}
+.pirandello-course .pirlab-poster-options{display:grid;gap:.65rem;margin:1.5rem 0}
+.pirandello-course .pirlab-poster-options button{display:flex;justify-content:space-between;gap:.5rem;align-items:center;text-align:left}
+.pirandello-course .pirlab-poster-options button b{font-size:1.06rem;letter-spacing:-.02em}
+.pirandello-course .pirlab-poster-options button small{text-align:right;font-size:.82rem;font-weight:500}
+.pirandello-course .pirlab-design-questions{padding:1.25rem;background:#e8dac6;border-left:4px solid #ab6045;line-height:1.55}
+.pirandello-course .pirlab-design-questions p{margin:.5rem 0 0}
+.pirandello-course .pirlab-monologo .pirlab-bridge{margin:0;border-radius:0}
+.pirandello-course .pirlab :focus-visible,.pirandello-course .pirlab-entry:focus-visible{outline:3px solid #0b659c;outline-offset:3px}
+.pirandello-course .pirlab [hidden]{display:none!important}
+@media(max-width:960px){.pirandello-course .pirlab-layout,.pirandello-course .pirlab-mirror-layout{grid-template-columns:1fr}.pirandello-course .pirlab-art-board{min-height:400px}.pirandello-course .pirlab-mask-art svg{max-height:550px;min-height:0}.pirandello-course .pirlab-poster{min-height:560px}.pirandello-course .pirlab-dossier{grid-template-columns:1fr 1fr}}
+@media(max-width:720px){.pirandello-course .pirlab-intro-heading,.pirandello-course .pirlab-entry-grid,.pirandello-course .pirlab-dossier,.pirandello-course .pirlab-answers{grid-template-columns:1fr}.pirandello-course .pirlab-entry{min-height:13.5rem;padding:1.1rem}.pirandello-course .pirlab-entry-art{position:absolute;inset:0 0 0 60%;margin:0;opacity:.42;min-height:0}.pirandello-course .pirlab-entry-art i{height:80%}.pirandello-course .pirlab-entry-number,.pirandello-course .pirlab-entry strong,.pirandello-course .pirlab-entry small,.pirandello-course .pirlab-entry>b{position:relative;z-index:1;max-width:55%}.pirandello-course .pirlab-entry>b{margin-top:auto}.pirandello-course .pirlab-intro{padding:2.5rem 1.2rem}.pirandello-course .pirlab{border-radius:1rem}.pirandello-course .pirlab-big-number{display:none}.pirandello-course .pirlab-theater-art-footer{font-size:.59rem;padding:.7rem}.pirandello-course .pirlab-art-board{min-height:0}.pirandello-course .pirlab-poster{min-height:540px}.pirandello-course .pirlab-image-caption{right:1rem;top:1rem}.pirandello-course .pirlab-answers button{min-height:4rem}.pirandello-course .pirlab-poster-options button{flex-wrap:wrap}.pirandello-course .pirlab-poster-options button small{text-align:left}}
+@media(max-width:380px){.pirandello-course .pirlab-head h3{font-size:2rem}.pirandello-course .pirlab-poster{min-height:470px}.pirandello-course .pirlab-poster-word{font-size:2.8rem}.pirandello-course .pirlab-poster[data-identity="nessuno"] .pirlab-poster-word{font-size:2.5rem}.pirandello-course .pirlab-view-buttons button{flex:1 1 40%}}
+@media(prefers-reduced-motion:reduce){.pirandello-course .pirlab *{transition:none!important;animation:none!important}}
+body.high-contrast .pirandello-course .pirlab,body.high-contrast .pirandello-course .pirlab-control-board{color:#141414}
+@media print{
+ .pirandello-course .topbar,.pirandello-course .pirlab-intro,.pirandello-course .pirlab:not(.pirlab-monologo){display:none!important}
+ .pirandello-course .pirlab-monologo .pirlab-head,.pirandello-course .pirlab-monologo .pirlab-mirror-intro,.pirandello-course .pirlab-monologo .pirlab-poster-controls,.pirandello-course .pirlab-monologo>.pirlab-bridge{display:none!important}
+ .pirandello-course .pirlab-monologo{position:fixed;inset:0;background:#fff;z-index:9999;border:0;margin:0;box-shadow:none;width:100vw;height:100vh}
+ .pirandello-course .pirlab-monologo .pirlab-mirror-layout{display:block}
+ .pirandello-course .pirlab-monologo .pirlab-poster{width:100%;height:100vh;min-height:0;print-color-adjust:exact;-webkit-print-color-adjust:exact}
+ @page{size:A4 portrait;margin:0}
+}
