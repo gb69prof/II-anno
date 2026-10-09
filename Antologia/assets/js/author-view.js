@@ -1,3 +1,5 @@
+import { labsIntroTemplate, pirandelloLabTemplate, bindPirandelloLabs } from './pirandello-labs.js';
+
 function esc(value) {
   return String(value).replace(/[&<>'"]/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[char]));
 }
@@ -29,10 +31,13 @@ function sectionTemplate(lesson, section, index) {
   const prev = lesson.sections[index - 1], next = lesson.sections[index + 1];
   return `<section class="author-section" id="pirandello-${section.id}" data-author-section="${section.id}" aria-labelledby="heading-${section.id}">
     <div class="author-section-head"><span>${section.number}</span><div><p class="eyebrow">LEZIONE ${section.number} DI 06</p><h2 id="heading-${section.id}" tabindex="-1">${esc(section.title)}</h2></div></div>
+    ${section.id === 'cosi-e-se-vi-pare' ? pirandelloLabTemplate(section.id) : ''}
     ${mapTemplate(section)}
+    ${section.id === 'maschere' ? pirandelloLabTemplate(section.id) : ''}
     ${section.video ? `<div class="author-video"><h3 id="laudisi-video-title">${esc(section.video.title)}</h3><video controls playsinline preload="metadata" width="1920" height="1080" aria-labelledby="laudisi-video-title" aria-describedby="laudisi-video-note"><source src="${section.video.src}" type="video/mp4">Il browser non supporta il video. <a href="${section.video.src}">Apri il video del monologo</a>.</video><p id="laudisi-video-note">Premi Play per avviare il video. Richiede una connessione; il testo resta disponibile qui sotto anche offline.</p><p data-video-error role="status" hidden>Il video non è disponibile in questo momento. Puoi leggere il monologo qui sotto e riprovare quando la connessione è disponibile.</p></div>` : ''}
     ${section.blocks ? `<div class="author-prose">${section.blocks.map(block => `<article>${block.heading ? `<h3>${esc(block.heading)}</h3>` : ''}${block.paragraphs.map(text => `<p>${esc(text)}</p>`).join('')}</article>`).join('')}</div>` : ''}
     ${section.theater ? `<div class="author-theater"><h3>${esc(section.readingTitle)}</h3><p class="theater-note">Testo in italiano attuale, come nel materiale della lezione.</p>${section.theater.map(line => `<p class="theater-${line.kind}">${line.kind === 'direction' ? `<em>${esc(line.text)}</em>` : esc(line.text)}</p>`).join('')}</div>` : ''}
+    ${section.id === 'monologo' ? pirandelloLabTemplate(section.id) : ''}
     ${section.connections ? `<nav class="author-connections" aria-label="Collegamenti concettuali">${section.connections.map(([id, label]) => `<a href="${route(id)}">${esc(label)}</a>`).join('')}</nav>` : ''}
     ${section.groups ? reviewTemplate(section) : ''}
     <nav class="stage-nav author-step-nav" aria-label="Navigazione della lezione ${section.number}">${prev ? `<a href="${route(prev.id)}" rel="prev"><small>← Precedente</small>${prev.number} · ${esc(prev.title)}</a>` : '<a href="#autori"><small>← Torna</small>Indice autori</a>'}${next ? `<a href="${route(next.id)}" rel="next"><small>Successiva →</small>${next.number} · ${esc(next.title)}</a>` : '<a href="#autori"><small>Percorso concluso →</small>Indice autori</a>'}</nav>
@@ -44,6 +49,7 @@ export function authorTemplate(lesson) {
     <header class="author-hero"><div class="shell author-hero-grid"><div><p class="eyebrow">${esc(lesson.label)}</p><h1>${esc(lesson.author)}</h1><p class="author-subtitle">${esc(lesson.title)}</p></div><div class="author-question"><span>LA GRANDE DOMANDA</span><p>${esc(lesson.question)}</p></div></div></header>
     <nav class="author-nav" aria-label="Le sei lezioni"><div class="shell">${lesson.sections.map(section => `<a href="${route(section.id)}" data-author-nav="${section.id}"><span>${section.number}</span>${esc(section.title)}</a>`).join('')}</div></nav>
     <div class="author-tools"><div class="shell"><div class="author-progress"><span data-author-progress>0 di 6 lezioni visitate</span><i><b data-author-progress-bar></b></i></div><button type="button" data-author-focus aria-pressed="false">Concentrazione</button><a href="#autori">Indice autori</a></div></div>
+    ${labsIntroTemplate()}
     <div class="author-body">${lesson.sections.map((section, index) => sectionTemplate(lesson, section, index)).join('')}
       <footer class="author-final"><div class="author-notebook"><label for="pirandelloNotes">Taccuino personale</label><textarea id="pirandelloNotes" data-author-notes placeholder="Annota una domanda, un dubbio o un collegamento. Resta soltanto su questo dispositivo."></textarea><small data-notes-status>Salvataggio locale automatico.</small></div><div class="author-reset"><button type="button" data-author-reset>Azzera progresso, ripasso e appunti</button></div></footer>
     </div>
@@ -61,6 +67,7 @@ function readLearningState(lesson) {
 
 export function bindAuthorInteractions(root, lesson) {
   const state = readLearningState(lesson);
+  const disposeLabs = bindPirandelloLabs(root);
   const page = root.querySelector('.author-page');
   root.querySelectorAll('a[href^="#autore/pirandello/"]').forEach(link => link.addEventListener('click', event => {
     if (link.getAttribute('href') !== location.hash) return;
@@ -146,5 +153,5 @@ export function bindAuthorInteractions(root, lesson) {
   const toolbar = document.querySelector('.topbar');
   const resize = new ResizeObserver(() => page.style.setProperty('--toolbar-height', `${toolbar.getBoundingClientRect().height}px`));
   resize.observe(toolbar);
-  return () => { observer.disconnect(); resize.disconnect(); video.pause(); if (dialog.open) dialog.close(); };
+  return () => { disposeLabs(); observer.disconnect(); resize.disconnect(); video.pause(); if (dialog.open) dialog.close(); };
 }
