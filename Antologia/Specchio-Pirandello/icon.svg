@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="t d">
+<title id="t">Lo specchio di Pirandello</title><desc id="d">Un volto diviso da una frattura luminosa dentro uno specchio scuro</desc>
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ebae88"/><stop offset="1" stop-color="#7b5568"/></linearGradient><clipPath id="c"><rect width="512" height="512" rx="105"/></clipPath></defs>
+<g clip-path="url(#c)"><rect width="512" height="512" fill="#171820"/><circle cx="256" cy="256" r="220" stroke="#b89a86" fill="#252936" stroke-width="9"/>
+<path d="M111 478c7-110 60-150 145-153 88-2 146 47 153 153" fill="#765567"/><path d="M156 206c0-82 42-126 100-126s100 44 100 126v46c0 94-51 143-100 143s-100-49-100-143z" fill="url(#g)"/>
+<path d="M155 222c-3-79 40-146 105-146 86 0 109 67 97 146l-29-70c-52 23-99 18-150 55z" fill="#252438"/>
+<path d="M195 254c15-10 31-10 44 0M282 254c14-10 27-10 42 0" stroke="#4b354b" stroke-width="9" stroke-linecap="round"/>
+<path d="M259 270l-12 41 14 7" fill="none" stroke="#965e66" stroke-width="7" stroke-linecap="round"/>
+<path d="M255 63l-24 94 36 97-34 80 24 123" fill="none" stroke="#ffdbac" stroke-width="10" stroke-linejoin="round"/><text x="256" y="471" fill="#f6e6d2" font-family="Georgia,serif" font-size="26" text-anchor="middle" letter-spacing="10">UNO · 100000</text></g></svg>

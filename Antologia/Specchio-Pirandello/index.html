@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#171820">
+  <meta name="description" content="Lo specchio di Pirandello: cinque ambienti interattivi per scoprire l'identità e gli sguardi degli altri. Un laboratorio di gbprof per la 2AT.">
+  <meta name="gbprof-storage-exact" content="gbprof-specchio-pirandello-v1">
+  <title>Lo specchio di Pirandello | gbprof</title>
+  <link rel="icon" type="image/svg+xml" href="./icon.svg">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenuto">Vai al contenuto</a>
+  <header class="site-header">
+    <a class="brand" href="../index.html#autori" aria-label="Torna all'indice dell'Antologia">
+      <span class="brand-symbol" aria-hidden="true">◇</span>
+      <span><strong>gbprof</strong><small>ANTOLOGIA · II ANNO</small></span>
+    </a>
+    <div class="header-actions">
+      <span class="online-label" id="connectionStatus" role="status" aria-live="polite">Percorso interattivo</span>
+      <button id="fontToggle" class="tool-button" type="button" aria-label="Testo più grande" aria-pressed="false" title="Testo più grande">Aa</button>
+      <button id="contrastToggle" class="tool-button" type="button" aria-label="Contrasto elevato" aria-pressed="false" title="Contrasto elevato">◐</button>
+    </div>
+  </header>
+
+  <main id="contenuto">
+    <section class="landing shell" id="landing" aria-labelledby="landingTitle">
+      <div class="landing-copy">
+        <p class="eyebrow"><span class="live-dot" aria-hidden="true"></span> LABORATORIO DI LETTERATURA · 2AT</p>
+        <p class="hero-overline">LUIGI PIRANDELLO · UNO, NESSUNO E CENTOMILA</p>
+        <h1 id="landingTitle">Non sei <em>una sola</em> immagine.</h1>
+        <p class="landing-lead">La persona che credi di essere coincide con quella che gli altri vedono? Attraversa cinque stanze, incontra Vitangelo Moscarda e scopri quanto può cambiare un’identità quando cambia lo sguardo.</p>
+        <div class="landing-actions">
+          <button type="button" class="button primary" data-go="0">Attraversa lo specchio <span aria-hidden="true">↗</span></button>
+          <button type="button" class="button quiet" id="installButton">Installa sul dispositivo</button>
+        </div>
+        <p class="install-status" id="installStatus" role="status" aria-live="polite"></p>
+        <div class="hero-meta" aria-label="Informazioni sul percorso">
+          <span><strong>05</strong> ambienti</span>
+          <span><strong>100′</strong> percorso didattico</span>
+          <span><strong>00</strong> voti automatici</span>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-orbit orbit-one"></div>
+        <div class="art-orbit orbit-two"></div>
+        <div class="art-stamp">CHI<br>SONO<br>IO?</div>
+        <div class="mirror-art">
+          <div class="mirror-etch">UNO</div>
+          <svg class="portrait" viewBox="0 0 420 570" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="">
+            <defs>
+              <linearGradient id="body-grad" x1="0" x2="1"><stop offset="0" stop-color="#e9a77e"/><stop offset="1" stop-color="#69455b"/></linearGradient>
+              <linearGradient id="face-grad" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f2cbb0"/><stop offset=".6" stop-color="#c68f89"/><stop offset="1" stop-color="#624a68"/></linearGradient>
+              <clipPath id="split"><path d="M212 0h208v570H212z"/></clipPath>
+            </defs>
+            <circle cx="210" cy="232" r="170" fill="#302b44" opacity=".58"/>
+            <path d="M27 571c15-138 66-203 173-214 130-12 191 67 202 214z" fill="url(#body-grad)"/>
+            <path d="M156 325l-8 77c24 46 103 60 131 3l-13-82z" fill="#af7a80"/>
+            <ellipse cx="211" cy="216" rx="117" ry="157" fill="url(#face-grad)"/>
+            <path d="M99 189C95 94 141 53 214 52c90-1 122 66 117 137-20-47-37-45-53-73-38 25-107 22-165 93z" fill="#262638"/>
+            <path d="M117 235c20-13 42-12 65-2M243 233c22-14 42-13 62-3" stroke="#4d3a4b" stroke-width="8" stroke-linecap="round" fill="none"/>
+            <path d="M192 296c17 13 37 14 52 0" stroke="#8c5c67" stroke-width="6" stroke-linecap="round" fill="none"/>
+            <path d="M218 230l-12 46 19 5" stroke="#a66f75" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <g clip-path="url(#split)" opacity=".78" transform="translate(30 5)">
+              <ellipse cx="211" cy="216" rx="117" ry="157" fill="#92a2bf"/>
+              <path d="M99 189C95 94 141 53 214 52c90-1 122 66 117 137-20-47-37-45-53-73-38 25-107 22-165 93z" fill="#272c4e"/>
+              <path d="M117 235c20-13 42-12 65-2M243 233c22-14 42-13 62-3" stroke="#394466" stroke-width="8" stroke-linecap="round" fill="none"/>
+            </g>
+            <path d="M211 45L223 528" stroke="#ffe3c5" stroke-width="3" stroke-dasharray="8 14" opacity=".82"/>
+            <path d="M208 0l-40 100 53 93-58 145 51 232" stroke="#ffe0bd" stroke-width="2" opacity=".5" fill="none"/>
+          </svg>
+          <div class="mirror-etch bottom">CENTOMILA</div>
+        </div>
+        <div class="float-label">E se qualcuno conoscesse<br>un me che io ignoro?</div>
+        <div class="art-num">01 / ∞</div>
+      </div>
+      <div class="landing-bottom"><span>UN’ESPERIENZA DA VIVERE, NON DA IMPARARE A MEMORIA</span><span>SCORRI CON IL PENSIERO ↓</span></div>
+    </section>
+
+    <section id="learning" class="learning" aria-label="Le cinque stanze del percorso" hidden>
+      <div class="learning-top shell">
+        <button type="button" id="backToCover" class="link-button">← Copertina</button>
+        <div class="learning-progress"><span id="progressLabel" role="status" aria-live="polite">Stanza 1 di 5</span><div class="progress-rail"><span id="progressFill"></span></div></div>
+        <span class="tiny-label">PIRANDELLO / IDENTITÀ</span>
+      </div>
+      <div class="learning-layout shell">
+        <nav class="chapter-nav" aria-label="Navigazione tra le stanze">
+          <p class="eyebrow">LE CINQUE STANZE</p>
+          <button type="button" data-go="0" class="chapter-link"><span>01</span><b>Prima dello specchio</b></button>
+          <button type="button" data-go="1" class="chapter-link"><span>02</span><b>Gli sguardi</b></button>
+          <button type="button" data-go="2" class="chapter-link"><span>03</span><b>La frattura</b></button>
+          <button type="button" data-go="3" class="chapter-link"><span>04</span><b>Le tre finestre</b></button>
+          <button type="button" data-go="4" class="chapter-link"><span>05</span><b>Il ritorno</b></button>
+          <div class="chapter-foot">
+            <span>Non cercare la risposta giusta.</span>
+            <p>Cerca ciò che non avevi ancora visto.</p>
+          </div>
+        </nav>
+
+        <div class="rooms">
+          <section class="room" data-room="0" aria-labelledby="room1Title">
+            <header class="room-head">
+              <p class="eyebrow">STANZA 01 <span class="sep">/</span> LA DOMANDA</p>
+              <h2 id="room1Title" tabindex="-1">Prima dello <em>specchio.</em></h2>
+              <p>Immagina di guardare una persona che conosci da sempre. Quanto puoi dire davvero di lei?</p>
+            </header>
+            <div class="reading-card">
+              <span class="card-serial">UNA DOMANDA, TRE POSSIBILITÀ</span>
+              <h3>Chi ci conosce davvero?</h3>
+              <p>Partiamo da ciò che pensi <strong>prima</strong> di incontrare Pirandello. Non c’è un test della personalità: puoi ragionare su personaggi inventati, senza parlare di te.</p>
+              <div class="choice-stack" role="group" aria-label="Scegli una posizione iniziale">
+                <button type="button" data-initial="0" class="statement-choice" aria-pressed="false"><span class="choice-number">A</span><span><strong>Io mi conosco meglio degli altri.</strong><small>Nessuno può vedere dall’esterno tutto quello che vivo.</small></span><span aria-hidden="true">↗</span></button>
+                <button type="button" data-initial="1" class="statement-choice" aria-pressed="false"><span class="choice-number">B</span><span><strong>Gli altri vedono cose che io non noto.</strong><small>Il loro sguardo può sorprendermi.</small></span><span aria-hidden="true">↗</span></button>
+                <button type="button" data-initial="2" class="statement-choice" aria-pressed="false"><span class="choice-number">C</span><span><strong>Nessuno sguardo è completo.</strong><small>Neanche l’immagine che ho di me.</small></span><span aria-hidden="true">↗</span></button>
+              </div>
+              <p id="initialFeedback" class="feedback subtle" role="status" aria-live="polite">Scegli una posizione: la ritroverai nell’ultima stanza.</p>
+            </div>
+            <aside class="thought">
+              <span class="thought-mark" aria-hidden="true">“</span>
+              <p>Una descrizione può essere vera, senza essere tutta la verità su una persona.</p>
+              <small>IPOTESI DA METTERE ALLA PROVA</small>
+            </aside>
+            <div class="room-nav"><span>Il primo sguardo è il tuo.</span><button type="button" class="button primary" data-go="1">Entra negli sguardi →</button></div>
+          </section>
+
+          <section class="room" data-room="1" aria-labelledby="room2Title" hidden>
+            <header class="room-head">
+              <p class="eyebrow">STANZA 02 <span class="sep">/</span> IL CONFLITTO</p>
+              <h2 id="room2Title" tabindex="-1">Una scena. <em>Tre verità?</em></h2>
+              <p>Lo stesso momento cambia quando cambia chi lo racconta.</p>
+            </header>
+            <div class="case-card">
+              <span class="card-serial">IL CASO DI LUCA · ACCOGLIENZA TURISTICA</span>
+              <h3>Cinque secondi di silenzio.</h3>
+              <p>Luca è alla reception. Un ospite gli pone una domanda in una lingua straniera. Luca tace per alcuni secondi, poi risponde in modo preciso. Una recensione online racconta soltanto il silenzio.</p>
+              <div class="lens-switch" role="group" aria-label="Scegli il punto di vista">
+                <button type="button" data-lens="luca" aria-pressed="true">Luca</button>
+                <button type="button" data-lens="ospite" aria-pressed="false">L’ospite</button>
+                <button type="button" data-lens="rete" aria-pressed="false">La recensione</button>
+              </div>
+              <blockquote id="lensQuote" class="lens-quote">«Stavo cercando le parole adatte. Non volevo sbagliare.»</blockquote>
+              <p class="lens-note" id="lensNote">Lo sguardo dall’interno comprende intenzioni che il cliente non può conoscere.</p>
+            </div>
+            <div class="reading-card">
+              <span class="card-serial">LABORATORIO DI INTERPRETAZIONE</span>
+              <h3>Fatto, interpretazione o giudizio?</h3>
+              <p>Leggi ogni frase. Un <strong>fatto</strong> è osservabile; un’<strong>interpretazione</strong> propone una spiegazione; un <strong>giudizio</strong> attribuisce una valutazione alla persona.</p>
+              <div class="classification">
+                <div class="claim" data-claim="c1" data-correct="fatto"><p>«Luca resta in silenzio per alcuni secondi prima di rispondere.»</p><div class="classify-actions" role="group" aria-label="Classifica la prima affermazione"><button type="button" data-classify="fatto" aria-pressed="false">Fatto</button><button type="button" data-classify="interpretazione" aria-pressed="false">Interpretazione</button><button type="button" data-classify="giudizio" aria-pressed="false">Giudizio</button></div><p class="claim-feedback" role="status" aria-live="polite" hidden></p></div>
+                <div class="claim" data-claim="c2" data-correct="interpretazione"><p>«Forse Luca stava traducendo mentalmente la domanda.»</p><div class="classify-actions" role="group" aria-label="Classifica la seconda affermazione"><button type="button" data-classify="fatto" aria-pressed="false">Fatto</button><button type="button" data-classify="interpretazione" aria-pressed="false">Interpretazione</button><button type="button" data-classify="giudizio" aria-pressed="false">Giudizio</button></div><p class="claim-feedback" role="status" aria-live="polite" hidden></p></div>
+                <div class="claim" data-claim="c3" data-correct="giudizio"><p>«Quel ragazzo è incompetente.»</p><div class="classify-actions" role="group" aria-label="Classifica la terza affermazione"><button type="button" data-classify="fatto" aria-pressed="false">Fatto</button><button type="button" data-classify="interpretazione" aria-pressed="false">Interpretazione</button><button type="button" data-classify="giudizio" aria-pressed="false">Giudizio</button></div><p class="claim-feedback" role="status" aria-live="polite" hidden></p></div>
+                <div class="claim" data-claim="c4" data-correct="fatto"><p>«L’ospite riceve una risposta dopo l’attesa.»</p><div class="classify-actions" role="group" aria-label="Classifica la quarta affermazione"><button type="button" data-classify="fatto" aria-pressed="false">Fatto</button><button type="button" data-classify="interpretazione" aria-pressed="false">Interpretazione</button><button type="button" data-classify="giudizio" aria-pressed="false">Giudizio</button></div><p class="claim-feedback" role="status" aria-live="polite" hidden></p></div>
+              </div>
+              <p id="classifyStatus" class="feedback subtle" role="status" aria-live="polite">Puoi ripensare ogni scelta, senza voti o classifiche.</p>
+            </div>
+            <div class="concept-note"><strong>Il punto:</strong> lo sguardo dell’ospite non è necessariamente menzognero. È <em>parziale</em>. Una parte non dovrebbe diventare la definizione dell’intera persona.</div>
+            <div class="room-nav"><button type="button" class="button outline" data-go="0">← Prima stanza</button><button type="button" class="button primary" data-go="2">Incontra Moscarda →</button></div>
+          </section>
+
+          <section class="room" data-room="2" aria-labelledby="room3Title" hidden>
+            <header class="room-head">
+              <p class="eyebrow">STANZA 03 <span class="sep">/</span> LA LETTERATURA</p>
+              <h2 id="room3Title" tabindex="-1">Il naso che <em>cambiò tutto.</em></h2>
+              <p>Un’osservazione insignificante apre una frattura nell’identità di Vitangelo Moscarda.</p>
+            </header>
+            <div class="literature-intro"><div class="book-symbol" aria-hidden="true">P.</div><div><p class="eyebrow">LUIGI PIRANDELLO · 1926</p><h3>Uno, nessuno e centomila</h3><p>Il romanzo segue l’esperimento radicale di un uomo che scopre di non coincidere con l’immagine che gli altri hanno di lui.</p></div></div>
+            <div class="reading-card literary-card">
+              <span class="card-serial">LETTURA GUIDATA · ADATTAMENTO DIDATTICO ORIGINALE</span>
+              <h3>Una piccola scoperta, una grande frattura.</h3>
+              <p>Una mattina, mentre si guarda allo specchio, Vitangelo Moscarda sente la moglie osservare che il suo naso pende leggermente verso destra.</p>
+              <p>È un particolare minuscolo. Eppure lo turba profondamente: come può non aver notato una cosa che la moglie conosce da tempo? Se non sa come gli altri vedono il suo volto, quante altre immagini di sé gli sono sconosciute?</p>
+              <p>Moscarda comincia a intuire che ciascuna persona incontrata conosce un Vitangelo diverso. Non è lo specchio a mentire: è la certezza di possedere una sola immagine di sé che improvvisamente si spezza.</p>
+              <p class="source-note"><strong>Attenzione:</strong> questo testo è una parafrasi originale dell’episodio iniziale, <strong>non</strong> una citazione del romanzo. Nel testo autentico è Moscarda stesso a raccontare in prima persona.</p>
+              <a class="text-link" href="../index.html#autore/pirandello/maschere">Approfondisci Pirandello nell’Antologia ↗</a>
+            </div>
+            <div class="fracture-steps" aria-label="Le tre fasi della frattura">
+              <div><b>01</b><h4>Prima</h4><p>«So come sono fatto.»</p></div>
+              <span class="fracture-arrow" aria-hidden="true">→</span>
+              <div><b>02</b><h4>La scoperta</h4><p>«Mia moglie vede ciò che io ignoro.»</p></div>
+              <span class="fracture-arrow" aria-hidden="true">→</span>
+              <div><b>03</b><h4>La frattura</h4><p>«Quanti “me” esistono?»</p></div>
+            </div>
+            <div class="reading-card question-card">
+              <span class="card-serial">LEGGI, RISPONDI, CONTROLLA</span>
+              <h3>Quattro domande, nessuna scorciatoia.</h3>
+              <p>Prova a rispondere prima di aprire ciascuna spiegazione.</p>
+              <details><summary>1. Che cosa mette in crisi Moscarda? <span aria-hidden="true">+</span></summary><p>Non il naso in sé, ma la scoperta di essere diverso da come gli altri lo conoscono. Un fatto banale incrina una certezza molto più profonda.</p></details>
+              <details><summary>2. Perché «centomila» identità? <span aria-hidden="true">+</span></summary><p>Perché ogni persona può costruire un’immagine diversa di Moscarda. Il numero non è un conteggio letterale: indica la molteplicità degli sguardi.</p></details>
+              <details><summary>3. Che cosa significa «nessuno»? <span aria-hidden="true">+</span></summary><p>Che non esiste un’unica forma definitiva in cui racchiudere il protagonista. Non significa che egli non esista, ma che un’identità fissa e universalmente condivisa gli sfugge.</p></details>
+              <details><summary>4. Chi racconta: il protagonista o un narratore esterno? <span aria-hidden="true">+</span></summary><p>Nell’originale parla Moscarda in prima persona, rivolgendosi anche al lettore. In questa parafrasi didattica, invece, è usata la terza persona: non bisogna confondere le due voci narrative.</p></details>
+            </div>
+            <div class="concept-note"><strong>Oltre la “maschera”:</strong> Pirandello non sostiene semplicemente che fingiamo. Mostra la tensione fra la vita, che cambia, e la forma rigida in cui gli altri — e talvolta noi stessi — cerchiamo di fissarla.</div>
+            <div class="room-nav"><button type="button" class="button outline" data-go="1">← Gli sguardi</button><button type="button" class="button primary" data-go="3">Apri il laboratorio →</button></div>
+          </section>
+
+          <section class="room" data-room="3" aria-labelledby="room4Title" hidden>
+            <header class="room-head">
+              <p class="eyebrow">STANZA 04 <span class="sep">/</span> IL LABORATORIO</p>
+              <h2 id="room4Title" tabindex="-1">Le tre <em>finestre.</em></h2>
+              <p>Costruisci un personaggio fittizio attraverso tre rappresentazioni differenti. Non devi raccontare nulla di personale.</p>
+            </header>
+            <div class="lab-toolbar">
+              <div><strong>Parti da un esempio oppure inventa.</strong><small>I testi si modificano direttamente nelle caselle.</small></div>
+              <div class="sample-buttons"><button type="button" data-sample="luca">Esempio Luca</button><button type="button" data-sample="sara">Esempio Sara</button><button type="button" data-sample="vuoto">Foglio vuoto</button></div>
+            </div>
+            <form id="labForm" autocomplete="off" onsubmit="return false;">
+              <label class="field"><span>Nome del personaggio inventato</span><input type="text" id="workName" data-work-field="name" maxlength="60" placeholder="Esempio: Luca"></label>
+              <div class="window-fields">
+                <label class="field"><span><b>01</b> Dall’interno</span><small>Che cosa pensa di sé?</small><textarea id="workInside" data-work-field="inside" rows="4" maxlength="350" placeholder="Io mi vedo come…"></textarea></label>
+                <label class="field"><span><b>02</b> Dall’esterno</span><small>Che cosa pensa un’altra persona?</small><textarea id="workOutside" data-work-field="outside" rows="4" maxlength="350" placeholder="Un’altra persona pensa che…"></textarea></label>
+                <label class="field"><span><b>03</b> Dallo schermo</span><small>Come appare in un post o commento?</small><textarea id="workDigital" data-work-field="digital" rows="4" maxlength="350" placeholder="Una foto o un commento mostra…"></textarea></label>
+              </div>
+              <div class="lab-details">
+                <label class="field"><span>Un fatto osservabile</span><input type="text" data-work-field="fact" maxlength="250" placeholder="Che cosa è realmente accaduto?"></label>
+                <label class="field"><span>Un’interpretazione possibile</span><input type="text" data-work-field="inference" maxlength="250" placeholder="Quale spiegazione potremmo ipotizzare?"></label>
+                <label class="field"><span>Un’etichetta affrettata</span><input type="text" data-work-field="label" maxlength="250" placeholder="Quale giudizio rischia di fissarsi?"></label>
+                <label class="field"><span>Una domanda prima di giudicare</span><input type="text" data-work-field="question" maxlength="250" placeholder="Che cosa vorresti chiedere al personaggio?"></label>
+              </div>
+              <label class="field"><span>Un mini-racconto (facoltativo)</span><small>Circa 80–120 parole: mostra un episodio in cui i tre sguardi entrano in conflitto.</small><textarea id="workStory" data-work-field="story" rows="5" maxlength="1300" placeholder="Tutto è cominciato quando…"></textarea></label>
+            </form>
+            <div class="lab-preview" id="labPreview">
+              <div class="lab-preview-head"><p class="eyebrow">IL TUO ELABORATO</p><h3 id="previewName">Personaggio senza nome</h3></div>
+              <div class="preview-grid"><div><span>01 / IO</span><p id="previewInside">Ancora da scrivere.</p></div><div><span>02 / ALTRI</span><p id="previewOutside">Ancora da scrivere.</p></div><div><span>03 / SCHERMO</span><p id="previewDigital">Ancora da scrivere.</p></div></div>
+            </div>
+            <div class="lab-actions"><button type="button" id="downloadLab" class="button primary">Scarica la scheda .txt ↓</button><button type="button" id="printLab" class="button outline">Stampa il lavoro ↗</button></div>
+            <p class="data-note" id="workStatus" role="status" aria-live="polite">Il lavoro resta soltanto su questo dispositivo. Non viene inviato a un server.</p>
+            <div class="room-nav"><button type="button" class="button outline" data-go="2">← Moscarda</button><button type="button" class="button primary" data-go="4">Torna alla domanda →</button></div>
+          </section>
+
+          <section class="room" data-room="4" aria-labelledby="room5Title" hidden>
+            <header class="room-head">
+              <p class="eyebrow">STANZA 05 <span class="sep">/</span> LA RIFLESSIONE</p>
+              <h2 id="room5Title" tabindex="-1">Ritorna allo <em>specchio.</em></h2>
+              <p>La domanda iniziale è ancora qui. Ma forse ora puoi guardarla diversamente.</p>
+            </header>
+            <div class="before-after">
+              <div><p class="eyebrow">ALL’INIZIO PENSAVI</p><p id="initialRecap">Non avevi scelto una posizione iniziale.</p></div>
+              <div><p class="eyebrow">ADESSO CHE COSA PENSI?</p><div class="final-choices" role="group" aria-label="La tua posizione finale"><button type="button" data-final="0" aria-pressed="false">Io mi conosco meglio.</button><button type="button" data-final="1" aria-pressed="false">Gli altri vedono aspetti che ignoro.</button><button type="button" data-final="2" aria-pressed="false">Nessuno sguardo è completo.</button></div><p id="changeFeedback" class="small-feedback" role="status" aria-live="polite">Scegli: puoi anche confermare la risposta iniziale.</p></div>
+            </div>
+            <div class="reading-card ticket">
+              <span class="card-serial">IL TUO BIGLIETTO D’USCITA</span>
+              <h3>Il pensiero che porti via.</h3>
+              <p>Scrivi liberamente o usa un personaggio inventato. Non è necessario raccontare esperienze private.</p>
+              <label class="field"><span>All’inizio pensavo che…</span><textarea data-ticket="before" rows="2" maxlength="450" placeholder="All’inizio…"></textarea></label>
+              <label class="field"><span>La scoperta di Moscarda mi ha fatto capire che…</span><textarea data-ticket="moscarda" rows="2" maxlength="450" placeholder="Moscarda…"></textarea></label>
+              <label class="field"><span>Adesso distinguo meglio fra un fatto e…</span><textarea data-ticket="difference" rows="2" maxlength="450" placeholder="Ora distinguo…"></textarea></label>
+              <label class="field"><span>La domanda che mi resta è…</span><textarea data-ticket="open" rows="2" maxlength="450" placeholder="Mi chiedo se…"></textarea></label>
+              <div class="lab-actions"><button type="button" id="downloadDiary" class="button primary">Scarica il taccuino ↓</button><button type="button" id="resetCourse" class="button outline">Ricomincia da zero</button></div>
+              <p id="ticketStatus" class="data-note" role="status" aria-live="polite">Risposte salvate localmente quando il browser lo consente.</p>
+            </div>
+            <div class="closing-quote"><span aria-hidden="true">✳</span><p>Conoscere una persona non significa esaurirla in una definizione. Il compito non è rinunciare a giudicare, ma imparare a farlo senza fermarsi alla prima immagine.</p></div>
+            <div class="room-nav"><button type="button" class="button outline" data-go="3">← Laboratorio</button><a class="button primary" href="../index.html#autori">Torna all’Antologia ↗</a></div>
+          </section>
+        </div>
+      </div>
+    </section>
+    <noscript><div class="noscript shell">Per esplorare le attività interattive è necessario abilitare JavaScript. Puoi comunque approfondire Pirandello tornando all’<a href="../index.html#autore/pirandello">Antologia</a>.</div></noscript>
+  </main>
+  <footer class="site-footer shell">
+    <span>LO SPECCHIO DI PIRANDELLO <em>© gbprof · laboratorio didattico</em></span>
+    <a href="../index.html#autore/pirandello">Lezione su Pirandello nell’Antologia ↗</a>
+    <span class="footer-end">COMPRENDERE PRIMA DI GIUDICARE.</span>
+  </footer>
+  <script src="./app.js" defer></script>
+</body>
+</html>

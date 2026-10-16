@@ -38,12 +38,12 @@ function esc(value) {
 }
 
 function authorPreviewCard(author) {
-  if (author.route) return `<a class="author-card available" href="#${author.route}"><span>${author.status}</span><h3>${author.name}</h3><p>${author.note}</p><b>${author.route.startsWith('opera/') ? 'Entra nella poesia' : 'Apri la lezione'} →</b></a>`;
+  if (author.route || author.href) return `<a class="author-card available" href="${author.href || ('#' + author.route)}"><span>${author.status}</span><h3>${author.name}</h3><p>${author.note}</p><b>${author.route?.startsWith('opera/') ? 'Entra nella poesia' : 'Apri la lezione'} →</b></a>`;
   return `<article class="author-card"><span>PROSSIMAMENTE</span><h3>${author.name}</h3><p>${author.note}</p></article>`;
 }
 
 function futureAuthorCard(author) {
-  if (author.route) return `<a class="future-card available" href="#${author.route}"><p class="eyebrow">${author.status}</p><h3>${author.name}</h3><p>${author.note}</p><b>Apri la lezione →</b></a>`;
+  if (author.route || author.href) return `<a class="future-card available" href="${author.href || ('#' + author.route)}"><p class="eyebrow">${author.status}</p><h3>${author.name}</h3><p>${author.note}</p><b>Apri la lezione →</b></a>`;
   return `<article class="future-card"><p class="eyebrow">CONTENUTI NON ANCORA INSERITI</p><h3>${author.name}</h3><p>${author.note}</p></article>`;
 }
 

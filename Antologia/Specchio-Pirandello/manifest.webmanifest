@@ -1,0 +1,37 @@
+{
+  "name": "Lo specchio di Pirandello — gbprof",
+  "short_name": "Lo specchio",
+  "description": "Un laboratorio interattivo di Italiano sull’identità e gli sguardi degli altri, ispirato a Uno, nessuno e centomila.",
+  "lang": "it",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#171820",
+  "theme_color": "#171820",
+  "categories": [
+    "education",
+    "books"
+  ],
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "../icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "../icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

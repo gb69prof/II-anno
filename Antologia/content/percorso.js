@@ -186,6 +186,7 @@ export const authorMethod = [
 
 export const futureAuthors = [
   { name: 'Luigi Pirandello', note: 'L’identità, le maschere, la verità', status: 'LEZIONE DISPONIBILE', route: 'autore/pirandello' },
+  { name: 'Lo specchio di Pirandello', note: 'Un laboratorio interattivo su identità, sguardi e Uno, nessuno e centomila · 2AT', status: 'PWA · LABORATORIO DISPONIBILE', href: './Specchio-Pirandello/' },
   { name: 'Giacomo Leopardi', note: 'Prima opera: L’Infinito', status: 'LEZIONE DISPONIBILE', route: 'opera/leopardi/infinito' },
   { name: 'Jacques Prévert', note: 'I ragazzi che si amano: amore, libertà e sguardo sociale', status: 'LEZIONE DISPONIBILE', route: 'opera/prevert/ragazzi-che-si-amano' }
 ];
