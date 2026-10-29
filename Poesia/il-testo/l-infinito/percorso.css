@@ -110,3 +110,19 @@
 @media(max-width:750px){.orbit-choice-grid,.two-col,.visual-cards,.image-scheme{grid-template-columns:1fr}.orbits{width:min(100%,520px)}.orbit-world .orbit-label{top:8%}.orbit-poetica .orbit-label{top:10%}}
 @media(max-width:520px){.opening-orbit{padding:0}.orbits{width:min(100%,360px)}.world-label{top:7%;font-size:1rem}.world-label small{font-size:.53rem;margin:.15rem 0}.poetica-label{top:8%;font-size:.79rem}.poetica-label small{font-size:.47rem;margin:.13rem auto}.text-label{top:34%;font-size:1rem}.orbit-text .text-label small{font-size:.54rem}.orbit-poetica{width:70%;height:70%}.orbit-text{width:42%;height:42%}.poem-lines li{grid-template-columns:1.35rem minmax(0,1fr)}.poem-line{font-size:1.02rem;padding:.35rem .25rem}.poem-sheet{padding:.9rem}.lab-actions{flex-direction:column;align-items:flex-start}.landscape{height:220px}.flow-diagram>span{display:none}}
 @media(prefers-reduced-motion:reduce){.hedge{transition:none}.wind-waves.playing i{animation:none}.orbit,.orbit-choice{transition:none}}
+
+/* Evita sovrapposizioni tra le etichette degli anelli sugli schermi piccoli. */
+@media(max-width:520px){
+ .world-label small,.poetica-label small{display:none}
+ .world-label{top:7%}
+ .poetica-label{top:10%}
+}
+@media print{
+ .infinite-page{background:white;color:black}
+ .infinite-page:before{display:none}
+ .lesson-track,.end-nav,.lab-actions{display:none}
+ .paper-panel,.info-card,.poem-sheet{break-inside:avoid}
+ .poem-interface{display:block}
+ .poem-interface .analysis-panel{display:none}
+ .poem-line{color:black}
+}
