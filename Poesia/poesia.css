@@ -69,3 +69,66 @@ footer a{color:var(--gold)}
 @media(max-width:850px){.tiles{grid-template-columns:1fr}.tile{min-height:260px}.tile h2{margin-top:1.1rem}.metric{grid-template-columns:1fr}}
 @media(max-width:520px){.scan{gap:.38rem}.syl{min-width:2rem;padding:.32rem .35rem}.example{padding:1.05rem}.tile h2{font-size:2rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+
+/* Pagina introduttiva alla forma e lezione sulle forme poetiche */
+.hub-intro{max-width:900px}.hub-intro>p{font-size:1.08rem;color:var(--muted);max-width:780px}
+.hub-step-line{display:flex;align-items:center;flex-wrap:wrap;gap:.75rem;margin:2rem 0 .4rem}
+.hub-step-line span:nth-child(odd){padding:.65rem 1.1rem;border:1px solid rgba(239,200,117,.35);background:#263c33;border-radius:99px;font-weight:800}
+.hub-step-line span:nth-child(even){color:var(--gold)}
+.lesson-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem;margin-top:1.1rem}
+.lesson-card{position:relative;display:flex;flex-direction:column;overflow:hidden;min-height:425px;padding:clamp(1.4rem,3.4vw,2.5rem);border-radius:1.35rem;border:1px solid var(--line);background:linear-gradient(150deg,#4e4638,#26382d 65%,#1b2a25);text-decoration:none;transition:transform .2s,border-color .2s,box-shadow .2s}
+.lesson-card.forms-card{background:linear-gradient(150deg,#4d3b50,#2b3843 67%,#182a25)}
+.lesson-card:hover,.lesson-card:focus-visible{transform:translateY(-5px);border-color:rgba(239,200,117,.7);box-shadow:0 20px 45px #0004}
+.lesson-card h2{margin:.2rem 0 .85rem;font-size:clamp(2.2rem,4vw,3.6rem)}.lesson-card p{color:#e8ebe3;margin:0 0 1rem;max-width:31rem}
+.lesson-card .enter{margin-top:auto;padding-top:2rem;font-weight:800;color:var(--gold)}
+.lesson-illustration{display:flex;align-items:flex-end;gap:.45rem;height:120px;margin:2rem 0 1.2rem;transform:rotate(-4deg)}
+.lesson-illustration b{display:block;font-family:Georgia,serif;letter-spacing:-.2rem;font-size:2.4rem;color:#f6ce8180;font-weight:400}
+.letters-illustration{align-items:center;flex-wrap:wrap;align-content:center;gap:.5rem;max-width:235px;transform:none}
+.letters-illustration b{width:2.7rem;height:2.7rem;display:grid;place-items:center;border:1px solid #fbdfb158;border-radius:.6rem;letter-spacing:0;font-size:1.3rem;color:var(--gold);background:#ffffff0b}
+.hub-signoff{max-width:680px;color:var(--muted);font-family:Georgia,serif;font-size:1.25rem;font-style:italic;margin:3rem 0 0}
+.section-lead{max-width:850px;font-size:1.16rem;color:var(--muted)}
+.concept-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.8rem;margin:1.5rem 0}
+.concept{border:1px solid var(--line);border-radius:1rem;background:#22382e;padding:1.2rem}
+.concept h3{font-size:1.5rem;margin:.4rem 0}.concept p{color:var(--muted);margin:.3rem 0;font-size:.92rem}
+.concept-index{font-size:.76rem;color:var(--gold);font-weight:800}
+.lesson-section{padding-top:1.5rem;border-top:1px solid var(--line);scroll-margin-top:2rem}
+.diagram-layout{display:grid;grid-template-columns:1.03fr .97fr;gap:1.15rem;align-items:stretch;margin:1.6rem 0}
+.pattern-card,.interpretation,.comparison-card{min-width:0;padding:clamp(1.2rem,3vw,2rem);border:1px solid var(--line);border-radius:1.2rem;background:#1e342b}
+.interpretation{background:#263b32}.interpretation h3{font-size:1.9rem}
+.pattern-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.7rem;margin-bottom:1.35rem}
+.pattern-head strong{font:500 1.7rem Georgia,serif}.pattern-head span{font-size:.82rem;font-weight:800;color:var(--gold)}
+.sonnet-pattern{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
+.pattern-stanza{padding:1rem;background:#11271f;border:1px solid var(--line);border-radius:.85rem}
+.stanza-title{display:block;margin-bottom:.65rem;font-size:.78rem;color:var(--muted);font-weight:750}
+.rhyme-line{display:flex;flex-wrap:wrap;gap:.3rem}
+.rhyme{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;width:2.15rem;height:2.15rem;border-radius:.45rem;font:800 1rem/1 system-ui,sans-serif;font-style:normal}
+.r-a{color:#1d2a1c;background:#f0c977}.r-b{color:#e4f6ef;background:#4a897f}.r-c{color:#211f2e;background:#d9bbeb}.r-d{color:#1e1f26;background:#b9d6ed}.r-e{color:#34211b;background:#edb9a0}
+.diagram-caption{margin:1rem 0 0;font-size:.87rem;color:#c4d2c8}
+.quote-block{border-left:3px solid var(--gold);padding:.65rem 0 .65rem 1.15rem;margin:1.4rem 0;background:linear-gradient(90deg,#f2d9a40b,transparent)}
+.quote-block p{font:clamp(1.25rem,2.2vw,1.65rem)/1.5 Georgia,serif;margin:.2rem 0 .65rem}
+.quote-block span{font-size:.86rem;color:var(--muted)}
+.prompt{margin-top:1.4rem;padding-top:1rem;border-top:1px solid var(--line);color:#f2dfb2}
+.comparison-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.15rem;margin:1.5rem 0}
+.comparison-card{display:flex;flex-direction:column}.comparison-card h3{margin:.7rem 0}
+.comparison-card>p{color:var(--muted)}.comparison-card .quote-block{margin-top:auto}
+.stanza-flow{display:grid;gap:.8rem;margin:1.2rem 0}
+.stanza-flow>div{display:grid;grid-template-columns:5.4rem 1fr;align-items:center;gap:.5rem}
+.stanza-flow>div>span{font-size:.84rem;color:var(--muted)}
+.flow-bars{display:flex;flex-wrap:wrap;align-items:center;gap:.32rem}
+.flow-bars b{display:block;height:1.7rem;border-radius:.2rem;background:#80b9a4}
+.flow-bars .wide{width:1.5rem}.flow-bars .short{width:.85rem;background:var(--gold)}
+.stanza-flow.varied .flow-bars b{background:#bda8c9}.stanza-flow.varied .flow-bars .short{background:#e3b695}
+.tiny{font-size:.88rem}.octave-pattern{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem}
+.octave-pattern>div,.tercet>div{display:flex;align-items:center;justify-content:space-between;gap:.5rem;background:#11271f;border:1px solid #fff2;border-radius:.65rem;padding:.5rem .7rem}
+.octave-pattern>div span,.tercet>div span{font-family:Georgia,serif;font-size:1.12rem}
+.tercet-pattern{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.6rem}
+.tercet{display:grid;align-content:start;gap:.5rem}.tercet .stanza-title{margin:0 0 .1rem}
+.tercet>div{padding:.38rem .5rem}.tercet>div span{font-size:.97rem}
+.tercet .rhyme{width:1.8rem;height:1.8rem}
+.form-table td:nth-child(3){font-family:inherit;font-size:1rem}.closing-statement strong{font-size:2.5rem}
+.lesson-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-top:3rem}
+.lesson-bottom a{font-weight:700;color:var(--gold);text-underline-offset:.3em}
+@media(max-width:900px){.concept-row{grid-template-columns:repeat(2,minmax(0,1fr))}.diagram-layout,.comparison-grid{grid-template-columns:1fr}.tercet-pattern{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:680px){.lesson-cards{grid-template-columns:1fr}.lesson-card{min-height:320px}.lesson-illustration{margin:.8rem 0}.concept-row{grid-template-columns:1fr 1fr}.sonnet-pattern{grid-template-columns:1fr 1fr}.tercet-pattern{grid-template-columns:1fr}.tercet{grid-template-columns:5.6rem repeat(3,minmax(0,1fr));align-items:center}.tercet .stanza-title{margin:0}.tercet>div{min-width:0}.tercet>div span{overflow-wrap:anywhere}.tercet>div .rhyme{width:1.55rem;height:1.55rem}}
+@media(max-width:420px){.sonnet-pattern{grid-template-columns:1fr}.concept-row{grid-template-columns:1fr}.tercet{grid-template-columns:1fr 1fr 1fr}.tercet .stanza-title{grid-column:1/-1}}
