@@ -1,0 +1,76 @@
+/* Immagine del mondo e poetica — stili locali, in continuità con poesia.css */
+.worldview-hero h1{max-width:1010px;font-size:clamp(3.2rem,7.6vw,6.6rem);line-height:1.02}
+.worldview-hero .amp{font-weight:400;font-style:italic;color:var(--gold)}
+.worldview-hero .intro{max-width:850px}
+.worldview-hero .intro strong{color:#fff4d8}
+.hero-thesis{position:relative;display:flex;align-items:center;gap:1.2rem;max-width:900px;margin-top:2.3rem;padding:1.4rem 1.8rem;border:1px solid rgba(239,200,117,.3);border-radius:1.2rem;background:linear-gradient(110deg,#253d32,#263038)}
+.hero-thesis p{margin:0;font:clamp(1.05rem,2vw,1.34rem)/1.55 Georgia,serif;color:#f1efdd}
+.hero-thesis .thesis-mark{font:6.5rem/.8 Georgia,serif;color:var(--gold)}
+.worldview-section{padding-top:1.2rem;scroll-margin-top:1.5rem}
+.definition{max-width:930px;display:grid;grid-template-columns:minmax(110px,170px) 1fr;gap:1.6rem;align-items:center;margin:1.6rem 0;padding:1.4rem 1.7rem;border-radius:1.15rem;border:1px solid rgba(239,200,117,.38);background:linear-gradient(120deg,#3b3b2e,#263c32)}
+.definition p{font:clamp(1.12rem,2vw,1.4rem)/1.6 Georgia,serif;margin:0}
+.definition-label{font-size:.75rem;text-transform:uppercase;letter-spacing:.16em;color:var(--gold);font-weight:800}
+.second-definition{background:linear-gradient(115deg,#2d3952,#253c36);border-color:#8eb2be5f}
+.window-grid{display:grid;grid-template-columns:minmax(220px,.9fr) minmax(0,1.1fr);gap:1.3rem;margin:2rem 0}
+.window-art{position:relative;min-height:330px;overflow:hidden;border-radius:1.3rem;border:12px solid #352d2c;box-shadow:inset 0 0 0 4px #71614b,0 16px 35px #0005;background:#142e3c}
+.window-sky{position:absolute;inset:0;background:linear-gradient(175deg,#142438,#49657a 50%,#bba78a)}
+.window-moon{position:absolute;top:16%;left:63%;height:52px;width:52px;border-radius:50%;background:#faedc6;box-shadow:0 0 62px 25px #f7dfab43}
+.window-hill{position:absolute;left:-10%;bottom:-7%;width:125%;height:49%;border-radius:50% 50% 0 0;background:#33534f;transform:rotate(-10deg)}
+.window-hill.hill-front{bottom:-26%;left:-18%;background:#183c38;transform:rotate(8deg)}
+.window-vertical,.window-horizontal{position:absolute;background:#3d3030;box-shadow:0 0 0 2px #a17d5355}
+.window-vertical{left:48%;top:0;bottom:0;width:13px}
+.window-horizontal{left:0;top:48%;right:0;height:13px}
+.window-text{display:flex;flex-direction:column;justify-content:center;border:1px solid var(--line);background:var(--surface);border-radius:1.25rem;padding:clamp(1.4rem,4vw,2.4rem)}
+.window-text h3{font-size:clamp(1.9rem,3.2vw,2.6rem);margin:.7rem 0}
+.window-text p{color:var(--muted);margin:.45rem 0}
+.window-text .key-question{color:var(--gold);font-weight:700}
+.poetic-choices{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.85rem;margin:1.6rem 0}
+.choice-card{min-width:0;display:flex;flex-direction:column;gap:.5rem;min-height:255px;padding:1.4rem;background:linear-gradient(155deg,#2a4141,#20342d);border:1px solid var(--line);border-radius:1.1rem}
+.choice-no{color:var(--gold);font-size:.75rem;font-weight:800;letter-spacing:.16em}
+.choice-card h3{font-size:1.55rem;margin:.55rem 0 .2rem}.choice-card p{color:var(--muted);font-size:.97rem;margin:0}
+.world-map{display:grid;grid-template-columns:minmax(0,1fr) 30px minmax(0,1fr) 30px minmax(0,1fr) 30px minmax(0,1fr);gap:.35rem;align-items:stretch;margin:1.7rem 0}
+.map-step{min-width:0;padding:1.2rem 1.05rem;min-height:260px;border:1px solid var(--line);background:#263a31;border-radius:1rem}
+.map-step.selected{background:#314d45;border-color:#8fc3a177}
+.map-step.final-step{background:#383c37;border-color:#e8c88066}
+.step-icon{display:grid;place-items:center;border-radius:.65rem;width:2.6rem;height:2.6rem;font:1.7rem Georgia,serif;color:var(--gold);background:#fff1;margin-bottom:1.4rem}
+.step-no{color:var(--gold);font-size:.74rem;letter-spacing:.07em;text-transform:uppercase;font-weight:800}
+.map-step h3{font-size:1.35rem;margin:.55rem 0}.map-step p{font-size:.91rem;color:var(--muted);margin:0}
+.map-arrow{align-self:center;text-align:center;font-size:1.55rem;color:var(--gold)}
+.map-caveat{border-left:3px solid var(--gold);padding:.6rem 1rem;background:#f2dfac0b;color:var(--muted)}
+.poets-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.2rem;margin:1.75rem 0}
+.poet-card{min-width:0;overflow:hidden;border:1px solid var(--line);border-radius:1.3rem;background:#20372f}
+.poet-scene{position:relative;overflow:hidden;height:auto;aspect-ratio:2/1;background:#263f45}
+.poet-scene svg{display:block;width:100%;height:100%;object-fit:cover}
+.art-label{position:absolute;left:1rem;bottom:.9rem;background:#102720d9;padding:.35rem .75rem;border:1px solid #ffffff3b;border-radius:10rem;font-size:.78rem;letter-spacing:.06em;font-weight:750;color:#f2ead4}
+.poet-body{padding:clamp(1.15rem,3vw,2rem)}
+.poet-body h3{font-size:clamp(2.1rem,4vw,3.3rem);margin:.6rem 0 1rem}
+.poem-quote{margin:0;padding:1.2rem 0 1.2rem 1.1rem;border-left:3px solid var(--gold);font:clamp(1rem,1.75vw,1.2rem)/1.77 Georgia,serif;letter-spacing:.005em;overflow-wrap:anywhere}
+.pascoli-card .poem-quote{border-color:#9bc4d8}
+.ellipsis{color:#d1d5c4;font-style:italic}
+.poem-credit{font-size:.81rem;color:var(--muted);margin:1rem 0 1.5rem}
+.poem-credit a{color:var(--gold);text-underline-offset:3px}
+.reading-keys{border-top:1px solid var(--line);padding-top:1rem}
+.reading-keys p{margin:.8rem 0;color:var(--muted);font-size:.94rem}
+.reading-keys strong{color:#f9e1a0}
+.contrast-strip{display:grid;grid-template-columns:1fr 42px 1fr;align-items:center;gap:1.2rem;margin:1rem 0 1.5rem;border:1px solid var(--line);background:linear-gradient(120deg,#2e473b,#26333e);border-radius:1.2rem;padding:1.45rem 1.8rem}
+.contrast-strip>div{text-align:center}.contrast-strip strong{display:block;font:clamp(1.5rem,2.7vw,2.1rem) Georgia,serif;margin:.3rem 0}
+.contrast-strip p{color:var(--muted);margin:.35rem 0}
+.contrast-label{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:800}
+.versus{font:2.5rem Georgia,serif;color:var(--gold);text-align:center}
+.question-list{padding:0;margin:1.75rem 0;list-style:none;display:grid;gap:.7rem}
+.question-list li{display:flex;align-items:start;gap:1.1rem;background:var(--surface);border-radius:1rem;border:1px solid var(--line);padding:1.15rem 1.4rem}
+.q-number{flex:0 0 2.5rem;display:grid;place-items:center;width:2.5rem;height:2.5rem;border-radius:50%;background:#eec975;color:#20302b;font-weight:800}
+.question-list strong{font:1.4rem Georgia,serif}.question-list p{margin:.35rem 0 0;color:var(--muted)}
+.sample-answer{border:1px solid rgba(239,200,117,.45);border-radius:1rem;background:#20382f;overflow:hidden}
+.sample-answer summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;cursor:pointer;padding:1.1rem 1.5rem;color:var(--gold);font-weight:750}
+.sample-answer summary:hover{background:#ffffff0b}.sample-answer summary span{font-size:1.5rem}
+.sample-answer[open] summary span{transform:rotate(45deg)}
+.answer-text{border-top:1px solid var(--line);padding:1.3rem 1.5rem;color:var(--muted)}
+.answer-text h3{font-size:1.5rem;color:var(--ink);margin:0 0 .8rem}
+.answer-text strong{color:var(--gold)}.answer-reminder{font-style:italic}
+.final-thought{padding-top:1.5rem}.worldview-conclusion{max-width:1000px}
+.worldview-conclusion strong{font-size:clamp(2rem,4.6vw,3.4rem)}
+@media(max-width:1020px){.poetic-choices{grid-template-columns:repeat(2,minmax(0,1fr))}.world-map{grid-template-columns:repeat(4,minmax(0,1fr));gap:.7rem}.map-arrow{display:none}.map-step{min-height:240px}}
+@media(max-width:790px){.world-map{grid-template-columns:repeat(2,minmax(0,1fr))}.window-grid,.poets-grid{grid-template-columns:1fr}.window-art{min-height:280px}.poet-scene{max-height:330px}.poem-quote{font-size:clamp(1.05rem,2.8vw,1.3rem)}}
+@media(max-width:560px){.worldview-hero h1{font-size:clamp(2.9rem,12vw,4.5rem)}.hero-thesis{padding:1rem}.hero-thesis .thesis-mark{font-size:4rem}.definition{grid-template-columns:1fr;gap:.4rem;padding:1.1rem}.world-map{grid-template-columns:1fr}.map-step{min-height:auto}.poetic-choices{grid-template-columns:1fr}.choice-card{min-height:auto}.window-art{min-height:225px}.contrast-strip{grid-template-columns:1fr;gap:.6rem;padding:1.2rem}.versus{font-size:1.7rem}.poet-body{padding:1.1rem}.question-list li{padding:.95rem}.question-list strong{font-size:1.17rem}}
+@media(prefers-reduced-motion:reduce){.sample-answer[open] summary span{transform:none}}
