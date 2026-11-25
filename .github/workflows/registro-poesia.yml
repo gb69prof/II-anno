@@ -1,0 +1,37 @@
+name: Registro Poesia
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/registro-poesia/**'
+      - '.github/workflows/registro-poesia.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: registro-poesia
+  cancel-in-progress: false
+jobs:
+  registro:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Aggiorna il servizio dedicato alla verifica
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: ${{ secrets.DEPLOY_USER }}
+          key: ${{ secrets.DEPLOY_SSH_KEY }}
+          script: |
+            set -eu
+            cd /opt/gbprof/projects/II-anno
+            command -v docker
+            docker version --format 'Docker server {{.Server.Version}}'
+            docker ps --filter ancestor=caddy:2-alpine --format 'Caddy {{.Names}}'
+            for id in $(docker ps --filter ancestor=caddy:2-alpine --quiet); do
+              docker inspect --format '{{range .Mounts}}{{if or (eq .Destination "/etc/caddy") (eq .Destination "/etc/caddy/Caddyfile")}}{{println .Source .Destination}}{{end}}{{end}}' "$id"
+            done
+            git fetch origin main
+            test "$(git rev-parse origin/main)" = "${{ github.sha }}" || exit 0
+            if git cat-file -e "origin/main:.github/registro-poesia/install.sh" 2>/dev/null; then
+              git show origin/main:.github/registro-poesia/install.sh | bash -se -- "${{ github.sha }}"
+            fi
