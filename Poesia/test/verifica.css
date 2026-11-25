@@ -1,0 +1,13 @@
+.book fieldset,.book .recupero{min-width:0;margin:1.2rem 0;padding:1.15rem;border:1px solid #bdb9ab;background:#fffdf7}
+.book legend,.book .voci dt{font-weight:700;color:#203e57}
+.book legend{padding:0 .35rem}
+.book .identita{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:1rem}
+.book input:not([type=radio]){display:block;max-width:100%;width:25em;padding:.6em;font:inherit;border:1px solid #696f72;border-radius:.2em}
+.book .scelta{display:flex;align-items:baseline;gap:.65em;padding:.55em;cursor:pointer}
+.book .scelta:focus-within,.book .scelta:has(:checked){background:#e6eee7}
+.book input[type=radio]{accent-color:#214c3a}
+.book button{padding:.7em 1.1em;background:#244738;color:white;border:0;font:inherit;cursor:pointer;margin:.7em .5em .7em 0}
+.book button:disabled{background:#5d6461;cursor:not-allowed}
+.book .voci>div{border-top:1px solid #cecaba;padding:1rem 0;display:grid;grid-template-columns:minmax(180px,1fr) 3fr;gap:.8rem}
+.book dd{margin:0}.book #avviso,.book #msg{color:#802626}.book .voto{font:2.3rem Georgia,serif;color:#174530}
+@media(max-width:620px){.book .voci>div{grid-template-columns:1fr;gap:.2em}}

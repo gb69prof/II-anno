@@ -1,0 +1,262 @@
+[
+  {
+    "id": 1,
+    "topic": "Poesia",
+    "prompt": "Rispetto alla parafrasi che comincia con «Questo colle», che cosa mette in primo piano «Sempre caro mi fu»?",
+    "choices": [
+      "La durata del rapporto affettivo",
+      "La misura metrica nella quartina",
+      "La posizione del poeta sul colle"
+    ],
+    "key": 0,
+    "recovery": "La parafrasi nomina subito il colle. Nel verso, «Sempre» e «caro» fanno sentire la durata e l’affetto prima che appaia il nome del luogo.",
+    "practice": "Pronuncia le due aperture e indica quale informazione arriva per prima."
+  },
+  {
+    "id": 2,
+    "topic": "Metrica",
+    "prompt": "In un endecasillabo, su quale sillaba cade l’ultimo accento tonico?",
+    "choices": [
+      "La quarta del verso",
+      "La decima del verso",
+      "La quinta del verso"
+    ],
+    "key": 1,
+    "recovery": "È endecasillabo qualsiasi verso che ha come ultima sillaba tonica, cioè accentata, la decima. I diversi tipi di verso si riconoscono dalla posizione dell’ultimo accento.",
+    "practice": "Conta fino a «còl-» in «Sempre caro mi fu quest’ermo colle»."
+  },
+  {
+    "id": 3,
+    "topic": "Metrica",
+    "prompt": "Se dopo la decima sillaba tonica vengono due sillabe atone, come si chiama l’uscita?",
+    "choices": [
+      "Cadenza sdrucciola",
+      "Conclusione tronca",
+      "Terminazione piana"
+    ],
+    "key": 0,
+    "recovery": "Prova a dire «nù-vo-le». Dopo la sillaba accentata ne restano due: l’uscita è sdrucciola. Con una sola atona è piana, con la tonica finale è tronca.",
+    "practice": "Confronta «còlle», «blu» e «nùvole» e segna le sillabe successive all’accento."
+  },
+  {
+    "id": 4,
+    "topic": "Metrica",
+    "prompt": "Che cosa accade nel contatto fra «sedendo» ed «e» quando leggi il verso ad alta voce?",
+    "choices": [
+      "Vocali vicine contano per una sillaba",
+      "Due versi condividono un suono finale",
+      "Due frasi ripetono la stessa apertura"
+    ],
+    "key": 0,
+    "recovery": "Pronuncia senza pausa «sedendo e». La vocale finale di «sedendo» e la congiunzione «e» occupano insieme una posizione metrica.",
+    "practice": "Rileggi il verso e batti un solo colpo per «do e»."
+  },
+  {
+    "id": 5,
+    "topic": "Figure retoriche",
+    "prompt": "Quale esempio contiene una similitudine esplicita?",
+    "choices": [
+      "La classe è rumorosa come un alveare",
+      "La classe oggi è un alveare rumoroso",
+      "Ora il vento bussa alla nostra porta"
+    ],
+    "key": 0,
+    "recovery": "La similitudine dichiara il paragone con una parola come «come». «La classe è un alveare» identifica invece una realtà con un’altra e costruisce una metafora.",
+    "practice": "Trasforma la similitudine sulla classe in una metafora."
+  },
+  {
+    "id": 6,
+    "topic": "Figure retoriche",
+    "prompt": "Quale procedimento senti in «Frusciano fresche fronde»?",
+    "choices": [
+      "La ripresa della parola a inizio verso",
+      "Il ritorno del suono tra parole vicine",
+      "Il passaggio della frase al verso dopo"
+    ],
+    "key": 1,
+    "recovery": "L’allitterazione fa tornare gli stessi suoni in parole vicine. Leggi lentamente «frusciano fresche fronde» e senti come «fr» suggerisce il fruscio.",
+    "practice": "Sottolinea soltanto i suoni che ritornano."
+  },
+  {
+    "id": 7,
+    "topic": "Figure retoriche",
+    "prompt": "Quale figura riconosci in «Qui aspetto. Qui ricordo»?",
+    "choices": [
+      "La ripetizione della parola all’inizio",
+      "Il passaggio di senso fra due immagini",
+      "Il ritorno dei suoni tra parole vicine"
+    ],
+    "key": 0,
+    "recovery": "L’anafora riprende una parola o un gruppo di parole all’inizio di unità successive. Qui «Qui» insiste sul luogo in cui si aspetta e si ricorda.",
+    "practice": "Inventa due frasi che comincino con «Oggi»."
+  },
+  {
+    "id": 8,
+    "topic": "Figure retoriche",
+    "prompt": "Che cosa rende «interminati / Spazi» un enjambement?",
+    "choices": [
+      "Il suono ritorna tra parole vicine",
+      "La rima ritorna nel verso seguente",
+      "Il nome compare nel verso seguente"
+    ],
+    "key": 2,
+    "recovery": "L’aggettivo «interminati» chiede un nome. Il verso finisce prima che arrivi «Spazi»: il legame sintattico continua oltre il confine metrico.",
+    "practice": "Leggi prima solo l’aggettivo e poi aggiungi il nome: che cosa restava sospeso?"
+  },
+  {
+    "id": 9,
+    "topic": "Forme poetiche",
+    "prompt": "In quale ordine si susseguono le strofe del sonetto italiano A Zacinto?",
+    "choices": [
+      "In due quartine e due terzine",
+      "In due terzine e due quartine",
+      "Fra terzine legate dalla rima"
+    ],
+    "key": 0,
+    "recovery": "In A Zacinto puoi contare quattro, quattro, tre e tre versi. La frase può proseguire nella strofa seguente, mentre la disposizione metrica resta riconoscibile.",
+    "practice": "Numera le quattro strofe del sonetto di Foscolo nell’antologia."
+  },
+  {
+    "id": 10,
+    "topic": "Forme poetiche",
+    "prompt": "Dante ha appena concluso due terzine con schema ABA BCB. Quale gruppo di rime viene subito dopo?",
+    "choices": [
+      "La serie BCB",
+      "La serie ABA",
+      "La serie CDC"
+    ],
+    "key": 2,
+    "recovery": "Nella terza rima la rima centrale di una terzina diventa la rima esterna della seguente. Dopo BCB, C incornicia la nuova terzina: CDC.",
+    "practice": "Segui ora le parole «forte», «morte» e «scorte»."
+  },
+  {
+    "id": 11,
+    "topic": "Forme poetiche",
+    "prompt": "Quale movimento caratterizza l’idillio leopardiano nella lezione?",
+    "choices": [
+      "Dalla quartina alle terzine del sonetto",
+      "Dal paesaggio al pensiero di chi guarda",
+      "Dalla rima interna alla strofa seguente"
+    ],
+    "key": 1,
+    "recovery": "La siepe appartiene al paesaggio. I silenzi e gli spazi che il poeta si figura appartengono alla sua esperienza interiore: il movimento fra questi due piani è decisivo.",
+    "practice": "Distingui un oggetto percepito e un’immagine mentale nei primi sette versi."
+  },
+  {
+    "id": 12,
+    "topic": "Immagine del mondo",
+    "prompt": "Quale domanda riguarda l’immagine del mondo di un autore?",
+    "choices": [
+      "Come dispone le rime nelle strofe?",
+      "Come comprende il posto dell’uomo?",
+      "Come adopera le immagini poetiche?"
+    ],
+    "key": 1,
+    "recovery": "L’immagine del mondo riguarda la visione della realtà e del posto che vi occupa l’essere umano. Nel giovane Leopardi ne fa parte l’idea di un desiderio più grande dei singoli piaceri.",
+    "practice": "Formula una frase che inizi con «Per il giovane Leopardi, l’essere umano…»."
+  },
+  {
+    "id": 13,
+    "topic": "Sensismo",
+    "prompt": "Secondo il sensismo, da che cosa prende avvio la conoscenza?",
+    "choices": [
+      "Dai dati dell’esperienza sensibile",
+      "Dalle speranze evocate dai ricordi",
+      "Dalle immagini evocate dal ricordo"
+    ],
+    "key": 0,
+    "recovery": "Puoi riconoscere una voce perché hai già udito quel timbro. Il sensismo mette l’esperienza sensibile all’origine della formazione delle idee.",
+    "practice": "Scegli una sensazione del tatto e indica l’idea che ne hai ricavato."
+  },
+  {
+    "id": 14,
+    "topic": "Natura e desiderio",
+    "prompt": "Per quale ragione il giovane Leopardi chiama benigna la Natura?",
+    "choices": [
+      "Rievoca il passato nel presente",
+      "Rivela i limiti delle illusioni",
+      "Offre immaginazione e illusioni"
+    ],
+    "key": 2,
+    "recovery": "Il desiderio tende all’illimitato, mentre ogni piacere concreto finisce. In questa fase Leopardi attribuisce alla Natura la capacità di offrire immaginazione e illusioni che sostengono la vita.",
+    "practice": "Quale desiderio rimane quando finisce una musica che ami?"
+  },
+  {
+    "id": 15,
+    "topic": "Pessimismo storico",
+    "prompt": "Come spiega il pessimismo storico la maggiore infelicità dei moderni?",
+    "choices": [
+      "La riflessione indebolisce le antiche illusioni",
+      "La fantasia alimenta le illusioni degli antichi",
+      "La memoria richiama le sensazioni dell’infanzia"
+    ],
+    "key": 0,
+    "recovery": "Gli antichi, secondo il giovane Leopardi, potevano affidarsi più pienamente alle illusioni. La ragione dei moderni ne mette in luce i limiti: da qui la spiegazione storica.",
+    "practice": "Confronta la funzione dell’immaginazione con quella della ragione moderna."
+  },
+  {
+    "id": 16,
+    "topic": "Poetica",
+    "prompt": "Quale domanda serve a ricostruire la poetica di un autore?",
+    "choices": [
+      "Quale posto occupa l’uomo nel mondo?",
+      "Quale effetto cerca con le immagini?",
+      "Dove arriva l’ultima sillaba tonica?"
+    ],
+    "key": 1,
+    "recovery": "La poetica comprende l’idea che un autore ha della poesia e le scelte con cui cerca un effetto. Per Leopardi conta lo spazio che la parola lascia all’immaginazione.",
+    "practice": "Scegli un’immagine dell’idillio e indica quale effetto suggerisce."
+  },
+  {
+    "id": 17,
+    "topic": "Teoria della vista",
+    "prompt": "Perché la mano davanti al panorama aiuta a capire la funzione della siepe?",
+    "choices": [
+      "Il ricordo riaccende l’esperienza infantile",
+      "Il suono vicino suggerisce la voce presente",
+      "La vista parziale favorisce l’immaginazione"
+    ],
+    "key": 2,
+    "recovery": "La mano copre una zona della veduta. Puoi figurarti che cosa continui dietro di essa. Nel testo la siepe impedisce allo sguardo di raggiungere parte dell’orizzonte.",
+    "practice": "Scrivi una cosa che vedi nella tavola e una che potresti solo immaginare."
+  },
+  {
+    "id": 18,
+    "topic": "Teoria del suono",
+    "prompt": "Quale suono è realmente percepito dal poeta nell’Infinito?",
+    "choices": [
+      "Il muggito che sale dalla valle",
+      "La voce che si sente da lontano",
+      "Il fruscio fra le piante vicine"
+    ],
+    "key": 2,
+    "recovery": "Canto lontano e muggito ovattato sono esempi della teoria del suono. Nel testo il poeta dice «il vento / Odo stormir tra queste piante»: il suono viene da vicino.",
+    "practice": "Trova nei versi la parola che segnala la vicinanza delle piante."
+  },
+  {
+    "id": 19,
+    "topic": "Lettura del testo",
+    "prompt": "Che cosa accosta il poeta quando dice «Vo comparando»?",
+    "choices": [
+      "La fantasia antica e la ragione moderna",
+      "Il silenzio infinito e il fruscio reale",
+      "La vista completa e la vista interrotta"
+    ],
+    "key": 1,
+    "recovery": "«Quello / Infinito silenzio» appartiene all’immaginazione; «questa voce» appartiene al vento che ode nel presente. Dal confronto il pensiero passa alla dimensione del tempo.",
+    "practice": "Spiega a chi o a che cosa rimandano «quello» e «questa»."
+  },
+  {
+    "id": 20,
+    "topic": "Interpretazione",
+    "prompt": "Nel verso finale che cosa rappresenta il «mare» nel quale è dolce naufragare?",
+    "choices": [
+      "La musica che si spegne nella campagna",
+      "Il paesaggio che appare fra i cipressi",
+      "La vastità in cui si perde il pensiero"
+    ],
+    "key": 2,
+    "recovery": "Il poeta è ancora sul colle. Il mare dà una forma sensibile all’immensità di spazio e tempo che ha immaginato. «Dolce» suggerisce il piacere di abbandonarvisi.",
+    "practice": "Rileggi «s’annega il pensier mio»: quale parola identifica chi naufraga?"
+  }
+]

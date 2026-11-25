@@ -1,42 +1,21 @@
-name: Registro Poesia
+name: Collaudo del registro Poesia
 on:
   push:
     branches: [main]
     paths:
       - '.github/registro-poesia/**'
       - '.github/workflows/registro-poesia.yml'
-  workflow_dispatch:
+      - 'Poesia/test/**'
 permissions:
   contents: read
-concurrency:
-  group: registro-poesia
-  cancel-in-progress: false
 jobs:
-  registro:
+  verifica:
     runs-on: ubuntu-latest
     steps:
-      - name: Aggiorna il servizio dedicato alla verifica
-        uses: appleboy/ssh-action@v1.2.0
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
-          host: ${{ secrets.DEPLOY_HOST }}
-          username: ${{ secrets.DEPLOY_USER }}
-          key: ${{ secrets.DEPLOY_SSH_KEY }}
-          script: |
-            set -eu
-            cd /opt/gbprof/projects/II-anno
-            whoami
-            command -v python3
-            command -v systemctl
-            loginctl show-user "$(id -un)" -p Linger || true
-            sudo -n -l 2>/dev/null | tail -12 || true
-            for f in /opt/gbprof/caddy/Caddyfile /opt/gbprof/Caddyfile /etc/caddy/Caddyfile; do
-              if test -r "$f"; then
-                ls -ld "$f"
-                awk '/^[^#]*gbprof[.]it[[:space:]]*[{]|^[[:space:]]*import[[:space:]]/{print}' "$f"
-              fi
-            done
-            git fetch origin main
-            test "$(git rev-parse origin/main)" = "${{ github.sha }}" || exit 0
-            if git cat-file -e "origin/main:.github/registro-poesia/install.sh" 2>/dev/null; then
-              git show origin/main:.github/registro-poesia/install.sh | bash -se -- "${{ github.sha }}"
-            fi
+          python-version: '3.12'
+      - run: pip install openpyxl==3.1.5 msoffcrypto-tool==5.4.2
+      - run: python .github/registro-poesia/verifica.py
+      - run: node --check Poesia/test/test.js && node --check Poesia/test/registro.js

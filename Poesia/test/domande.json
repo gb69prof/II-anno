@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "prompt": "Rispetto alla parafrasi che comincia con «Questo colle», che cosa mette in primo piano «Sempre caro mi fu»?",
+    "choices": [
+      "La durata del rapporto affettivo",
+      "La misura metrica nella quartina",
+      "La posizione del poeta sul colle"
+    ]
+  },
+  {
+    "id": 2,
+    "prompt": "In un endecasillabo, su quale sillaba cade l’ultimo accento tonico?",
+    "choices": [
+      "La quarta del verso",
+      "La decima del verso",
+      "La quinta del verso"
+    ]
+  },
+  {
+    "id": 3,
+    "prompt": "Se dopo la decima sillaba tonica vengono due sillabe atone, come si chiama l’uscita?",
+    "choices": [
+      "Cadenza sdrucciola",
+      "Conclusione tronca",
+      "Terminazione piana"
+    ]
+  },
+  {
+    "id": 4,
+    "prompt": "Che cosa accade nel contatto fra «sedendo» ed «e» quando leggi il verso ad alta voce?",
+    "choices": [
+      "Vocali vicine contano per una sillaba",
+      "Due versi condividono un suono finale",
+      "Due frasi ripetono la stessa apertura"
+    ]
+  },
+  {
+    "id": 5,
+    "prompt": "Quale esempio contiene una similitudine esplicita?",
+    "choices": [
+      "La classe è rumorosa come un alveare",
+      "La classe oggi è un alveare rumoroso",
+      "Ora il vento bussa alla nostra porta"
+    ]
+  },
+  {
+    "id": 6,
+    "prompt": "Quale procedimento senti in «Frusciano fresche fronde»?",
+    "choices": [
+      "La ripresa della parola a inizio verso",
+      "Il ritorno del suono tra parole vicine",
+      "Il passaggio della frase al verso dopo"
+    ]
+  },
+  {
+    "id": 7,
+    "prompt": "Quale figura riconosci in «Qui aspetto. Qui ricordo»?",
+    "choices": [
+      "La ripetizione della parola all’inizio",
+      "Il passaggio di senso fra due immagini",
+      "Il ritorno dei suoni tra parole vicine"
+    ]
+  },
+  {
+    "id": 8,
+    "prompt": "Che cosa rende «interminati / Spazi» un enjambement?",
+    "choices": [
+      "Il suono ritorna tra parole vicine",
+      "La rima ritorna nel verso seguente",
+      "Il nome compare nel verso seguente"
+    ]
+  },
+  {
+    "id": 9,
+    "prompt": "In quale ordine si susseguono le strofe del sonetto italiano A Zacinto?",
+    "choices": [
+      "In due quartine e due terzine",
+      "In due terzine e due quartine",
+      "Fra terzine legate dalla rima"
+    ]
+  },
+  {
+    "id": 10,
+    "prompt": "Dante ha appena concluso due terzine con schema ABA BCB. Quale gruppo di rime viene subito dopo?",
+    "choices": [
+      "La serie BCB",
+      "La serie ABA",
+      "La serie CDC"
+    ]
+  },
+  {
+    "id": 11,
+    "prompt": "Quale movimento caratterizza l’idillio leopardiano nella lezione?",
+    "choices": [
+      "Dalla quartina alle terzine del sonetto",
+      "Dal paesaggio al pensiero di chi guarda",
+      "Dalla rima interna alla strofa seguente"
+    ]
+  },
+  {
+    "id": 12,
+    "prompt": "Quale domanda riguarda l’immagine del mondo di un autore?",
+    "choices": [
+      "Come dispone le rime nelle strofe?",
+      "Come comprende il posto dell’uomo?",
+      "Come adopera le immagini poetiche?"
+    ]
+  },
+  {
+    "id": 13,
+    "prompt": "Secondo il sensismo, da che cosa prende avvio la conoscenza?",
+    "choices": [
+      "Dai dati dell’esperienza sensibile",
+      "Dalle speranze evocate dai ricordi",
+      "Dalle immagini evocate dal ricordo"
+    ]
+  },
+  {
+    "id": 14,
+    "prompt": "Per quale ragione il giovane Leopardi chiama benigna la Natura?",
+    "choices": [
+      "Rievoca il passato nel presente",
+      "Rivela i limiti delle illusioni",
+      "Offre immaginazione e illusioni"
+    ]
+  },
+  {
+    "id": 15,
+    "prompt": "Come spiega il pessimismo storico la maggiore infelicità dei moderni?",
+    "choices": [
+      "La riflessione indebolisce le antiche illusioni",
+      "La fantasia alimenta le illusioni degli antichi",
+      "La memoria richiama le sensazioni dell’infanzia"
+    ]
+  },
+  {
+    "id": 16,
+    "prompt": "Quale domanda serve a ricostruire la poetica di un autore?",
+    "choices": [
+      "Quale posto occupa l’uomo nel mondo?",
+      "Quale effetto cerca con le immagini?",
+      "Dove arriva l’ultima sillaba tonica?"
+    ]
+  },
+  {
+    "id": 17,
+    "prompt": "Perché la mano davanti al panorama aiuta a capire la funzione della siepe?",
+    "choices": [
+      "Il ricordo riaccende l’esperienza infantile",
+      "Il suono vicino suggerisce la voce presente",
+      "La vista parziale favorisce l’immaginazione"
+    ]
+  },
+  {
+    "id": 18,
+    "prompt": "Quale suono è realmente percepito dal poeta nell’Infinito?",
+    "choices": [
+      "Il muggito che sale dalla valle",
+      "La voce che si sente da lontano",
+      "Il fruscio fra le piante vicine"
+    ]
+  },
+  {
+    "id": 19,
+    "prompt": "Che cosa accosta il poeta quando dice «Vo comparando»?",
+    "choices": [
+      "La fantasia antica e la ragione moderna",
+      "Il silenzio infinito e il fruscio reale",
+      "La vista completa e la vista interrotta"
+    ]
+  },
+  {
+    "id": 20,
+    "prompt": "Nel verso finale che cosa rappresenta il «mare» nel quale è dolce naufragare?",
+    "choices": [
+      "La musica che si spegne nella campagna",
+      "Il paesaggio che appare fra i cipressi",
+      "La vastità in cui si perde il pensiero"
+    ]
+  }
+]
