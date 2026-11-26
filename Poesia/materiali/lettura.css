@@ -42,8 +42,27 @@
 }
 
 .lettura-pagina button[hidden],
+.lettura-pagina .lettura-voce[hidden],
 .lettura-pagina [role="status"]:empty {
   display: none;
+}
+
+.lettura-pagina .lettura-voce {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .4rem;
+}
+
+.lettura-pagina select {
+  max-width: min(100%, 14rem);
+  min-height: 44px;
+  padding: .4rem;
+  border: 1px solid #28513d;
+  border-radius: .45rem;
+  background: #fff;
+  color: #214732;
+  font: inherit;
 }
 
 .lettura-pagina [role="status"] {

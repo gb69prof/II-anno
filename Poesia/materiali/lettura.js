@@ -10,10 +10,12 @@
   player.setAttribute('role', 'group');
   player.setAttribute('aria-label', 'Lettura ad alta voce');
   player.innerHTML = '<button type="button">Ascolta la pagina</button>' +
-    '<button type="button" disabled>Ferma</button><span role="status"></span>';
+    '<button type="button" disabled>Ferma</button>' +
+    '<label class="lettura-voce" hidden>Voce <select></select></label><span role="status"></span>';
   title.after(player);
 
-  const [play, stop, status] = player.children;
+  const [play, stop, voiceLabel, status] = player.children;
+  const voiceSelect = voiceLabel.querySelector('select');
   if (!('speechSynthesis' in window) || !('SpeechSynthesisUtterance' in window)) {
     play.hidden = stop.hidden = true;
     status.textContent = 'La lettura ad alta voce non è disponibile in questo browser.';
@@ -22,6 +24,41 @@
 
   const synthesis = window.speechSynthesis;
   const lang = 'it-IT';
+  const isIPad = /\biPad\b/.test(navigator.userAgent) ||
+    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  const voicePreferenceKey = 'gbprof-poesia-voce-ipad';
+  let preferredVoiceURI = '';
+
+  function updateVoices() {
+    const italian = synthesis.getVoices().filter(voice => /^it(?:[-_]|$)/i.test(voice.lang));
+    const defaultVoice = italian.find(voice => voice.localService && voice.default) ??
+      italian.find(voice => voice.localService) ?? italian[0];
+    if (!isIPad) return defaultVoice;
+
+    const alice = italian.filter(voice => /^Alice\b/i.test(voice.name));
+    const hasQuality = (voice, quality) => quality.test(`${voice.name} ${voice.voiceURI}`);
+    const selected = italian.find(voice => voice.voiceURI === preferredVoiceURI) ??
+      alice.find(voice => hasQuality(voice, /premium/i)) ??
+      alice.find(voice => hasQuality(voice, /enhanced|avanzat|migliorat/i)) ??
+      italian.find(voice => /^(Federica|Emma)\b/i.test(voice.name)) ??
+      alice[0] ?? defaultVoice;
+
+    voiceSelect.replaceChildren(...italian.map(voice => new Option(voice.name, voice.voiceURI)));
+    if (selected) voiceSelect.value = selected.voiceURI;
+    voiceLabel.hidden = italian.length < 2;
+    return selected;
+  }
+
+  if (isIPad) {
+    try { preferredVoiceURI = localStorage.getItem(voicePreferenceKey) ?? ''; } catch {}
+    voiceSelect.addEventListener('change', () => {
+      preferredVoiceURI = voiceSelect.value;
+      try { localStorage.setItem(voicePreferenceKey, preferredVoiceURI); } catch {}
+    });
+    synthesis.addEventListener('voiceschanged', updateVoices);
+    updateVoices();
+  }
+
   const excluded = 'nav, footer, script, style, noscript, svg, img, summary, ' +
     'button, input, select, textarea, [hidden], [aria-hidden="true"], ' +
     '[role="status"], [role="alert"], [data-lettura-escludi], ' +
@@ -81,6 +118,7 @@
   let index = 0;
   let offset = 0;
   let current = null;
+  let readingVoice;
   let state = 'idle';
 
   function show(next, message = '') {
@@ -88,6 +126,7 @@
     play.textContent = {idle: 'Ascolta la pagina', playing: 'Pausa', paused: 'Riprendi'}[state];
     if (state === 'idle' && document.activeElement === stop) play.focus();
     stop.disabled = state === 'idle';
+    voiceSelect.disabled = state !== 'idle';
     status.textContent = message;
   }
 
@@ -103,11 +142,7 @@
     const utterance = new SpeechSynthesisUtterance(chunks[index].slice(start));
     current = utterance;
     utterance.lang = lang;
-
-    const italian = synthesis.getVoices().filter(voice => /^it(?:[-_]|$)/i.test(voice.lang));
-    const voice = italian.find(voice => voice.localService && voice.default) ??
-      italian.find(voice => voice.localService) ?? italian[0];
-    if (voice) utterance.voice = voice;
+    if (readingVoice) utterance.voice = readingVoice;
 
     utterance.onboundary = event => {
       if (current === utterance && event.name === 'word') offset = start + event.charIndex;
@@ -137,6 +172,7 @@
       if (!chunks.length) return;
       index = 0;
       offset = 0;
+      readingVoice = updateVoices();
     }
     show('playing', 'Lettura in corso.');
     speak();

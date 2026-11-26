@@ -39,3 +39,9 @@ Il pulsante «Ascolta la pagina» compare sotto il titolo delle sedici pagine HT
 La lettura parte dal titolo e segue il testo visibile. Comprende gli approfondimenti aperti, le didascalie e le domande con le alternative del test. I menu, i comandi e i campi dei moduli restano fuori. Il lettore esclude anche il nome dello studente visualizzato nell’esito. La funzione usa i due file condivisi in Poesia/materiali e viene distribuita dal workflow esistente.
 
 Il collaudo in Chromium ha verificato tutte le sedici pagine a larghezza smartphone. Con una voce simulata sono stati controllati il testo consegnato alla sintesi, i quindici versi dell’Infinito, le venti domande con relative alternative, il comportamento degli approfondimenti, il comando da tastiera, la pausa, la ripresa, l’arresto e gli errori del sintetizzatore. È stata verificata anche la segnalazione nel caso di browser privo dell’API. La resa sonora effettiva dipende dalle voci disponibili sui dispositivi e non è stata verificata nel collaudo automatico.
+
+### Scelta della voce su iPad
+
+La Voce 2 di Siri è riservata alle funzioni Apple. Il lettore del sito su iPad preferisce Alice Premium o avanzata se Safari la rende disponibile. In seguito prova Federica o Emma, poi Alice standard e le opzioni già previste dal lettore. Se Safari restituisce almeno due voci italiane, il menu «Voce» permette di impostarne una come prima scelta. La preferenza viene ricordata nel browser per le pagine del percorso. La voce scelta rimane la stessa durante una lettura, inclusi pausa e ripresa.
+
+Le verifiche con un catalogo simulato hanno coperto il riconoscimento dell’iPad in modalità desktop, il caricamento tardivo delle voci, l’ordine di preferenza, il cambio di voce, la permanenza della scelta fra le pagine e i casi senza alternative. Il collaudo è stato eseguito in Chromium. Il catalogo e la resa sonora su un iPad fisico restano da verificare.
