@@ -3,7 +3,9 @@ const form = document.querySelector('#prova');
 const submit = document.querySelector('#invia');
 const retry = document.querySelector('#ricontrolla');
 const message = document.querySelector('#avviso');
-let questions, available = false, sending = false, sent = false;
+let questions;
+let completedAttempt;
+let saving = false;
 const attempt = crypto.randomUUID();
 function tag(name, text) {
   const e = document.createElement(name);
@@ -19,17 +21,14 @@ function order(previous) {
   if (a.join('') === previous) a.push(a.shift());
   return a;
 }
-async function availability() {
+async function registerIsReady() {
   try {
-    const r = await fetch('./api/stato', {cache:'no-store',signal:AbortSignal.timeout(8000)});
-    available = r.ok && (await r.json()).pronto === true;
-  } catch { available = false; }
-  document.querySelector('#disponibile').textContent = available ? 'Il registro è pronto a ricevere la prova.' : 'Il registro non è disponibile. L’invio è sospeso: nessuna prova è stata registrata da questa pagina.';
-  submit.disabled = !available || sending || sent;
-  retry.hidden = available || sent;
+    const response = await fetch('./api/stato', {cache:'no-store', signal:AbortSignal.timeout(6000)});
+    return response.ok && (await response.json()).pronto === true;
+  } catch { return false; }
 }
 async function start() {
-  const r = await fetch('./domande.json');
+  const r = await fetch('./domande.json?v=2');
   if (!r.ok) throw Error();
   questions = await r.json();
   const previousKey = 'poesia-ordine-v1';
@@ -53,38 +52,94 @@ async function start() {
   }
   try { sessionStorage.setItem(previousKey,JSON.stringify(next)); } catch {}
   form.hidden = false;
-  await availability();
+  submit.disabled = false;
+  const info = document.querySelector('#disponibile');
+  info.textContent = 'Puoi svolgere la prova.';
+  info.textContent = await registerIsReady()
+    ? 'Il registro è disponibile. Le risposte saranno inviate quando concludi la prova.'
+    : 'Puoi svolgere il test e leggere il risultato. Al momento il registro Excel è offline.';
 }
 form.addEventListener('change',()=> {
   document.querySelector('#contatore').textContent = form.querySelectorAll('input[type=radio]:checked').length + ' risposte su 20';
 });
-retry.addEventListener('click',availability);
-form.addEventListener('submit',async event=>{
-  event.preventDefault();
-  if (sending || sent || !available) return;
-  const v = new FormData(form);
-  const data = {attempt,versione:1,nome:v.get('nome').trim(),cognome:v.get('cognome').trim(),risposte:questions.map(q=>Number(v.get('q'+q.id)))};
-  if (!data.nome || !data.cognome) {message.textContent='Scrivi il tuo nome e il tuo cognome.';return;}
-  sending=true;submit.disabled=true;message.textContent='Registrazione in corso…';
+function assess(answers) {
+  const errori = [];
+  const topics = new Map();
+  for (const [index, q] of questions.entries()) {
+    if (answers[index] === q.key) continue;
+    errori.push({numero:q.id, domanda:q.prompt, scelta:q.choices[answers[index]],
+      esatta:q.choices[q.key], lezione:q.recovery, esercizio:q.practice});
+    topics.set(q.topic, (topics.get(q.topic) || 0) + 1);
+  }
+  const corrette = questions.length - errori.length;
+  const priorities = [...topics].sort((a,b) => b[1]-a[1]).slice(0,3)
+    .map(([topic]) => topic.toLowerCase()).join(', ');
+  let giudizio;
+  if (corrette === 20) giudizio = 'Prova completa. Hai riconosciuto le forme e seguito con precisione il passaggio dalla percezione all’immaginazione nei versi di Leopardi.';
+  else if (corrette >= 17) giudizio = 'Comprensione solida del percorso. Per rendere più precisa la lettura, riprendi gli esempi relativi a ' + priorities + '.';
+  else if (corrette >= 14) giudizio = 'Hai riconosciuto buona parte dei concetti. Per consolidare i collegamenti fra definizione ed esempio, torna su ' + priorities + '.';
+  else if (corrette >= 12) giudizio = 'Hai raggiunto i saperi di base. Per acquisire maggiore sicurezza, confronta le tue risposte con i versi e con le tavole su ' + priorities + '.';
+  else giudizio = 'La prova richiede un recupero guidato. Riparti dalle definizioni e applicale a un esempio alla volta, cominciando da ' + priorities + '.';
+  return {voto:corrette / 2, corrette, giudizio, errori};
+}
+function showResult(result) {
+  const el = document.querySelector('#valutazione');
+  const grade = tag('p', 'Voto ' + String(result.voto).replace('.', ',') + '/10');
+  grade.className = 'voto';
+  el.replaceChildren(grade, tag('p',result.corrette+' risposte esatte su 20.'),
+    tag('h3','Giudizio sulla prova'), tag('p',result.giudizio));
+  if (result.errori.length) el.append(tag('h3','Le tue lezioni di recupero'));
+  for (const err of result.errori) {
+    const box = tag('section','');
+    box.className = 'recupero';
+    box.append(tag('h4',err.numero+'. '+err.domanda), tag('p','La tua risposta: '+err.scelta),
+      tag('p','Risposta esatta: '+err.esatta), tag('p',err.lezione), tag('p','Riprova: '+err.esercizio));
+    el.append(box);
+  }
+}
+async function saveAttempt() {
+  if (saving || !completedAttempt) return;
+  saving = true;
+  retry.hidden = true;
+  const status = document.querySelector('#salvataggio');
+  status.textContent = 'Verifica del registro Excel in corso…';
   try {
-    const r=await fetch('./api/prove',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data),signal:AbortSignal.timeout(45000)});
-    if (!r.ok) throw Error(({409:'È già stata registrata una prova con questo identificativo. Ripristina le risposte inviate per recuperarne l’esito oppure ricarica per una nuova prova.',422:'Controlla i dati e le venti risposte.',429:'Sono arrivate molte richieste. Attendi un minuto e riprova.'})[r.status] || 'Invio non confermato. Riprova da questa pagina con le stesse risposte.');
-    const result=await r.json();
-    if(result.registrata!==true) throw Error('Salvataggio non confermato.');
-    sent=true;
-    form.hidden=true;
-    document.querySelector('#disponibile').hidden=true;
-    const el=document.querySelector('#esito');
-    el.append(tag('h2','Prova registrata'),tag('p',data.nome+' '+data.cognome));
-    const grade=tag('p','Voto '+String(result.voto).replace('.',',')+'/10');grade.className='voto';
-    el.append(grade,tag('p',result.corrette+' risposte esatte su 20.'),tag('h3','Giudizio sulla prova'),tag('p',result.giudizio));
-    if(result.errori.length) el.append(tag('h3','Le tue lezioni di recupero'));
-    for(const err of result.errori){
-      const box=tag('section','');box.className='recupero';
-      box.append(tag('h4',err.numero+'. '+err.domanda),tag('p','La tua risposta: '+err.scelta),tag('p','Risposta esatta: '+err.esatta),tag('p',err.lezione),tag('p','Riprova: '+err.esercizio));el.append(box);
+    if (!await registerIsReady()) {
+      status.textContent = 'Registro offline. Salvataggio non confermato. Puoi riprovare da questa pagina.';
+      return;
     }
-    el.hidden=false;el.focus();
-  } catch(error){message.textContent=error.name==='Error'?error.message:'Invio non confermato. Riprova con le stesse risposte senza ricaricare la pagina.';}
-  finally {sending=false;submit.disabled=sent||!available;}
+    status.textContent = 'Invio della prova al registro Excel…';
+    const response = await fetch('./api/prove', {method:'POST', headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(completedAttempt), signal:AbortSignal.timeout(45000)});
+    if (!response.ok) throw Error();
+    const result = await response.json();
+    if (result.registrata !== true) throw Error();
+    showResult(result);
+    status.textContent = 'Prova registrata nel file Excel del docente.';
+    completedAttempt = null;
+  } catch {
+    status.textContent = 'Il registro non ha confermato il salvataggio. Puoi riprovare da questa pagina.';
+  } finally {
+    saving = false;
+    retry.hidden = !completedAttempt;
+  }
+}
+retry.addEventListener('click', saveAttempt);
+form.addEventListener('submit', event => {
+  event.preventDefault();
+  if (form.hidden || !form.reportValidity()) return;
+  const v = new FormData(form);
+  const nome = v.get('nome').trim(), cognome = v.get('cognome').trim();
+  if (!nome || !cognome) {message.textContent='Scrivi il tuo nome e il tuo cognome.';return;}
+  const risposte = questions.map(q => Number(v.get('q'+q.id)));
+  completedAttempt = {attempt, versione:1, nome, cognome, risposte};
+  showResult(assess(risposte));
+  document.querySelector('#studente').textContent = nome+' '+cognome;
+  form.hidden = true;
+  document.querySelector('#disponibile').hidden = true;
+  const resultSection = document.querySelector('#esito');
+  resultSection.hidden = false;
+  resultSection.focus();
+  saveAttempt();
 });
 start().catch(()=>{document.querySelector('#disponibile').textContent='Impossibile caricare le domande. Ricarica la pagina.';});

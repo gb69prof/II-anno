@@ -24,7 +24,7 @@ with tempfile.TemporaryDirectory() as directory:
         return status[0],result
     bank=app.BANK
     public=json.loads((Path(__file__).resolve().parents[2]/'Poesia/test/domande.json').read_text())
-    assert public==[{k:q[k] for k in ('id','prompt','choices')} for q in bank]
+    assert public==bank
     assert all(len(set(q['choices']))==3 and len(set(map(len,q['choices'])))==1 for q in bank)
     answers=[q['key'] for q in bank]
     a=dict(attempt=str(uuid.uuid4()),nome='Prova',cognome='=Esempio',risposte=answers,versione=1)

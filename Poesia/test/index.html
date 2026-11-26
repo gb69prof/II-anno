@@ -1,18 +1,18 @@
 <!doctype html>
 <html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Test finale · La poesia · gbprof</title><link rel="stylesheet" href="../materiali/lezioni.css">
-<link rel="stylesheet" href="../test/verifica.css"><script defer src="./test.js"></script></head>
+<link rel="stylesheet" href="../test/verifica.css"><script defer src="./test.js?v=2"></script></head>
 <body class="corso"><a class="salta" href="#contenuto">Vai al contenuto</a><main class="book" id="contenuto">
 <nav class="topnav" aria-label="Percorso"><a href="../../">Secondo anno</a><span>/</span><a href="../">Poesia</a><a class="pdf" href="../materiali/Poesia-dalla-forma-all-Infinito.pdf">Dispensa PDF ↗</a></nav>
 <p class="over">Verifica finale · Classe seconda</p><h1>Leggere la poesia</h1>
-<p>Venti domande. Scegli una risposta per ciascuna. Ogni risposta esatta vale mezzo punto. Dopo la registrazione riceverai il voto in decimi, un giudizio e il recupero degli errori.</p>
-<p id="disponibile" role="status">Controllo della disponibilità del registro…</p>
+<p>Venti domande. Scegli una risposta per ciascuna. Ogni risposta esatta vale mezzo punto. Quando concludi la prova vedrai subito il voto in decimi, il giudizio e una lezione di recupero per ogni errore.</p>
+<p id="disponibile" role="status">Caricamento delle domande…</p>
 <noscript>Attiva JavaScript per visualizzare e inviare il test.</noscript>
 <form id="prova" hidden>
 <fieldset><legend>I tuoi dati</legend><div class="identita"><label>Nome<input name="nome" required maxlength="60" autocomplete="given-name"></label><label>Cognome<input name="cognome" required maxlength="60" autocomplete="family-name"></label></div></fieldset>
 <div id="quesiti"></div><p id="contatore" aria-live="polite">0 risposte su 20</p>
-<button id="invia" disabled>Invia e registra la prova</button><button id="ricontrolla" type="button" hidden>Ricontrolla il registro</button><p id="avviso" role="alert"></p>
-</form><section id="esito" tabindex="-1" aria-live="polite" hidden></section>
+<button id="invia" disabled>Concludi la prova</button><p id="avviso" role="alert"></p>
+</form><section id="esito" tabindex="-1" hidden><h2>Risultato della prova</h2><p id="studente"></p><p id="salvataggio" role="status"></p><button type="button" id="ricontrolla" hidden>Riprova a registrare la prova</button><div id="valutazione"></div><p><a href="./">Svolgi di nuovo il test</a></p></section>
 <nav class="paging"><a href="../ripasso/">← Ripasso e vocabolario</a><a href="./docente.html">Registro Excel del docente</a></nav>
 
 </main><footer class="firma">gbprof e Libera · Italiano · Secondo anno</footer></body></html>

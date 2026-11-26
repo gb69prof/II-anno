@@ -25,3 +25,9 @@ Il servizio calcola mezzo punto per risposta esatta, motiva il giudizio e propon
 Il collaudo usa esclusivamente dati fittizi, fuori dall’archivio didattico. Verifica il calcolo dei voti, il recupero, il rifiuto della password errata, la cifratura, gli invii simultanei e i tentativi ripetuti dopo un errore di rete.
 
 Il servizio usa il percorso HTTPS dedicato /II-anno/Poesia/test/api/ e conserva il registro fuori dalla radice pubblica. La prima installazione sul server avviene con il comando indicato in .github/registro-poesia/INSTALLAZIONE.md. Prima dell’attivazione il sito permette di consultare le domande e sospende gli invii. La password non è inclusa nel codice né nel repository.
+
+## Aggiornamento della verifica e della dispensa
+
+«Concludi la prova» mostra subito il voto, il giudizio e il recupero di ciascuna risposta errata. Lo stato del salvataggio compare a parte. Se il registro è disponibile, il server ricalcola il risultato dalle scelte dello studente e aggiorna il file cifrato. Se manca la conferma, il risultato resta leggibile e il pulsante di nuovo invio riutilizza lo stesso identificativo finché la pagina rimane aperta.
+
+La dispensa prosegue a pagina 15 con i nove saperi del ripasso online. Le pagine 16–18 raccolgono le 24 voci del vocabolario con definizioni ed esempi. Il confronto delle prime quattordici pagine prima e dopo l’aggiunta ha restituito immagini identiche. Sono stati controllati anche i segnalibri e l’impaginazione delle quattro pagine nuove.
