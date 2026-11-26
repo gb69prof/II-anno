@@ -7,7 +7,8 @@
   font: 500 .95rem/1.35 system-ui, sans-serif;
 }
 
-.lettura-pagina button {
+.lettura-pagina button,
+.lettura-pagina .lettura-siri {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
@@ -19,6 +20,7 @@
   color: #fff;
   font: inherit;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .lettura-pagina button + button {
@@ -26,12 +28,14 @@
   color: #214732;
 }
 
-.lettura-pagina button:hover:not(:disabled) {
+.lettura-pagina button:hover:not(:disabled),
+.lettura-pagina .lettura-siri:hover {
   background: #183c2a;
   color: #fff;
 }
 
-.lettura-pagina button:focus-visible {
+.lettura-pagina button:focus-visible,
+.lettura-pagina .lettura-siri:focus-visible {
   outline: 2px solid currentColor;
   outline-offset: -4px;
 }
@@ -39,12 +43,6 @@
 .lettura-pagina button:disabled {
   opacity: .65;
   cursor: default;
-}
-
-.lettura-pagina button[hidden],
-.lettura-pagina .lettura-voce[hidden],
-.lettura-pagina [role="status"]:empty {
-  display: none;
 }
 
 .lettura-pagina .lettura-voce {
@@ -65,9 +63,15 @@
   font: inherit;
 }
 
-.lettura-pagina [role="status"] {
+.lettura-pagina [role="status"],
+.lettura-pagina .lettura-aiuto {
   flex-basis: 100%;
   font-size: .875rem;
+}
+
+.lettura-pagina [hidden],
+.lettura-pagina [role="status"]:empty {
+  display: none;
 }
 
 @media print {

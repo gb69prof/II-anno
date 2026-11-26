@@ -11,10 +11,14 @@
   player.setAttribute('aria-label', 'Lettura ad alta voce');
   player.innerHTML = '<button type="button">Ascolta la pagina</button>' +
     '<button type="button" disabled>Ferma</button>' +
-    '<label class="lettura-voce" hidden>Voce <select></select></label><span role="status"></span>';
+    '<a class="lettura-siri" hidden>Ascolta la pagina</a>' +
+    '<label class="lettura-voce" hidden>Voce <select></select></label>' +
+    '<span class="lettura-aiuto" hidden>In Comandi Rapidi, chiama il comando «Leggi gbprof». ' +
+    'In «Pronuncia testo», usa «Input del comando rapido» e scegli Siri — Voce 2. ' +
+    'La lettura si avvia e si interrompe in Comandi Rapidi.</span><span role="status"></span>';
   title.after(player);
 
-  const [play, stop, voiceLabel, status] = player.children;
+  const [play, stop, siriPlay, voiceLabel, siriHelp, status] = player.children;
   const voiceSelect = voiceLabel.querySelector('select');
   if (!('speechSynthesis' in window) || !('SpeechSynthesisUtterance' in window)) {
     play.hidden = stop.hidden = true;
@@ -27,7 +31,15 @@
   const isIPad = /\biPad\b/.test(navigator.userAgent) ||
     (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
   const voicePreferenceKey = 'gbprof-poesia-voce-ipad';
+  const siriVoice = 'shortcut:Leggi gbprof';
+  const siriCommand = 'shortcuts://run-shortcut?name=Leggi%20gbprof&input=text';
   let preferredVoiceURI = '';
+
+  function showVoiceMode() {
+    const usesShortcut = voiceSelect.value === siriVoice;
+    play.hidden = stop.hidden = usesShortcut;
+    siriPlay.hidden = siriHelp.hidden = !usesShortcut;
+  }
 
   function updateVoices() {
     const italian = synthesis.getVoices().filter(voice => /^it(?:[-_]|$)/i.test(voice.lang));
@@ -44,16 +56,25 @@
       alice[0] ?? defaultVoice;
 
     voiceSelect.replaceChildren(...italian.map(voice => new Option(voice.name, voice.voiceURI)));
-    if (selected) voiceSelect.value = selected.voiceURI;
-    voiceLabel.hidden = italian.length < 2;
+    if (!selected) voiceSelect.add(new Option('Voce del browser', ''));
+    voiceSelect.add(new Option('Siri — Voce 2', siriVoice));
+    voiceSelect.value = preferredVoiceURI === siriVoice ? siriVoice : selected?.voiceURI ?? '';
+    voiceLabel.hidden = false;
+    showVoiceMode();
     return selected;
   }
 
   if (isIPad) {
+    siriPlay.href = siriCommand;
+    siriPlay.addEventListener('click', () => {
+      siriPlay.href = siriCommand + '&text=' + encodeURIComponent(pageText());
+    });
     try { preferredVoiceURI = localStorage.getItem(voicePreferenceKey) ?? ''; } catch {}
     voiceSelect.addEventListener('change', () => {
       preferredVoiceURI = voiceSelect.value;
       try { localStorage.setItem(voicePreferenceKey, preferredVoiceURI); } catch {}
+      status.textContent = '';
+      showVoiceMode();
     });
     synthesis.addEventListener('voiceschanged', updateVoices);
     updateVoices();
