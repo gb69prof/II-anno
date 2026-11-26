@@ -31,3 +31,11 @@ Il servizio usa il percorso HTTPS dedicato /II-anno/Poesia/test/api/ e conserva 
 «Concludi la prova» mostra subito il voto, il giudizio e il recupero di ciascuna risposta errata. Lo stato del salvataggio compare a parte. Se il registro è disponibile, il server ricalcola il risultato dalle scelte dello studente e aggiorna il file cifrato. Se manca la conferma, il risultato resta leggibile e il pulsante di nuovo invio riutilizza lo stesso identificativo finché la pagina rimane aperta.
 
 La dispensa prosegue a pagina 15 con i nove saperi del ripasso online. Le pagine 16–18 raccolgono le 24 voci del vocabolario con definizioni ed esempi. Il confronto delle prime quattordici pagine prima e dopo l’aggiunta ha restituito immagini identiche. Sono stati controllati anche i segnalibri e l’impaginazione delle quattro pagine nuove.
+
+## Lettura ad alta voce
+
+Il pulsante «Ascolta la pagina» compare sotto il titolo delle sedici pagine HTML di Poesia. I comandi permettono di mettere in pausa, riprendere e fermare la lettura. Il lettore usa la sintesi vocale del browser, preferisce una voce italiana locale se disponibile e divide il testo in tratti brevi per le pagine più lunghe. Quando il sintetizzatore comunica la posizione delle parole, la ripresa riparte dall’ultima parola raggiunta. Negli altri casi riparte dall’inizio del tratto corrente.
+
+La lettura parte dal titolo e segue il testo visibile. Comprende gli approfondimenti aperti, le didascalie e le domande con le alternative del test. I menu, i comandi e i campi dei moduli restano fuori. Il lettore esclude anche il nome dello studente visualizzato nell’esito. La funzione usa i due file condivisi in Poesia/materiali e viene distribuita dal workflow esistente.
+
+Il collaudo in Chromium ha verificato tutte le sedici pagine a larghezza smartphone. Con una voce simulata sono stati controllati il testo consegnato alla sintesi, i quindici versi dell’Infinito, le venti domande con relative alternative, il comportamento degli approfondimenti, il comando da tastiera, la pausa, la ripresa, l’arresto e gli errori del sintetizzatore. È stata verificata anche la segnalazione nel caso di browser privo dell’API. La resa sonora effettiva dipende dalle voci disponibili sui dispositivi e non è stata verificata nel collaudo automatico.

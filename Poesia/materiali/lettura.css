@@ -1,0 +1,56 @@
+.lettura-pagina {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .5rem;
+  margin: .75rem 0 1rem;
+  font: 500 .95rem/1.35 system-ui, sans-serif;
+}
+
+.lettura-pagina button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin: 0;
+  padding: .5rem .85rem;
+  border: 1px solid #28513d;
+  border-radius: .45rem;
+  background: #28513d;
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+.lettura-pagina button + button {
+  background: #fff;
+  color: #214732;
+}
+
+.lettura-pagina button:hover:not(:disabled) {
+  background: #183c2a;
+  color: #fff;
+}
+
+.lettura-pagina button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: -4px;
+}
+
+.lettura-pagina button:disabled {
+  opacity: .65;
+  cursor: default;
+}
+
+.lettura-pagina button[hidden],
+.lettura-pagina [role="status"]:empty {
+  display: none;
+}
+
+.lettura-pagina [role="status"] {
+  flex-basis: 100%;
+  font-size: .875rem;
+}
+
+@media print {
+  .lettura-pagina { display: none; }
+}
