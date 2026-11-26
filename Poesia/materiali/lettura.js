@@ -5,6 +5,7 @@
   const title = main?.querySelector('h1');
   if (!title) return;
 
+  const shortcutName = 'Leggi testo';
   const player = document.createElement('div');
   player.className = 'lettura-pagina';
   player.setAttribute('role', 'group');
@@ -13,7 +14,7 @@
     '<button type="button" disabled>Ferma</button>' +
     '<a class="lettura-siri" hidden>Ascolta la pagina</a>' +
     '<label class="lettura-voce" hidden>Voce <select></select></label>' +
-    '<span class="lettura-aiuto" hidden>In Comandi Rapidi, chiama il comando «Leggi gbprof». ' +
+    `<span class="lettura-aiuto" hidden>In Comandi Rapidi, apri il comando «${shortcutName}». ` +
     'In «Pronuncia testo», usa «Input del comando rapido» e scegli Siri — Voce 2. ' +
     'La lettura si avvia e si interrompe in Comandi Rapidi.</span><span role="status"></span>';
   title.after(player);
@@ -31,8 +32,9 @@
   const isIPad = /\biPad\b/.test(navigator.userAgent) ||
     (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
   const voicePreferenceKey = 'gbprof-poesia-voce-ipad';
+  // Keep the saved Siri selection when the shortcut's name changes.
   const siriVoice = 'shortcut:Leggi gbprof';
-  const siriCommand = 'shortcuts://run-shortcut?name=Leggi%20gbprof&input=text';
+  const siriCommand = 'shortcuts://run-shortcut?name=' + encodeURIComponent(shortcutName) + '&input=text';
   let preferredVoiceURI = '';
 
   function showVoiceMode() {
